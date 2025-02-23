@@ -1,0 +1,106 @@
+---
+import Logo from "@/assets/logo.astro";
+
+const menuItems = [
+    {
+        title: "Institucional",
+        submenu: [
+            { label: "Carta de presentación", href: "#" },
+            { label: "Secundaria", href: "#" },
+            { label: "Bachillerato", href: "#" },
+        ],
+    },
+    {
+        title: "Proyecto Educativo",
+        submenu: [
+            { label: "Primaria", href: "#" },
+            { label: "Secundaria", href: "#" },
+            { label: "Bachillerato", href: "#" },
+        ],
+    },
+    {
+        title: "Admisión",
+        submenu: [
+            { label: "Proceso de admisión", href: "#" },
+            { label: "Matrícula", href: "#" },
+            { label: "Becas", href: "#" },
+        ],
+    },
+    {
+        title: "Servicios",
+        submenu: [
+            { label: "Comedor", href: "#" },
+            { label: "Transporte", href: "#" },
+            { label: "Actividades extraescolares", href: "#" },
+            { label: "Comedor", href: "#" },
+            { label: "Transporte", href: "#" },
+            { label: "Actividades extraescolares", href: "#" },
+        ],
+    },
+    {
+        title: "Contacto",
+        submenu: [
+            { label: "Ubicación", href: "#" },
+            { label: "Contacto", href: "#" },
+        ],
+    },
+];
+---
+
+<header
+    class="bg-gradient-to-r from-[#86CBEA] to-[#59A8CC] flex justify-between items-center p-4"
+>
+    <div class="flex w-[25%] gap-1 items-center px-4 justify-around">
+        <Logo width="100" heigth="100" />
+        <h1 class="text-xl text-white font-black">
+            Colegio <br /> Las Lomas
+        </h1>
+        <div class="w-0.5 h-10 bg-white"></div>
+        <a href="/" class="text-white font-bold">INICIO</a>
+    </div>
+    <div class="flex justify-end items-center px-4 py-2">
+        <nav class="flex space-x-8">
+            {
+                menuItems.map((item) => (
+                    <div class="relative group w-fit flex">
+                        <button class="text-white font-bold flex items-center space-x-1 uppercase w-full justify-between hover:text-[#DBFA9B] group-hover:text-[#DBFA9B] transition-colors duration-300">
+                            <span>{item.title}</span>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-200"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </button>
+
+                        <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible top-full left-0 mt-2 min-w-full w-max bg-white rounded-md shadow-lg z-50 transition-all duration-500 delay-150">
+                            <div class="">
+                                <a class="flex justify-center mt-0.5 ml-auto mr-auto w-[98%] py-0.5 bg-[#86CBEA] rounded-full" />
+                                {item.submenu.map((subItem) => (
+                                    <a
+                                        href={subItem.href}
+                                        class="block px-4 py-2 text-gray-800 hover:bg-[#F5F5DC] transition-colors duration-500 border-b border-[#454545]"
+                                    >
+                                        {subItem.label}
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </nav>
+        <a
+            href="#"
+            class="bg-[#B2CA4D] text-white px-6 py-2 rounded-[4px] ml-5 font-bold"
+        >
+            CONTACTO
+        </a>
+    </div>
+</header>

@@ -1,11 +1,57 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import AboutUs from "@/sections/AboutUs.astro";
+import Niveles from "@/sections/Niveles.astro";
 
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+import Testimonials from "@/sections/Testimonials.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<Hero
+		images={[
+			{
+				src: Image1.src,
+				alt: "Aula del Colegio Las Lomas",
+				title: "Nuestras Aulas",
+				description: "Espacios modernos diseñados para el aprendizaje",
+			},
+			{
+				src: Image2.src,
+				alt: "Frente del Colegio Las Lomas",
+				title: "Nuestras Instalaciones",
+				description: "Infraestructura moderna y segura",
+			},
+		]}
+	/>
+	<PostHero />
+	<AboutUs />
+	<Niveles />
+	<Testimonials
+		testimonios={[
+			{
+				nombre: "María González",
+				ocupacion: "Madre de familia",
+				contenido:
+					"Excelente educación y valores. Mis hijos han crecido académicamente y como personas desde que están en Las Lomas.",
+			},
+			{
+				nombre: "Carlos Ramírez",
+				ocupacion: "Padre de familia",
+				contenido:
+					"La atención personalizada y el compromiso de los maestros han hecho una gran diferencia en el aprendizaje de mi hija.",
+			},
+			{
+				nombre: "Ana Martínez",
+				ocupacion: "Ex-alumna",
+				contenido:
+					"Los años que pasé en Las Lomas me prepararon exitosamente para la universidad. Guardo los mejores recuerdos.",
+			},
+		]}
+	/>
 </Layout>

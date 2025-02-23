@@ -1,0 +1,199 @@
+---
+// HeroSlider.astro
+// Define la interfaz para las imágenes del slider
+interface SliderImage {
+    src: string;
+    alt: string;
+    title?: string;
+    description?: string;
+}
+
+// Recibe un array de imágenes como prop
+//const { images = [] } = Astro.props as { images: SliderImage[] };
+const { images = [] } = Astro.props as { images: SliderImage[] };
+---
+
+<section class="relative w-full overflow-hidden bg-gray-900">
+    <div class="hero-slider relative w-full h-[70vh] md:h-[80vh]">
+        <!-- Las imágenes del slider -->
+        <div id="slider-container" class="w-full h-full relative">
+            {
+                images.map((image, index) => (
+                    <div
+                        class={`slider-item absolute top-0 left-0 w-full h-full transition-opacity duration-700 ${index === 0 ? "opacity-100" : "opacity-0"}`}
+                        data-index={index}
+                    >
+                        <img
+                            src={image.src}
+                            alt={image.alt}
+                            class="w-full h-full object-cover object-center"
+                        />
+
+                        {(image.title || image.description) && (
+                            <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/70 to-transparent text-white">
+                                {image.title && (
+                                    <h2 class="text-2xl md:text-3xl font-bold mb-2">
+                                        {image.title}
+                                    </h2>
+                                )}
+                                {image.description && (
+                                    <p class="text-sm md:text-base">
+                                        {image.description}
+                                    </p>
+                                )}
+                            </div>
+                        )}
+                    </div>
+                ))
+            }
+        </div>
+
+        <!-- Controles de navegación -->
+        <div
+            class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2"
+        >
+            {
+                images.map((_, index) => (
+                    <button
+                        class="slider-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-colors duration-300"
+                        data-index={index}
+                        aria-label={`Ir a la imagen ${index + 1}`}
+                    />
+                ))
+            }
+        </div>
+
+        <!-- Botones de anterior/siguiente -->
+        <button
+            id="prev-slide"
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 rounded-full p-2 transition-colors duration-300"
+            aria-label="Imagen anterior"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        <button
+            id="next-slide"
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 rounded-full p-2 transition-colors duration-300"
+            aria-label="Imagen siguiente"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+    </div>
+</section>
+
+<script>
+    // Script para la funcionalidad del slider
+    document.addEventListener("DOMContentLoaded", () => {
+        const sliderItems = document.querySelectorAll(".slider-item");
+        const sliderDots = document.querySelectorAll(".slider-dot");
+        const prevBtn = document.getElementById("prev-slide");
+        const nextBtn = document.getElementById("next-slide");
+
+        let currentIndex = 0;
+        const totalSlides = sliderItems.length;
+
+        // Si no hay imágenes, no hacemos nada
+        if (totalSlides === 0) return;
+
+        // Inicializa el estado visual de los dots
+        updateActiveDot();
+
+        // Función para actualizar el estado visual del slider
+        function updateSlider() {
+            sliderItems.forEach((item, index) => {
+                if (index === currentIndex) {
+                    item.classList.remove("opacity-0");
+                    item.classList.add("opacity-100");
+                } else {
+                    item.classList.remove("opacity-100");
+                    item.classList.add("opacity-0");
+                }
+            });
+
+            updateActiveDot();
+        }
+
+        // Función para actualizar el estado visual de los dots
+        function updateActiveDot() {
+            sliderDots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add("bg-white");
+                    dot.classList.remove("bg-white/50");
+                } else {
+                    dot.classList.remove("bg-white");
+                    dot.classList.add("bg-white/50");
+                }
+            });
+        }
+
+        // Función para ir a la siguiente diapositiva
+        function goToNextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider();
+        }
+
+        // Función para ir a la diapositiva anterior
+        function goToPrevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        // Agregamos event listeners a los botones y dots
+        prevBtn?.addEventListener("click", goToPrevSlide);
+        nextBtn?.addEventListener("click", goToNextSlide);
+
+        sliderDots.forEach((dot) => {
+            dot.addEventListener("click", () => {
+                const targetIndex = parseInt(
+                    dot.getAttribute("data-index") || "0",
+                );
+                currentIndex = targetIndex;
+                updateSlider();
+            });
+        });
+
+        // Autoplay opcional
+        let interval: number | undefined;
+        function startAutoplay() {
+            interval = setInterval(goToNextSlide, 5000); // Cambia cada 5 segundos
+        }
+
+        function stopAutoplay() {
+            clearInterval(interval);
+        }
+
+        startAutoplay();
+
+        // Detener autoplay al interactuar manualmente
+        document
+            .querySelector(".hero-slider")
+            ?.addEventListener("mouseenter", stopAutoplay);
+        document
+            .querySelector(".hero-slider")
+            ?.addEventListener("mouseleave", startAutoplay);
+    });
+</script>

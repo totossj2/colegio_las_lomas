@@ -1,0 +1,108 @@
+<section class="mt-16">
+    <div class="text-center mb-8">
+        <h2 class="text-5xl font-light tracking-wide">
+            <span class="text-[#B2CA4D]">SOBRE</span>
+            <span class="text-[#B2CA4D] font-bold">NOSOTROS</span>
+        </h2>
+        <div class="w-64 h-1 bg-[#B2CA4D] mx-auto mt-4"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-4">
+        <div class="space-y-6">
+            <p class="text-lg text-black leading-relaxed">
+                Nuestra institución nació de la necesidad de crear un <span
+                    class="font-bold">espacio educativo innovador</span
+                >, basado en una <span class="italic"
+                    >construcción colectiva del conocimiento</span
+                > entre la familia y la escuela. Fundada por una familia <span
+                    class="font-bold"
+                    >comprometida con el trabajo y el estudio</span
+                >, creemos que
+                <span class="font-bold"
+                    >la educación es el camino hacia un futuro mejor</span
+                >, ofreciendo una propuesta
+                <span class="font-bold"
+                    >concreta, responsable y comprometida</span
+                > con los niños.
+            </p>
+            <p class="text-lg text-black leading-relaxed">
+                Nuestra filosofía se centra en el <span class="font-bold"
+                    >aprendizaje significativo</span
+                >, donde los niños <span class="italic"
+                    >exploran, experimentan e indagan</span
+                > para construir su propio conocimiento. Guiados por nuestro lema,
+                <span class="italic"
+                    >"Me lo contaron y lo olvidé, lo vi y lo entendí, lo hice y
+                    lo aprendí"</span
+                >, buscamos que los estudiantes <span class="font-bold"
+                    >vivan el conocimiento</span
+                > para asimilarlo plenamente.
+            </p>
+        </div>
+    </div>
+    <!-- Animated Cards Section -->
+    <div class="max-w-4xl mx-auto px-4 mt-16">
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Card 1 -->
+            <div
+                class="animate-card opacity-0 translate-y-16 bg-[#B2CA4D] rounded-lg shadow-xl hover:shadow-2xl overflow-hidden transition-all duration-700 ease-out hover:scale-105"
+            >
+                <div class="p-6">
+                    <h3 class="text-2xl font-[600] text-white mb-4">
+                        Nuestra
+                        <span class="font-bold"> Misión</span>
+                    </h3>
+                    <p class="text-gray-700">
+                        Promovemos un
+                        <span class="font-bold"
+                            >aprendizaje activo y experiencial</span
+                        >. Formamos estudiantes
+                        <span class="font-bold">críticos</span>, <span
+                            class="font-bold">reflexivos</span
+                        > y capaces de aplicar sus conocimientos en diversos contextos
+                        para construir un <span class="font-bold"
+                            >futuro consciente y comprometido</span
+                        >.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="animate-card opacity-0 translate-y-16 bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-700 ease-out delay-200"
+            >
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-[#B2CA4D] mb-4">
+                        Nuestra Visión
+                    </h3>
+                    <p class="text-gray-700">
+                        Ser reconocidos como una institución educativa líder en
+                        innovación y excelencia académica, creando un impacto
+                        positivo en la comunidad a través de nuestros egresados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script is:inline>
+    // Intersection Observer setup
+    const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove("opacity-0", "translate-y-16");
+            }
+        });
+    }, observerOptions);
+
+    // Observe all elements with animate-card class
+    document.querySelectorAll(".animate-card").forEach((card) => {
+        observer.observe(card);
+    });
+</script>

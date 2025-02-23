@@ -1,0 +1,125 @@
+---
+const niveles = [
+    {
+        titulo: "INICIAL",
+        imagen: "/fondo_posthero.webp",
+        alt: "Nivel Inicial - Niños usando computadoras",
+    },
+    {
+        titulo: "PRIMARIO",
+        imagen: "/images/nivel-primario.jpg",
+        alt: "Nivel Primario - Alumnos dibujando",
+    },
+    {
+        titulo: "SECUNDARIO",
+        imagen: "/images/nivel-secundario.jpg",
+        alt: "Nivel Secundario - Estudiantes en formación",
+    },
+];
+
+const areasAcademicas = [
+    {
+        titulo: { prefijo: "TECNOLOGÍA", sufijo: "INFORMÁTICA" },
+        color: "bg-[#B2CA4D]",
+        cols: "col-span-12 md:col-span-6 lg:col-span-5",
+    },
+    {
+        titulo: { prefijo: "", sufijo: "INGLÉS" },
+        color: "bg-sky-400",
+        cols: "col-span-6 md:col-span-6 lg:col-span-3",
+    },
+    {
+        titulo: { prefijo: "", sufijo: "MÚSICA" },
+        color: "bg-sky-400",
+        cols: "col-span-6 md:col-span-3 lg:col-span-3",
+    },
+    {
+        titulo: { prefijo: "ESCUELITA", sufijo: "DEPORTIVA" },
+        color: "bg-[#B2CA4D]",
+        cols: "col-span-12 md:col-span-9 lg:col-span-6",
+    },
+    {
+        titulo: { prefijo: "", sufijo: "COCINA" },
+        color: "bg-[#B2CA4D]",
+        cols: "col-span-6 md:col-span-3 lg:col-span-3",
+    },
+    {
+        titulo: { prefijo: "", sufijo: "DANZA" },
+        color: "bg-sky-400",
+        cols: "col-span-6 md:col-span-3 lg:col-span-3",
+    },
+];
+---
+
+<section class="py-16 px-4 max-w-7xl mx-auto mt-16">
+    <div class="text-center mb-16">
+        <h2 class="text-5xl font-light tracking-wide">
+            <span class="text-[#B2CA4D]">PROYECTO</span>
+            <span class="text-[#B2CA4D] font-bold">EDUCATIVO</span>
+        </h2>
+    </div>
+
+    <!-- Niveles Educativos -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        {
+            niveles.map((nivel) => (
+                <div class="relative overflow-hidden rounded-2xl shadow-md group">
+                    <img
+                        src={nivel.imagen}
+                        alt={nivel.alt}
+                        class="w-full h-64 object-cover"
+                    />
+                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        <h3
+                            class="text-white text-4xl font-bold tracking-wider"
+                            style="  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"
+                        >
+                            {nivel.titulo}
+                        </h3>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#B2CA4D]" />
+                </div>
+            ))
+        }
+    </div>
+
+    <!-- Separadores -->
+    <div class="grid grid-cols-2 gap-x-20 gap-y-8 mb-12">
+        <div class="h-1 bg-[#B2CA4D]"></div>
+        <div class="h-1 bg-[#B2CA4D]"></div>
+    </div>
+
+    <!-- Áreas Académicas -->
+    <div class="grid grid-cols-12 gap-4 mb-8">
+        {
+            areasAcademicas.map((area) => (
+                <div
+                    class={`${area.cols} ${area.color} rounded-lg p-6 flex items-center justify-center shadow-md`}
+                >
+                    <h3 class="text-white text-2xl">
+                        {area.titulo.prefijo && (
+                            <span class="font-light">
+                                {area.titulo.prefijo}{" "}
+                            </span>
+                        )}
+                        <span class="font-bold">{area.titulo.sufijo}</span>
+                    </h3>
+                </div>
+            ))
+        }
+    </div>
+
+    <!-- Separador final -->
+    <div class="h-3 bg-[#B2CA4D] rounded-full mt-16"></div>
+</section>
+
+<style>
+    .group:hover img {
+        transform: scale(1.05);
+        transition: transform 0.5s ease;
+    }
+
+    img {
+        transition: transform 0.3s ease;
+    }
+</style>
