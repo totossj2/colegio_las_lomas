@@ -7,27 +7,33 @@ import Logo from "@/assets/logo.astro";
         class="posthero w-[95%] rounded-3xl mx-auto flex flex-row justify-between px-8 items-center gap-4 py-8 shadow-[-4px_4px_8px_rgba(0,0,0,0.25)]"
     >
         <div class="flex flex-row items-center justify-between w-full">
-            <div class="text-center flex justify-center w-[20%]">
+            <div class="text-center hidden md:flex justify-center w-[20%]">
                 <Logo width="110" heigth="110" class="mx-auto" />
             </div>
-            <div class="w-1 rounded-full h-24 bg-[#303030]"></div>
-            <div class="flex-1 text-center">
+            <div class="w-1 hidden md:flex rounded-full h-24 bg-[#303030]">
+            </div>
+            <div class="w-[50%] text-center">
                 <h1
                     style="text-shadow: 0px 2px 5px white;"
-                    class="uppercase text-5xl text-[#1C1C1E] font-bold"
+                    class="uppercase text-xl md:text-5xl text-[#1C1C1E] font-bold"
                 >
-                    Abierta la inscripción <span class="text-8xl block"
+                    Abierta la inscripción <span class="md:text-7xl block"
                         >todo el año</span
                     >
                 </h1>
             </div>
-            <div class="w-1 rounded-full h-24 bg-[#303030]"></div>
+
+            <div class="text-center flex md:hidden justify-center w-[20%]">
+                <Logo width="110" heigth="110" class="mx-auto" />
+            </div>
+            <div class="w-1 hidden md:flex rounded-full h-24 bg-[#303030]">
+            </div>
             <div
-                class="flex justify-center w-[20%] text-center text-white uppercase"
+                class="hidden md:flex justify-center w-[20%] text-center text-white uppercase"
             >
-                <h1 class="text-2xl">
+                <h1 class="md:text-2xl">
                     Colegio <br />
-                    <span class="font-bold text-3xl">Las Lomas</span>
+                    <span class="font-bold md:text-3xl">Las Lomas</span>
                 </h1>
             </div>
         </div>

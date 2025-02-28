@@ -1,0 +1,16 @@
+---
+import slugify from
+
+export async function getStaticPaths() {
+    return [
+        params: { slug: 'articulo-1' }, 
+        props: {  }
+    ]
+}
+---
+
+<Layout>
+  <h1>{articulo.data.title}</h1>
+  <img src={articulo.data.image} alt={articulo.data.title} />
+  <article>{articulo.body}</article>
+</Layout>

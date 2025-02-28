@@ -1,0 +1,85 @@
+---
+import FacebookIcon from "@/assets/icons/facebook.astro";
+import YoutubeIcon from "@/assets/icons/youtube.astro";
+import Logo from "@/assets/logo.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<section
+    id="footer"
+    class="bg-gradient-to-b from-[#86CBEA] to-[#59A8CC] flex flex-col h-fit px-8 md:px-20 py-10 gap-y-8 mt-24"
+>
+    <div
+        class="flex w-full justify-between text-white font-semibold size-4 flex-col md:flex-row h-fit"
+    >
+        <a
+            href="https://maps.app.goo.gl/gQWPWMFnmZfUroyV8"
+            target="_blank"
+            class="md:w-fit md:whitespace-nowrap flex items-center gap-x-2 flex-col md:flex-row text-start"
+        >
+            <span>Colegio Las Lomas</span> - <span
+                >Cañada de Gómez 70, Barrio Las Lomas - Carlos Spegazzini</span
+            >
+        </a>
+        <a
+            href="mailto:secretaria@colegiolaslomas.com"
+            target="_blank"
+            class="mt-10 md:mt-0 w-fit whitespace-nowrap"
+        >
+            secretaria@colegiolaslomas.com
+        </a>
+    </div>
+    <div
+        class="flex w-full flex-col md:flex-row justify-between text-white font-semibold size-4 h-fit"
+    >
+        <a href="#" target="_blank" class="w-fit whitespace-nowrap">
+            Nivel Inicial | 011-5036-8172
+        </a>
+        <a
+            href="mailto:secretaria@colegiolaslomas.com"
+            target="_blank"
+            class="w-fit whitespace-nowrap"
+        >
+            Nivel Primario | 011-5037-4569
+        </a>
+        <a
+            href="mailto:secretaria@colegiolaslomas.com"
+            target="_blank"
+            class="w-fit whitespace-nowrap"
+        >
+            Nivel Secundario | 011-5037-3248
+        </a>
+        <a
+            href="mailto:secretaria@colegiolaslomas.com"
+            target="_blank"
+            class="w-fit whitespace-nowrap"
+        >
+            Administración | 011-5095-8777
+        </a>
+    </div>
+    <div
+        class="flex w-full justify-between text-white font-semibold size-4 flex-row h-fit"
+    >
+        <div class="flex gap-x-4 flex-col md:flex-row">
+            <div class="flex gap-x-4 flex-row">
+                <a
+                    href="https://www.facebook.com/profile.php?id=100063531022668"
+                    target="_blank"
+                >
+                    <FacebookIcon width="24" height="24" color="white" />
+                </a>
+                <a
+                    href="https://www.youtube.com/channel/UCLlDCM7bWN2NktdL1jMFbgA"
+                    target="_blank"
+                >
+                    <YoutubeIcon width="auto" height="24" color="white" />
+                </a>
+                <Logo width="auto" height="24" />
+            </div>
+            <a href="/" class="w-fit md:whitespace-nowrap">
+                Colegio Las Lomas Carlos Spegazzini © {currentYear}
+            </a>
+        </div>
+    </div>
+</section>

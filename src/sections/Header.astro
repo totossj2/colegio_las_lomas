@@ -5,66 +5,115 @@ const menuItems = [
     {
         title: "Institucional",
         submenu: [
-            { label: "Carta de presentación", href: "#" },
-            { label: "Secundaria", href: "#" },
-            { label: "Bachillerato", href: "#" },
+            { label: "Carta de Presentación", href: "#" },
+            { label: "Ideario", href: "#" },
+            { label: "Lema y Misión", href: "#" },
+            { label: "Nombre del colegio", href: "#" },
+            { label: "Escudo", href: "#" },
+            { label: "Galería de Fotos", href: "#" },
         ],
     },
     {
         title: "Proyecto Educativo",
         submenu: [
-            { label: "Primaria", href: "#" },
-            { label: "Secundaria", href: "#" },
-            { label: "Bachillerato", href: "#" },
+            { label: "Educación Inicial", href: "/Institucional/Primaria" },
+            { label: "Educación Primaria", href: "#" },
+            { label: "Educación Secundaria", href: "#" },
+            { label: "Inglés", href: "#" },
+            { label: "Tecnología Informática", href: "#" },
+            { label: "Música", href: "#" },
+            { label: "Escuelita Deportiva", href: "#" },
+            { label: "Medio Ambiente", href: "#" },
+            { label: "Taller de Artes Visuales", href: "#" },
+            { label: "Cocina", href: "#" },
+            { label: "Nutrición", href: "#" },
+            { label: "Clases de Apoyo", href: "#" },
+            { label: "Danza", href: "#" },
+            { label: "Teatro", href: "#" },
+            { label: "Yoga", href: "#" },
+            { label: "Equipo de Orientación Externo", href: "#" },
+        ],
+    },
+    {
+        title: "Información Administrativa",
+        submenu: [
+            { label: "Modalidad y Horarios", href: "#" },
+            { label: "Normativa de Convivencia", href: "#" },
+            { label: "Uniformes Escolares", href: "#" },
+            { label: "Útiles Escolares y Libros", href: "#" },
+            { label: "Servicio de Comedor", href: "#" },
+            { label: "Plan de Evacuación", href: "#" },
         ],
     },
     {
         title: "Admisión",
         submenu: [
-            { label: "Proceso de admisión", href: "#" },
-            { label: "Matrícula", href: "#" },
-            { label: "Becas", href: "#" },
-        ],
-    },
-    {
-        title: "Servicios",
-        submenu: [
-            { label: "Comedor", href: "#" },
-            { label: "Transporte", href: "#" },
-            { label: "Actividades extraescolares", href: "#" },
-            { label: "Comedor", href: "#" },
-            { label: "Transporte", href: "#" },
-            { label: "Actividades extraescolares", href: "#" },
-        ],
-    },
-    {
-        title: "Contacto",
-        submenu: [
-            { label: "Ubicación", href: "#" },
-            { label: "Contacto", href: "#" },
+            { label: "Solicitud de Vacante", href: "#" },
+            { label: "Documentación de Ingreso", href: "#" },
         ],
     },
 ];
 ---
 
+<!-- Modifica el script añadiendo la lógica del scroll -->
+<script>
+    const header = document.getElementById("header");
+    const logo = document.getElementById("logo_header")?.querySelector("svg");
+
+    if (logo) {
+        logo.style.transition = "width 0.3s ease, height 0.3s ease";
+    }
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            header?.classList.add("py-1");
+            if (window.innerWidth >= 768) {
+                header?.classList.remove("p-4");
+            }
+
+            logo?.setAttribute("width", "80");
+            logo?.setAttribute("height", "80");
+        } else {
+            header?.classList.remove("py-1");
+            header?.classList.add("p-4");
+            logo?.setAttribute("width", "100");
+            logo?.setAttribute("height", "100");
+        }
+    });
+</script>
+
+<style>
+    header {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
 <header
-    class="bg-gradient-to-r from-[#86CBEA] to-[#59A8CC] flex justify-between items-center p-4"
+    class="bg-gradient-to-r from-[#86CBEA] to-[#59A8CC] flex justify-between items-center p-4 fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    id="header"
 >
-    <div class="flex w-[25%] gap-1 items-center px-4 justify-around">
-        <Logo width="100" heigth="100" />
-        <h1 class="text-xl text-white font-black">
+    <div
+        id="logo_header"
+        class="flex w-[55%] md:w-[25%] justify-start md:justify-between gap-1 items-center md:px-4"
+    >
+        <Logo width="100" height="100" />
+        <h1 class="text-md md:text-xl text-white font-black">
             Colegio <br /> Las Lomas
         </h1>
-        <div class="w-0.5 h-10 bg-white"></div>
-        <a href="/" class="text-white font-bold">INICIO</a>
+        <div class="hidden md:flex w-0.5 h-10 bg-white"></div>
+        <a href="/" class="text-white font-bold hidden md:block">INICIO</a>
     </div>
-    <div class="flex justify-end items-center px-4 py-2">
+
+    <!-- Menu Desktop -->
+    <div class="hidden md:flex justify-end items-center px-4 py-2">
         <nav class="flex space-x-8">
             {
                 menuItems.map((item) => (
                     <div class="relative group w-fit flex">
                         <button class="text-white font-bold flex items-center space-x-1 uppercase w-full justify-between hover:text-[#DBFA9B] group-hover:text-[#DBFA9B] transition-colors duration-300">
-                            <span>{item.title}</span>
+                            <span class="w-min whitespace-normal">
+                                {item.title}
+                            </span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-200"
@@ -80,7 +129,7 @@ const menuItems = [
                         </button>
 
                         <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible top-full left-0 mt-2 min-w-full w-max bg-white rounded-md shadow-lg z-50 transition-all duration-500 delay-150">
-                            <div class="">
+                            <div>
                                 <a class="flex justify-center mt-0.5 ml-auto mr-auto w-[98%] py-0.5 bg-[#86CBEA] rounded-full" />
                                 {item.submenu.map((subItem) => (
                                     <a
@@ -99,8 +148,114 @@ const menuItems = [
         <a
             href="#"
             class="bg-[#B2CA4D] text-white px-6 py-2 rounded-[4px] ml-5 font-bold"
+            >CONTACTO</a
         >
-            CONTACTO
-        </a>
     </div>
+
+    <!-- Menu Mobile -->
+    <button id="menuToggle" class="md:hidden text-white text-3xl">☰</button>
+
+    <div
+        id="mobileMenu"
+        class="fixed top-0 right-[-100%] h-full bg-[#59A8CC] w-[80%] bg-opacity-90 z-50 flex flex-col items-center justify-center space-y-6 transition-all duration-300 pointer-events-none"
+    >
+        <button
+            id="closeMenu"
+            class="absolute top-6 right-4 text-white text-5xl">&times;</button
+        >
+        <div class="absolute top-0 mt-20">
+            <!-- Enlace de inicio -->
+            <a
+                href="/"
+                class="w-full flex border-b border-white/20 justify-between items-center p-4 text-white font-bold uppercase hover:bg-[#86CBEA] transition-colors"
+            >
+                INICIO
+            </a>
+            <nav class="flex flex-col">
+                {
+                    menuItems.map((item) => (
+                        <div class="border-b border-white/20">
+                            <button class="accordion-button w-full flex justify-between items-center p-4 text-white font-bold uppercase hover:bg-[#86CBEA] transition-colors">
+                                <span>{item.title}</span>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="w-4 h-4 transition-transform duration-200"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <polyline points="6 9 12 15 18 9" />
+                                </svg>
+                            </button>
+
+                            <div class="hidden bg-white/10">
+                                {item.submenu.map((subItem) => (
+                                    <a
+                                        href={subItem.href}
+                                        class="block px-6 py-3 text-white hover:bg-white/20 transition-colors border-t border-white/10"
+                                    >
+                                        {subItem.label}
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    ))
+                }
+            </nav>
+            <a
+                href="#"
+                class="w-full border-b border-white/20 flex justify-between items-center p-4 text-white font-bold uppercase hover:bg-[#86CBEA] transition-colors"
+                >CONTACTO</a
+            >
+        </div>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const closeMenu = document.getElementById("closeMenu");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const accordionButtons = document.querySelectorAll(".accordion-button");
+
+        if (menuToggle && closeMenu && mobileMenu) {
+            menuToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                mobileMenu.style.pointerEvents = "auto";
+                requestAnimationFrame(() => {
+                    mobileMenu.style.right = "0";
+                });
+            });
+
+            closeMenu.addEventListener("click", () => {
+                mobileMenu.style.right = "-100%";
+                mobileMenu.style.pointerEvents = "none";
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener("click", (e) => {
+                if (
+                    mobileMenu.style.right === "0px" &&
+                    !mobileMenu.contains(e.target as HTMLElement) &&
+                    e.target !== menuToggle
+                ) {
+                    mobileMenu.style.right = "-100%";
+                    mobileMenu.style.pointerEvents = "none";
+                }
+            });
+        }
+
+        accordionButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const content = button.nextElementSibling;
+                if (content) {
+                    content.classList.toggle("hidden");
+                    button.querySelector("svg")?.classList.toggle("rotate-180");
+                }
+            });
+        });
+    </script>
 </header>
+
+<div class="h-[88px]"></div>
