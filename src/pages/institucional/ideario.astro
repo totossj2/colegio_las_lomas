@@ -1,0 +1,126 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h1 class="text-4xl font-bold mb-6 text-center">Ideario</h1>
+
+        <p class="mb-6 leading-relaxed">
+            Para la creación de nuestra Institución, proyectamos a partir de la
+            necesidad de crear un espacio propicio para la asimilación de nuevos
+            conocimientos más confortable y dinámico. Con una visión académica
+            de la correcta utilización de la tecnología como herramienta
+            indispensable para su futuro inmediato.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            La misión será crear seres más comprometidos con el bien común, el
+            respeto por la vida y la responsabilidad con el Medio Ambiente.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Estamos convencidos de que para mejorar nuestra calidad de vida
+            necesitamos mostrar el camino del conocimiento que llevará a las
+            buenas acciones, al compromiso con el planeta y con las generaciones
+            futuras.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            El ideario se basa y se fundamenta en la idea de formar a los
+            educandos desde muy temprana edad con un contacto activo con la
+            naturaleza y apropiándose del conocimiento de la misma. El cuidado
+            del medio ambiente es un proceso de aprendizaje permanente.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Hemos gestado un proyecto institucional del cuidado de nuestro medio
+            ambiente. Uno de los propósitos es crear conciencia sobre el impacto
+            ambiental. Es muy importante para nosotros formar ciudadanos
+            ambientales responsables de lo que sucede en el medio en el cual
+            están insertos.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            La propuesta curricular propone una enseñanza basada en la
+            indagación del ambiente que aporta a la formación ciudadana de los
+            niños, integrando conocimientos, hábitos, habilidades y valores de
+            compromiso individual y colectivo hacia el medio y su entorno.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Es necesario desarrollar estrategias que permitan a los docentes
+            generar un cambio de actitud a través del conocimiento de temas
+            ambientales para formar personas que sean agentes de cambio para su
+            entorno inmediato, tanto familiar como comunidad educativa en
+            general.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Otro de los propósitos como institución es educar para los valores.
+            Los valores se viven, se experimentan y se practican día a día. Son
+            ideas que guían nuestro accionar, creencias que se integran en la
+            estructura del conocimiento y características de la acción humana
+            que mueven la conducta, orientan la vida y marcan la personalidad.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Nos proponemos formar gestores de una cultura de Paz, Justicia,
+            Honestidad, solidaridad y ávidos de conocimiento, capaces de
+            contribuir a crear un mundo mejor y más pacífico en el marco del
+            entendimiento mutuo y el respeto intercultural.
+        </p>
+
+        <blockquote class="mb-8 italic border-l-4 border-blue-500 pl-4">
+            "Me lo contaron y lo olvidé, lo vi y lo entendí, lo hice y lo
+            aprendí."
+        </blockquote>
+
+        <p class="mb-6 leading-relaxed">
+            Adoptar una actitud activa de aprendizaje durante toda su vida, a
+            ser compasivos y a entender que otras personas, con sus diferencias,
+            también pueden estar en lo cierto.
+        </p>
+
+        <p class="mb-8 leading-relaxed">
+            Las políticas educativas procuran la construcción de una realidad
+            deseada. Para ello, los procesos de producción de ese horizonte
+            deben ser verdaderamente participativos para profundizar la
+            democracia y aportar a la consolidación de lo común y lo colectivo.
+            Esto significa posibilitar a todos los sujetos el ingreso al
+            entramado de oportunidades y el ejercicio pleno de sus derechos.
+        </p>
+
+        <p class="text-center text-blue-600 font-semibold text-xl">
+            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+        </p>
+    </section>
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

@@ -1,0 +1,164 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h1 class="text-4xl font-bold mb-6 text-center">
+            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+        </h1>
+
+        <h2 class="text-3xl font-semibold mb-6 text-center">SU NOMBRE…</h2>
+
+        <p class="mb-6 leading-relaxed">
+            El nombre de nuestra Institución Educativa LAS LOMAS DE CARLOS
+            SPEGAZZINI nos identifica como ciudadanos de una localidad en
+            progreso y crecimiento constante.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            El barrio Parque Las Lomas se caracteriza por su robusta y expansiva
+            vegetación a lo largo de sus calles, lo que da más significado a
+            nuestro ideal como Institución Educativa.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            El lugar donde se construye nuestro colegio cumple con todo lo
+            anhelado para lograr una educación experimental y en contacto con la
+            naturaleza, lo que da un sentido verdadero a nuestro Lema
+            Institucional:
+            <strong
+                >"ME LO CONTARON Y LO OLVIDÉ, LO VI Y LO ENTENDÍ, LO HICE Y LO
+                APRENDÍ"</strong
+            >.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Unificamos nuestro nombre con la localidad en la que se sitúa el
+            barrio, haciendo honor al científico e investigador Carlos
+            Spegazzini. Sus exploraciones en la naturaleza dieron más fundamento
+            a nuestro Ideario y Proyecto Institucional.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Estamos convencidos de que nuestra localidad necesita una
+            Institución con formación ambiental, con una mirada hacia el futuro,
+            donde los ciudadanos sean responsables y conscientes de sus
+            acciones. El conocimiento es el primer paso para el cuidado y
+            conservación del medio ambiente y sus recursos naturales.
+        </p>
+
+        <h2 class="text-3xl font-semibold mb-6 text-center">
+            BREVE RESEÑA HISTÓRICA
+        </h2>
+
+        <h3 class="text-2xl font-semibold mb-4">BARRIO PARQUE LAS LOMAS</h3>
+
+        <p class="mb-6 leading-relaxed">
+            LAS LOMAS es un barrio-parque ubicado en Carlos Spegazzini, partido
+            de José María Ezeiza, en la provincia de Buenos Aires. El barrio
+            posee una extensa vegetación donde predominan las plantaciones de
+            Eucaliptos y Cortaderas (Cola de Zorro), características principales
+            de la zona, distribuidas en 150 ha 63 a 45 c 74 dm².
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Sus propietarios, Juan Ramón y Nelly Elena Etchevers, decidieron
+            dividir la propiedad en parcelas y distribuirla en quintas de
+            amplias dimensiones. En diciembre de 1974, solicitaron al agrimensor
+            Jorge Hofer la subdivisión de la propiedad, concretándose en 477
+            parcelas para ser habitadas como fincas o quintas, además de una
+            reserva fiscal para uso público. La nomenclatura catastral fue
+            realizada en la Ciudad de la Plata, en el partido de Esteban
+            Echeverría, el 18 de marzo de 1975.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            El Barrio Parque Las Lomas limita al este con la calle Falucho, al
+            sur con la calle 25 de Mayo, al oeste con la calle Arroyo y al norte
+            con la calle Groenlandia. Actualmente, el barrio está habitado en un
+            60%, con familias jóvenes que buscan espacios grandes y en contacto
+            con la naturaleza. Las construcciones son modestas casas modernas de
+            baja altura, y el barrio se encuentra en constante crecimiento.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-4">
+            RESEÑA HISTÓRICA DE LA LOCALIDAD DE CARLOS SPEGAZZINI
+        </h3>
+
+        <p class="mb-6 leading-relaxed">
+            <strong>Historia</strong>
+        </p>
+
+        <ul class="list-disc pl-8 mb-6">
+            <li>
+                <strong>1500:</strong> El territorio del Partido de Ezeiza estaba
+                habitado por la nación querandí, dedicada a la caza y a la pesca.
+            </li>
+            <li>
+                <strong>1536:</strong> Llega Pedro de Mendoza, comenzando la lucha
+                contra los pueblos originarios en todo el territorio bonaerense.
+            </li>
+            <li><strong>1580:</strong> Se desaloja el territorio.</li>
+            <li><strong>1588:</strong> Comienza el reparto de las tierras.</li>
+            <li>
+                <strong>1758:</strong> Juan Guillermo González y Aragón funda la
+                "Estancia Los Remedios".
+            </li>
+            <li>
+                <strong>1767:</strong> Llega Gerónimo Ezeiza y se casa con la nieta
+                del célebre alcalde de Buenos Aires, Pedro de Barragán.
+            </li>
+            <li>
+                <strong>1885:</strong> Después de la muerte de José María Ezeiza,
+                el yerno dona al Ferrocarril Oeste el predio donde se levantará una
+                estación.
+            </li>
+            <li>
+                <strong>1945:</strong> La "Estancia Los Remedios" es expropiada para
+                la construcción del Aeropuerto Internacional de Ezeiza.
+            </li>
+            <li>
+                <strong>1949:</strong> Comienzan los loteos de los campos y se constituye
+                el primer barrio "Barrio General Güemes".
+            </li>
+            <li>
+                <strong>1995:</strong> "Spegazzini" pasa a formar parte del Partido
+                de Ezeiza.
+            </li>
+        </ul>
+
+        <p class="text-center text-blue-600 font-semibold text-xl">
+            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+        </p>
+    </section>
+
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

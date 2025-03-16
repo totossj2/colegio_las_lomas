@@ -1,0 +1,155 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+import Logo from "@/assets/logo.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h2 class="text-3xl font-semibold mb-6 text-center">
+            PROYECTO INSTITUCIONAL
+        </h2>
+        <h3 class="text-2xl font-semibold mb-4 text-center">
+            DEPORTE Y RECREACIÓN
+        </h3>
+
+        <p class="mb-6 leading-relaxed">
+            Desde nuestra institución concebimos al deporte como fundamental
+            para el desarrollo integral de los niños, pues es un gran método de
+            adaptación social y una gran fuente de valores. La integridad
+            consiste en formar buenas personas, sanas y alejadas de las malas
+            costumbres y hábitos.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            El deporte es para nosotros, ante todo, un medio para la formación
+            de la persona total: espíritu, mente y cuerpo.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            En el jardín se pone énfasis en la formación de destrezas y en el
+            trabajo sobre la motricidad gruesa, sin iniciar todavía la formación
+            deportivo-grupal. El eje central en esta etapa es el "JUEGO".
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            A partir de la educación primaria comenzarán a desarrollarse en
+            forma sistemática las actividades predeportivas y deportivas tanto a
+            nivel interno, como encuentros intercolegiales. Los deportes
+            practicados serán: Hockey, Rugby, Gimnasia deportiva, Fútbol, etc.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            El principal objetivo es fomentar el trabajo en equipo, la formación
+            de identidad y la ocupación del tiempo libre.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Desde la educación deportiva fomentamos la práctica de valores para
+            una buena convivencia: Respeto, Responsabilidad, Compromiso y
+            Convivencia serán los pilares afectivos fundamentales sobre los que
+            se construirán los diversos saberes.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Además de trabajar las habilidades motrices, la práctica deberá
+            tener otras intenciones: socialización, salud, ocupación
+            constructiva del tiempo de ocio, calidad de vida y recreación.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Los campamentos y las actividades al aire libre nos permiten
+            aprender jugando, descubrir las características particulares del
+            entorno en el cuál estamos insertos, disfrutar tiempo con los
+            diferentes miembros de nuestra comunidad educativa, aplicando en
+            juegos y actividades compartidas, descubriendo así límites,
+            posibilidades y responsabilidades en un entorno que se enmarca en
+            valores como el compañerismo, la solidaridad y laboriosidad, dando
+            sentido al trabajo comunitario, incorporando destrezas necesarias y
+            promoviendo dichos valores.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Buscamos prolongar la trayectoria deportiva ofreciendo actividades
+            de iniciación, recreación y competición para poder llegar a todos
+            los miembros de la comunidad educativa, combatiendo el abandono y el
+            sedentarismo, estableciendo un itinerario que garantice la
+            continuidad de la práctica deportiva.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            El verdadero valor que se debe buscar en el deporte es aprender a
+            medirse con respecto a uno mismo y no en franca competencia con los
+            demás; cómo se puede ser mejor que ayer, cuáles son los propios
+            logros, metas y objetivos, y lo más importante, disfrutar del enorme
+            bienestar que aporta el ejercicio físico y la interacción con los
+            demás, aspectos que en realidad son imposibles de cuantificar en los
+            resultados de lo que puede ser un excelente partido, aunque se haya
+            perdido.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Las jornadas deportivas extracurriculares del Nivel Inicial se
+            realizan durante toda una tarde, una vez por semana en las
+            instalaciones del colegio. En el Nivel Primario, las jornadas
+            deportivas extracurriculares se realizan durante toda una tarde. El
+            Ciclo Lectivo está dividido en tres temporadas a lo largo del año:
+        </p>
+
+        <ul class="list-inside list-disc mb-6">
+            <li>
+                <strong>Marzo, Abril y Mayo:</strong> Viaje al campo de deporte
+            </li>
+            <li>
+                <strong>Junio, Julio y Agosto:</strong> Jornada deportiva en las
+                instalaciones del colegio
+            </li>
+            <li>
+                <strong>Septiembre, Octubre y Noviembre:</strong> Retorno de la actividad
+                en el campo de deporte
+            </li>
+        </ul>
+
+        <p class="mb-6 leading-relaxed">
+            Los alumnos viajan al campo de deporte en micros, con las
+            habilitaciones correspondientes y medidas de seguridad. Los micros
+            cuentan con calefacción y aire acondicionado. Los días de lluvia,
+            los alumnos no viajan al campo de deporte. Los alumnos deben traer
+            una merienda saludable para los días de jornada deportiva, su bolsa
+            de higiene y los elementos de protección para realizar los
+            diferentes deportes.
+        </p>
+
+        <p class="text-center text-blue-600 font-semibold text-xl">
+            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+        </p>
+    </section>
+
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

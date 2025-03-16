@@ -1,0 +1,143 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+import Logo from "@/assets/logo.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h2 class="text-3xl font-semibold mb-6 text-center">
+            PROYECTO INSTITUCIONAL
+        </h2>
+        <h3 class="text-2xl font-semibold mb-4 text-center">YOGA</h3>
+
+        <p class="mb-6 leading-relaxed">
+            Estamos orgullosos de ser el primer colegio de la zona sur que tiene
+            como materia el espacio de Yoga, una disciplina extraordinaria para
+            trabajar múltiples mecanismos de enseñanza, encausando nuestras
+            emociones y utilizando los valores que enriquecen al niño como ser
+            humano, preparándolos para ser hombres y mujeres en un futuro
+            próximo.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            En la Institución fomentamos en los niños el desarrollo de la
+            inteligencia emocional como una habilidad para percibir, asimilar,
+            comprender y regular las propias emociones y las de los demás,
+            promoviendo un crecimiento emocional e intelectual.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            El principal objetivo del Yoga en el aula es utilizar sus beneficios
+            para el desarrollo de competencias básicas, como el conocimiento e
+            interacción con el mundo físico que rodea al niño, y brindarles
+            recursos personales tales como la atención y la relajación de manera
+            natural para resolver problemas y superar dificultades que puedan
+            presentarse en la vida.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Algunos de los beneficios que aporta el Yoga en los niños en general
+            son:
+        </p>
+
+        <ul class="list-inside list-disc mb-6">
+            <li>Mejora la autoestima</li>
+            <li>Rebaja el nivel de estrés infantil</li>
+            <li>Estimula y potencia los órganos de los sentidos</li>
+            <li>
+                Aumenta la atención, la concentración, la memoria e imaginación
+            </li>
+            <li>Brinda canales para canalizar la energía física</li>
+            <li>Genera buenos hábitos posturales en la columna vertebral</li>
+            <li>Desarrolla la fuerza y destreza en los músculos motores</li>
+            <li>Mejora y mantiene la flexibilidad de las articulaciones</li>
+        </ul>
+
+        <p class="mb-6 leading-relaxed">
+            En el ámbito de la mente, los beneficios son la concentración, la
+            responsabilidad (consigo mismo y con los demás), la voluntad, el
+            descubrimiento de las propias capacidades, los mecanismos básicos de
+            percepción y la valorización del proceso de aprendizaje.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            En el ámbito del cuerpo, los beneficios incluyen la conciencia del
+            propio cuerpo, del cuerpo de los demás y del espacio, la disminución
+            del cansancio, la flexibilidad, la fuerza, el equilibrio, la
+            reeducación de la postura y la relajación.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            En el ámbito de las emociones, se trabajan la alegría, el buen
+            humor, la diversión, la confianza y el aumento de la autoestima, sin
+            necesidad de competir con los compañeros. También se promueve la
+            integración con el entorno, logrando un trabajo de equipo, la
+            prevención de la desmotivación y la apatía. La canalización de
+            emociones se realiza de manera creativa, productiva y evolutiva,
+            ayudando en la regulación del estrés, los miedos y los enojos, y
+            fomentando una actitud positiva.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Los niños hoy en día realizan muchas actividades diarias, como
+            colegio, deportes, idiomas, arte, danza, etcétera. En muchos casos,
+            están sobre-estimulados y sobre-adaptados, no solo por estas
+            actividades, sino también por la tecnología y la vida cotidiana. Es
+            importante entender que los niños tienen otras maneras de comunicar
+            lo que les pasa, y el Yoga les ayuda a canalizar esas emociones de
+            una forma sana.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            La mejor edad para que un niño comience con el Yoga es a partir de
+            los 3 o 4 años, cuando ya tienen la capacidad de realizar y
+            controlar ciertos movimientos del cuerpo. A esa edad, la práctica
+            del Yoga se convierte en una actividad lúdica, que les ayuda a
+            relajarse, reducir tensiones y facilitar su concentración y
+            autocontrol, favoreciendo su potencial creativo.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            El Yoga para niños no es igual que para adultos, ya que los niños
+            están en constante movimiento y tienen gran curiosidad. Los niños
+            tienden a tener articulaciones más flexibles y mucho entusiasmo, lo
+            que hace necesario un seguimiento constante durante las prácticas.
+            Además de posturas, el Yoga incluye ejercicios respiratorios,
+            relajaciones y visualizaciones o meditación.
+        </p>
+
+        <p class="text-center text-blue-600 font-semibold text-xl">
+            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+        </p>
+    </section>
+
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

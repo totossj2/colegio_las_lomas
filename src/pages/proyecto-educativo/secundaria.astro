@@ -1,0 +1,94 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+import Logo from "@/assets/logo.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h2 class="text-3xl font-semibold mb-6 text-center">
+            PROYECTO INSTITUCIONAL
+        </h2>
+        <h3 class="text-2xl font-semibold mb-4 text-center">
+            EDUCACIÓN SECUNDARIA
+        </h3>
+
+        <p class="mb-6 leading-relaxed">
+            Nuestro Colegio proyecta su Educación Secundaria teniendo en cuenta
+            las nuevas tendencias educativas. El ser humano tiene la disposición
+            de aprender, pero solo aquello a lo que le encuentra sentido o
+            lógica. Aquello que no tiene relación con sus conocimientos previos
+            tiende a ser rechazado.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            En nuestra institución, buscamos potenciar que el alumno construya
+            su propio aprendizaje, desarrollando la competencia de aprender a
+            aprender. Formamos a nuestros jóvenes con pilares que guiarán
+            nuestra labor educativa.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            El aprendizaje significativo, al incorporar los conocimientos
+            previos y sumar nuevos aprendizajes a partir del descubrimiento, da
+            como resultado un aprendizaje permanente, duradero y beneficioso
+            para nuestros estudiantes.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Activamos metodologías y estrategias necesarias, con personal
+            proactivo y preparado, para acompañar a los estudiantes en la
+            apropiación de estos conocimientos.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Unificamos nuestra propuesta curricular y extracurricular, dando
+            como resultado una educación significativa y constructiva, siempre
+            acompañada de valores y principios sólidos.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Es nuestra prioridad que cada estudiante se sienta querido,
+            contenido y cuidado por su Colegio. De esta forma, podrá crecer
+            libre, desplegar su creatividad e iniciativa, incorporar el
+            conocimiento y superarse cada día.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Un niño seguro de sí mismo se valoriza y, a su vez, podrá hacer lo
+            mismo con los demás, desde una perspectiva solidaria y humanista.
+        </p>
+
+        <p class="text-center text-blue-600 font-semibold text-xl">
+            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+        </p>
+    </section>
+
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

@@ -1,0 +1,92 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+import Logo from "@/assets/logo.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+
+    <section
+        class="bg-gray-100 text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h2 class="text-3xl font-semibold mb-6 text-center">
+            PROYECTO INSTITUCIONAL
+        </h2>
+        <h3 class="text-2xl font-semibold mb-4 text-center">
+            EDUCACIÓN PRIMARIA
+        </h3>
+
+        <p class="mb-6 leading-relaxed">
+            El Colegio Las Lomas de Carlos Spegazzini proyecta su Educación
+            Primaria teniendo en cuenta las nuevas tendencias educativas.
+            Creemos que el ser humano tiene la disposición natural para
+            aprender, pero solo aquello a lo que le encuentra sentido o lógica,
+            tendiendo a rechazar lo que no se relaciona con sus conocimientos
+            previos.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            En nuestra institución, trabajamos para potenciar que el alumno
+            construya su propio aprendizaje, desarrollando la competencia de
+            aprender a aprender. Como institución educativa, formamos a nuestros
+            niños con pilares sólidos que sustentan nuestra labor educativa.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            El aprendizaje significativo, basado en los conocimientos previos y
+            sumando los nuevos a través del descubrimiento, será la clave para
+            obtener un aprendizaje permanente, a largo plazo y beneficioso para
+            los niños.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Activando las metodologías y estrategias adecuadas, y con un
+            personal proactivo y preparado, acompañamos a los niños en la
+            apropiación de dichos conocimientos.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Unificamos nuestra propuesta curricular y extracurricular, lo que
+            resulta en una educación significativa y constructiva, acompañada de
+            valores y principios. Es nuestra prioridad que cada niño se sienta
+            querido, contenido y cuidado por su Colegio, ya que solo así crecerá
+            libre, desplegará su creatividad e iniciativa, e incorporará el
+            conocimiento de manera efectiva.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Un niño seguro de sí mismo se valoriza y, a su vez, podrá valorar a
+            los demás con un sentido solidario y humanista.
+        </p>
+
+        <p class="text-center text-blue-600 font-semibold text-xl">
+            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+        </p>
+    </section>
+
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

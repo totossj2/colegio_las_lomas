@@ -1,0 +1,137 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+import Logo from "@/assets/logo.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h2 class="text-3xl font-semibold mb-6 text-center">
+            PROYECTO INSTITUCIONAL
+        </h2>
+        <h3 class="text-2xl font-semibold mb-4 text-center">
+            TECNOLOGÍA INFORMÁTICA Y ROBÓTICA
+        </h3>
+
+        <p class="mb-6 leading-relaxed">
+            La enseñanza de la tecnología es una base fundamental para el
+            desarrollo integral del hombre moderno. Hoy, la tecnología forma
+            parte inherente de nuestro entorno y vida cotidiana, por lo que es
+            esencial que los estudiantes comprendan su impacto positivo y
+            negativo en la sociedad, además de cómo utilizarla adecuadamente
+            para el bien común.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            En el Colegio Las Lomas, creemos que la escuela debe estar a la
+            vanguardia del mundo moderno para ofrecer a nuestros estudiantes
+            herramientas que les permitan encontrar soluciones a sus necesidades
+            y aportar positivamente a la sociedad. La tecnología no es solo el
+            uso de artefactos, sino también una herramienta para formar personas
+            éticas y responsables.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Nuestro enfoque educativo integra la tecnología como un área
+            transversal, enseñando a los niños a comprender cómo funciona el
+            mundo tecnológico que los rodea y cómo este puede ser utilizado para
+            resolver problemas. Nos centramos en el uso ético de la tecnología,
+            asegurando que los estudiantes no solo aprendan a usarla, sino a
+            aplicarla para su bien y el de los demás.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            En relación a la robótica, nuestro objetivo es que los alumnos se
+            introduzcan de manera lúdica en el mundo de la programación a través
+            del armado de robots. Esta experiencia fomenta la creatividad, la
+            imaginación y el aprendizaje aplicado a problemas reales mediante
+            modelos pedagógicos innovadores.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            El propósito de la robótica educativa no es formar expertos en
+            robótica, sino más bien desarrollar competencias esenciales para el
+            siglo XXI, como la autonomía, la iniciativa, la responsabilidad, la
+            creatividad, el trabajo en equipo, la autoestima y el interés por la
+            investigación.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Nuestro compromiso educativo es aplicar estrategias pedagógicas
+            significativas, basadas en la práctica y en los conocimientos
+            previos de los estudiantes. Evaluamos integralmente a cada alumno,
+            considerando su desarrollo ético, moral y académico, para garantizar
+            que logren resolver problemas reales con el uso de la tecnología.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Nuestros estudiantes adquirirán las capacidades necesarias para
+            convertirse en:
+        </p>
+
+        <ul class="list-inside list-disc mb-6">
+            <li>Competentes en el uso de tecnologías de la información.</li>
+            <li>Buscadores, analizadores y evaluadores de información.</li>
+            <li>Solucionadores de problemas y tomadores de decisiones.</li>
+            <li>
+                Usuarios creativos y eficaces de herramientas de productividad.
+            </li>
+            <li>Comunicadores, colaboradores, publicadores y productores.</li>
+            <li>
+                Ciudadanos informados, responsables y capaces de contribuir a la
+                sociedad.
+            </li>
+        </ul>
+
+        <p class="mb-6 leading-relaxed">
+            Para alcanzar estos objetivos, nuestro currículo está basado en 10
+            organizadores básicos:
+        </p>
+
+        <ul class="list-inside list-disc mb-6">
+            <li>Tecnología aplicada</li>
+            <li>Bases de datos</li>
+            <li>Desktop publishing</li>
+            <li>Gráficos y presentaciones</li>
+            <li>Multimedia</li>
+            <li>Entornos de operación</li>
+            <li>Programación y Robótica</li>
+            <li>Hojas de cálculo</li>
+            <li>Procesadores de texto</li>
+            <li>Conectividad y Redes</li>
+        </ul>
+
+        <p class="text-center text-blue-600 font-semibold text-xl">
+            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+        </p>
+    </section>
+
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

@@ -1,0 +1,120 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+import Logo from "@/assets/logo.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h2 class="text-3xl font-semibold mb-6 text-center">
+            PROYECTO INSTITUCIONAL
+        </h2>
+        <h3 class="text-2xl font-semibold mb-4 text-center">
+            EQUIPO DE ORIENTACIÓN EXTERNO
+        </h3>
+
+        <p class="mb-6 leading-relaxed">
+            Nuestro Equipo está conformado por una Nutricionista, una Psicóloga,
+            una Fonoaudióloga y una Psicopedagoga. Estas profesionales trabajan
+            de manera conjunta y articulada, aportando los saberes propios de
+            sus disciplinas. El objetivo principal es la detección y prevención
+            de factores que puedan perturbar los procesos de enseñanza y
+            aprendizaje de nuestros niños, con el fin de poner a disposición
+            recursos y herramientas para mejorar la situación.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            El equipo realiza una importante labor con las siguientes funciones:
+        </p>
+
+        <ul class="list-inside list-disc mb-6">
+            <li>
+                Orientar a las familias en relación al desarrollo de los niños,
+                realizando diferentes entrevistas, previa organización con los
+                miembros del equipo.
+            </li>
+            <li>
+                Asesorar a los docentes y profesores sobre la dinámica del grupo
+                y el alumno en particular, mediante reuniones, capacitaciones y
+                observaciones.
+            </li>
+            <li>
+                El equipo no realiza tratamientos ni clínica en la Institución.
+                Si el niño requiere una intervención terapéutica, se conversará
+                con la familia y se coordinará con pediatras y especialistas
+                para tomar la decisión adecuada.
+            </li>
+            <li>
+                Comunicación directa y trabajo complementario con los
+                profesionales que atienden a los niños. Estos profesionales
+                envían sugerencias y orientaciones puntuales, las cuales son
+                comunicadas a los docentes para asegurar que se lleven a cabo
+                las acciones necesarias que favorezcan la trayectoria escolar
+                del alumno.
+            </li>
+            <li>
+                Observación de los niños en los distintos espacios (recreos,
+                juegos, aula, talleres) para guiar tanto a los niños como a sus
+                docentes en las situaciones que atraviesan dentro del ámbito
+                escolar.
+            </li>
+            <li>
+                Intervenciones puntuales con los grupos y alumnos, llevando a
+                cabo los distintos Proyectos Institucionales: Convivencia,
+                Valores, No Bullying, No Violencia, Medio Ambiente, Salud,
+                Acciones Reparadoras. Fomentando el diálogo y haciendo que los
+                niños se sientan escuchados y contenidos.
+            </li>
+            <li>
+                Realización de entrevistas con las familias y alumnos para el
+                ingreso de los mismos a nuestra Comunidad Educativa, con el
+                objetivo de dar a conocer la forma de trabajo del Colegio y
+                conocer la dinámica familiar del niño aspirante, su trayectoria
+                escolar, rutinas, tratamientos y todo aquello que permita
+                abordarlo de manera individual y facilitando la enseñanza
+                personalizada que nuestra Institución propone.
+            </li>
+            <li>
+                Entrevistas con los docentes y profesionales que desean
+                incorporarse al staff de Las Lomas, realizando un recorrido por
+                su experiencia y trayectoria, con el fin de conocer sus
+                aptitudes, habilidades y objetivos profesionales, informándolos
+                sobre la forma de trabajo y el compromiso que conlleva la
+                educación en nuestra Institución.
+            </li>
+        </ul>
+
+        <p class="text-center text-blue-600 font-semibold text-xl">
+            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+        </p>
+    </section>
+
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

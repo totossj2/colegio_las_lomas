@@ -1,37 +1,78 @@
 ---
 import Logo from "@/assets/logo.astro";
 
+import { getCollection } from "astro:content";
+const posts = await getCollection("posts");
+
 const menuItems = [
     {
         title: "Institucional",
         submenu: [
-            { label: "Carta de Presentación", href: "#" },
-            { label: "Ideario", href: "#" },
-            { label: "Lema y Misión", href: "#" },
-            { label: "Nombre del colegio", href: "#" },
-            { label: "Escudo", href: "#" },
-            { label: "Galería de Fotos", href: "#" },
+            {
+                label: "Carta de Presentación",
+                href: "../institucional/carta-presentacion",
+            },
+            { label: "Ideario", href: "../institucional/ideario" },
+            { label: "Lema y Misión", href: "../institucional/lema-mision" },
+            {
+                label: "Nombre del colegio",
+                href: "../institucional/nombre-colegio",
+            },
+            { label: "Escudo", href: "../institucional/escudo" },
+            {
+                label: "Galería de Fotos",
+                href: "../institucional/galeria-fotos",
+            },
+        ],
+    },
+    {
+        title: "Niveles Educativos",
+        submenu: [
+            { label: "Educación Inicial", href: "/proyecto-educativo/inicial" },
+            {
+                label: "Educación Primaria",
+                href: "/proyecto-educativo/primaria",
+            },
+            {
+                label: "Educación Secundaria",
+                href: "/proyecto-educativo/secundaria",
+            },
         ],
     },
     {
         title: "Proyecto Educativo",
         submenu: [
-            { label: "Educación Inicial", href: "/Institucional/Primaria" },
-            { label: "Educación Primaria", href: "#" },
-            { label: "Educación Secundaria", href: "#" },
-            { label: "Inglés", href: "#" },
-            { label: "Tecnología Informática", href: "#" },
-            { label: "Música", href: "#" },
-            { label: "Escuelita Deportiva", href: "#" },
-            { label: "Medio Ambiente", href: "#" },
-            { label: "Taller de Artes Visuales", href: "#" },
-            { label: "Cocina", href: "#" },
-            { label: "Nutrición", href: "#" },
-            { label: "Clases de Apoyo", href: "#" },
-            { label: "Danza", href: "#" },
-            { label: "Teatro", href: "#" },
-            { label: "Yoga", href: "#" },
-            { label: "Equipo de Orientación Externo", href: "#" },
+            { label: "Inglés", href: "/proyecto-educativo/ingles" },
+            {
+                label: "Tecnología Informática",
+                href: "/proyecto-educativo/tecnologia-informatica",
+            },
+            { label: "Música", href: "/proyecto-educativo/musica" },
+            {
+                label: "Escuelita Deportiva",
+                href: "/proyecto-educativo/escuelita-deportiva",
+            },
+            {
+                label: "Medio Ambiente",
+                href: "/proyecto-educativo/medio-ambiente",
+            },
+            {
+                label: "Taller de Artes Visuales",
+                href: "/proyecto-educativo/taller-artes-visuales",
+            },
+            { label: "Cocina", href: "/proyecto-educativo/cocina" },
+            { label: "Nutrición", href: "/proyecto-educativo/nutricion" },
+            {
+                label: "Clases de Apoyo",
+                href: "/proyecto-educativo/clases-apoyo",
+            },
+            { label: "Danza", href: "/proyecto-educativo/danza" },
+            { label: "Teatro", href: "/proyecto-educativo/teatro" },
+            { label: "Yoga", href: "/proyecto-educativo/yoga" },
+            {
+                label: "Equipo de Orientación Externo",
+                href: "/proyecto-educativo/equipo-orientacion-externo",
+            },
         ],
     },
     {
@@ -258,4 +299,4 @@ const menuItems = [
     </script>
 </header>
 
-<div class="h-[88px]"></div>
+<div class="h-[130px]"></div>

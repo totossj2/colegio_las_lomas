@@ -1,0 +1,167 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+import Logo from "@/assets/logo.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h2 class="text-3xl font-semibold mb-6 text-center">
+            PROYECTO INSTITUCIONAL
+        </h2>
+        <h3 class="text-2xl font-semibold mb-4 text-center">IDIOMA INGLÉS</h3>
+
+        <p class="mb-6 leading-relaxed">
+            En el Colegio Las Lomas de Carlos Spegazzini concebimos el
+            aprendizaje del idioma inglés como un puente para la comprensión y
+            el respeto hacia otras culturas, otras maneras de pensar y de
+            actuar. Esto posibilita la formación de personas preparadas,
+            flexibles y creativas para el futuro.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Como institución, propiciamos que nuestros niños accedan a la lengua
+            inglesa como elemento de comunicación efectiva, en un ambiente
+            motivador con prácticas innovadoras, significativas y objetivos
+            realistas. Adoptamos diversas metodologías y prácticas pedagógicas.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Articulando la carga horaria oficial con la jornada extendida,
+            proyectamos la enseñanza del idioma desde la sala de tres años,
+            comenzando por una etapa de sensibilización lingüística que
+            permitirá a los educandos descubrir y explorar los sonidos y usos de
+            la lengua extranjera a través de juegos, cuentos, narraciones,
+            dramatizaciones, rimas y canciones. La literatura infantil tiene un
+            rol fundamental, siendo utilizada como disparador de distintos
+            contenidos y propiciando la alfabetización temprana que beneficia
+            tanto la lengua materna como la extranjera.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Teniendo en cuenta que cada niño tiene su propio ritmo de
+            aprendizaje, durante la semana se reforzarán esas áreas en las que
+            se presenten dificultades, con personal especializado realizando un
+            seguimiento exhaustivo del desempeño de cada uno en sesiones de
+            "coaching académico".
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Este proyecto articula los contenidos y competencias propuestos por
+            la Universidad de Cambridge, para que los niños accedan a rendir
+            exámenes de inglés a partir de tercer grado de la escuela primaria:
+        </p>
+
+        <ul class="list-inside list-disc mb-6">
+            <li>
+                <strong>Tercer Grado:</strong> STARTERS (Cambridge Young Learners
+                English Tests)
+            </li>
+            <li>
+                <strong>Quinto Grado:</strong> MOVERS (Cambridge Young Learners English
+                Tests)
+            </li>
+            <li>
+                <strong>Sexto Grado:</strong> FLYERS (Cambridge Young Learners English
+                Tests)
+            </li>
+        </ul>
+
+        <p class="mb-6 leading-relaxed">
+            Además, brindamos la posibilidad de continuidad de estos exámenes
+            durante la educación secundaria:
+        </p>
+
+        <ul class="list-inside list-disc mb-6">
+            <li>KET FOR SCHOOLS (Cambridge ESOL Examinations)</li>
+            <li>PET FOR SCHOOLS (Cambridge ESOL Examinations)</li>
+            <li>FCE (Cambridge ESOL Examinations)</li>
+        </ul>
+
+        <p class="mb-6 leading-relaxed">Los exámenes mencionados:</p>
+
+        <ul class="list-inside list-disc mb-6">
+            <li>
+                Fomentan el desarrollo de las habilidades necesarias para usar
+                el inglés en situaciones cotidianas.
+            </li>
+            <li>
+                Son elaborados y calificados en Inglaterra, lo que asegura que
+                los niños sean evaluados objetivamente según estándares
+                internacionales.
+            </li>
+            <li>
+                Acreditan los logros alcanzados a través de un certificado de
+                validez internacional.
+            </li>
+        </ul>
+
+        <p class="mb-6 leading-relaxed">
+            Las estrategias que docentes y alumnos implementarán para construir
+            diversos aprendizajes incluyen:
+        </p>
+
+        <ul class="list-inside list-disc mb-6">
+            <li>Juegos</li>
+            <li>Canciones y rimas</li>
+            <li>
+                Programa de lecto-escritura comenzando con phonics para una
+                correcta apropiación de fonemas y patrones de entonación.
+            </li>
+            <li>Storytelling - Narración de cuentos y Talleres literarios</li>
+            <li>
+                Drama - Artes dramáticas integradas a la enseñanza de la lengua
+                extranjera
+            </li>
+            <li>Debates en torno a textos o material audiovisual</li>
+            <li>
+                Tecnología aplicada a la enseñanza del idioma (material
+                didáctico interactivo, juegos que desarrollen competencias
+                tecnológicas y lingüísticas)
+            </li>
+            <li>Open Classes - Clases abiertas con participación familiar</li>
+            <li>Muestras realizadas por los alumnos</li>
+            <li>Club del libro - Book Club</li>
+            <li>Concurrencia al teatro u obras de títeres en el colegio</li>
+            <li>Visitas guiadas en inglés (zoo, museo interactivo, etc.)</li>
+            <li>Proyecto cultural anual sobre países de habla inglesa</li>
+            <li>
+                TEA PARTY - Actividad periódica para fomentar la conversación en
+                inglés
+            </li>
+        </ul>
+
+        <p class="text-center text-blue-600 font-semibold text-xl">
+            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+        </p>
+    </section>
+
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

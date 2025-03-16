@@ -1,0 +1,140 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+import Logo from "@/assets/logo.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h2 class="text-3xl font-semibold mb-6 text-center">
+            PROYECTO INSTITUCIONAL
+        </h2>
+        <h3 class="text-2xl font-semibold mb-4 text-center">DE DANZA</h3>
+
+        <p class="mb-6 leading-relaxed">
+            En nuestro Proyecto de Danza, comenzamos en el Nivel Inicial con el
+            Taller de Expresión Corporal, donde iniciamos el camino del niño
+            hacia la expresión de su propio cuerpo mediante movimientos
+            espontáneos, guiados por la música que penetra sus sentidos. En el
+            Nivel Primario, el alumno puede potenciar sus habilidades y
+            destrezas para incorporar diversos ritmos musicales, preparándose
+            para incursionar en la Danza Folclórica, la Danza Contemporánea o la
+            Danza Urbana. Así, el niño vive una experiencia que fusiona la
+            actividad física con el arte, en un enfoque más allá del ejercicio
+            físico de la Educación Física.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            A través de este proyecto, buscamos que el alumno experimente las
+            emociones y sensaciones que la música y la danza ofrecen. También
+            pretendemos que adquiera un conocimiento profundo sobre la variedad
+            de géneros dentro y fuera de nuestra cultura. La valoración que
+            otorgamos al arte de la danza abre nuevas oportunidades para su
+            futuro, permitiendo a los estudiantes explorar posibles carreras
+            profesionales.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            El proyecto no solo proporciona un conocimiento de nuestra cultura y
+            costumbres, sino que también amplía los horizontes de los
+            estudiantes, exponiéndolos a la danza y la música de otras culturas.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            “La tradición fue entendida como un sistema inalterable de usos y
+            costumbres digno de conservarse, respetarse y practicarse por los
+            miembros de la sociedad. Sistema que debe ser vivido como una
+            recomendación positiva. Además, se asocia tradición a la idea
+            romántica del rescate de lo puro, lo simple y lo elemental, lo
+            natural y lo originario que debe ser venerado como la única y más
+            alta fuente de valor”.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            La idea plural de tradiciones permite dar cuenta de los cambios y
+            transformaciones que han ido sufriendo a lo largo del tiempo, en
+            tanto su transmisión no se da de manera inmutable. “En las
+            sociedades, la tradición se manifiesta cotidianamente en un continuo
+            entre pasado, presente y futuro; en una relación dialéctica entre
+            continuidad y cambio”.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            La visión de la enseñanza de la danza en nuestra escuela propone un
+            enfoque abierto a diferentes estilos, privilegiando las expresiones
+            vinculadas a la contemporaneidad y al contexto latinoamericano. A
+            través de esta perspectiva, el alumno tiene la oportunidad de
+            desarrollar un lenguaje corporal propio, ya sea aprendiendo danzas
+            con coreografía establecida o creando sus propias danzas mediante
+            improvisación. En este proceso, se busca generar imágenes poéticas y
+            dar forma a configuraciones creativas.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            En el contexto de la danza, los cuerpos en quietud o movimiento
+            crean imágenes poéticas. Un cuerpo puede ser grito, susurro,
+            secreto, denuncia, sensualidad, angustia y mucho más. Movimientos,
+            gestos y acciones traducen emociones, estados y sensaciones,
+            definiendo en una imagen una atmósfera, un clima o una situación. La
+            clave está en cómo se da forma a esas imágenes y cómo se combinan
+            los materiales para que una propuesta de movimiento sea lo que es.
+        </p>
+
+        <h4 class="text-xl font-semibold mb-4">
+            Las cuestiones técnicas incluyen:
+        </h4>
+
+        <ul class="list-inside list-disc mb-6">
+            <li>
+                Desarrollo de la conciencia del propio cuerpo y revisión de
+                hábitos corporales.
+            </li>
+            <li>Mejoramiento general de la disposición física.</li>
+            <li>
+                Trabajo con capacidades y cualidades físicas para lograr
+                respuestas corporales más interesantes y precisas.
+            </li>
+            <li>
+                Enfoque en la interpretación y construcción de sentido en la
+                danza.
+            </li>
+            <li>
+                Adquisición de herramientas para generar imágenes poéticas desde
+                el cuerpo y el movimiento.
+            </li>
+        </ul>
+
+        <p class="text-center text-blue-600 font-semibold text-xl">
+            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+        </p>
+    </section>
+
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

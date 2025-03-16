@@ -1,0 +1,113 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+import Logo from "@/assets/logo.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h2 class="text-3xl font-semibold mb-6 text-center">
+            PROYECTO INSTITUCIONAL
+        </h2>
+        <h3 class="text-2xl font-semibold mb-4 text-center">
+            CLASES DE APOYO ESCOLAR PRIMARIO
+        </h3>
+        <h3 class="text-2xl font-semibold mb-4 text-center">
+            CASTELLANO - INGLÉS
+        </h3>
+        <h3 class="text-2xl font-semibold mb-4 text-center">
+            TÉCNICAS DE ESTUDIO – SECUNDARIO
+        </h3>
+
+        <p class="mb-6 leading-relaxed">
+            En el Colegio Las Lomas de Carlos Spegazzini, las clases de apoyo
+            convierten el aprendizaje en una tarea en la que prima el esfuerzo
+            individual. Estas clases representan un apoyo para la familia cuando
+            los padres no pueden abordar los problemas de aprendizaje de sus
+            hijos o cuando no pueden dedicarles el tiempo necesario para las
+            tareas escolares.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Es esencial que los alumnos reciban atención personalizada de un
+            adulto que desempeñe el rol docente, creando una relación de
+            confianza y cercanía. El docente de apoyo será quien mejor comprenda
+            las verdaderas dificultades o debilidades de cada estudiante en su
+            proceso de aprendizaje, ya que las clases se llevan a cabo en un
+            ambiente relajado y sin la presión de cumplir con objetivos
+            estrictos.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            La tarea del docente de apoyo será profundizar en los contenidos que
+            el alumno no haya podido asimilar, así como ofrecer herramientas
+            para que el niño pueda obtener logros por sus propios medios. Estas
+            clases no solo están dirigidas a niños con problemas de aprendizaje,
+            sino también a aquellos con agendas sobrecargadas de tareas y altos
+            estándares que cumplir.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Las clases se realizarán de manera individual o en grupos pequeños,
+            lo que permite un mayor aprovechamiento del tiempo y una atención
+            más personalizada. Los docentes de apoyo son especialistas por
+            materia y en la atención pedagógica infantil, son claros, precisos y
+            pacientes, creando un ambiente favorable para el aprendizaje.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Con el objetivo de optimizar el aprendizaje de los niños, se pondrá
+            énfasis en desarrollar habilidades para razonar en diversas
+            situaciones, establecer relaciones de ideas, distinguir lo principal
+            de lo secundario y sintetizar conceptos. Esto permitirá a los
+            alumnos desempeñarse de manera autónoma en futuras experiencias.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Como parte de las actividades, se abordarán Técnicas de Estudio
+            específicas para cada área. En el Nivel Secundario, se trabajará en
+            la preparación de los alumnos con miras a su posible ingreso a
+            universidades u otras instituciones, ayudándoles a conocer diversas
+            propuestas y alternativas para su desarrollo profesional y personal.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Las clases de apoyo se ofrecerán dentro del horario escolar en
+            inglés y castellano en el Nivel Primario y de manera extracurricular
+            en el Nivel Secundario, con personal especializado para dicha labor.
+        </p>
+
+        <p class="text-center text-blue-600 font-semibold text-xl">
+            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+        </p>
+    </section>
+
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

@@ -1,0 +1,136 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+import Logo from "@/assets/logo.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h2 class="text-3xl font-semibold mb-6 text-center">
+            PROYECTO INSTITUCIONAL
+        </h2>
+        <h3 class="text-2xl font-semibold mb-4 text-center">MÚSICA</h3>
+
+        <p class="mb-6 leading-relaxed">
+            En el Colegio Las Lomas de Carlos Spegazzini entendemos la música
+            como un lenguaje universal, una forma de comunicación con la que
+            todos los niños se vinculan desde temprana edad. La educación
+            musical busca formar seres autónomos, creativos y capaces de
+            expresarse a través de la música, una experiencia agradable y
+            enriquecedora.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            En el Nivel Inicial, los niños tendrán la oportunidad de trabajar
+            con los elementos del lenguaje musical mediante el juego espontáneo
+            y la exploración, desarrollando su imaginación y creatividad a
+            través de actividades como cantar, tocar y moverse al ritmo de la
+            música.
+        </p>
+
+        <ul class="list-inside list-disc mb-6">
+            <li>
+                Trabajar con los elementos del lenguaje musical mediante el
+                juego.
+            </li>
+            <li>
+                Explorar las posibilidades expresivas del cuerpo ante estímulos
+                musicales.
+            </li>
+            <li>
+                Desarrollar la discriminación auditiva y la relación de sonidos
+                en pares.
+            </li>
+            <li>
+                Fomentar la actitud positiva ante la música y disfrutar del
+                trabajo cooperativo.
+            </li>
+            <li>
+                Valorar producciones artísticas propias, regionales, nacionales
+                e internacionales.
+            </li>
+        </ul>
+
+        <p class="mb-6 leading-relaxed">
+            En el Nivel Primario, los alumnos participarán en ejecuciones
+            vocales e instrumentales, explorando un amplio repertorio de
+            canciones y melodías que les permitirán utilizar diferentes recursos
+            expresivos y desarrollar habilidades musicales de manera integral.
+        </p>
+
+        <ul class="list-inside list-disc mb-6">
+            <li>
+                Participar en ejecuciones vocales e instrumentales con diversas
+                melodías.
+            </li>
+            <li>
+                Utilizar la voz y los instrumentos musicales para recrear
+                sonidos del entorno.
+            </li>
+            <li>
+                Desarrollar conceptos básicos de sonido: altura, duración e
+                intensidad.
+            </li>
+            <li>
+                Trabajar en conjunto en ejecuciones instrumentales y vocales.
+            </li>
+            <li>Participar con creciente interés en actividades musicales.</li>
+        </ul>
+
+        <p class="mb-6 leading-relaxed">
+            El proyecto también se enfoca en el conocimiento de la música
+            cultural Argentina, utilizando la música como medio de comunicación
+            y complemento del aprendizaje, estimulando la imaginación y el
+            pensamiento lógico-creativo. A través de este proceso, los alumnos
+            construirán sus conocimientos musicales y se conectarán con su yo
+            interno y el mundo que los rodea.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Los niños también tendrán la oportunidad de involucrarse en la
+            producción de un "sencillo" o "single", aprendiendo sobre edición,
+            compilación y la realización de un videoclip, lo que les permitirá
+            explorar no solo aspectos musicales, sino también tecnológicos y
+            artísticos como la danza.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            "Los sonidos, los ritmos, la expresión corporal los acercarán al
+            mundo musical, ayudándolos a sentir, emocionarse, crear y disfrutar
+            momentos compartidos, mientras se acercan al conocimiento musical y
+            a la cultura."
+        </p>
+
+        <p class="text-center text-blue-600 font-semibold text-xl">
+            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+        </p>
+    </section>
+
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

@@ -1,0 +1,77 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+import Logo from "@/assets/logo.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <div class="flex justify-center">
+            <Logo width="250" height="250" />
+        </div>
+        <h2 class="text-3xl font-semibold mb-6 text-center">NUESTRO ESCUDO</h2>
+
+        <p class="mb-6 leading-relaxed">
+            Nuestro escudo representa los ideales, la convicción y el compromiso
+            con el futuro de nuestros niños. Cada símbolo refleja nuestra
+            propuesta educativa:
+        </p>
+
+        <ul class="list-disc pl-8 mb-6">
+            <li>
+                <strong>El papel y la pluma:</strong> Simbolizan la escritura, surgida
+                como la necesidad de dejar registro de la vida y la historia del
+                ser humano.
+            </li>
+            <li>
+                <strong>La naturaleza:</strong> Representada por la Cortaderia Selloana,
+                comúnmente conocida como “Cola de Zorro”, una planta característica
+                de la zona. Este símbolo incorpora a nuestro proyecto educativo la
+                concientización sobre el cuidado y protección del medio ambiente,
+                para que nuestros niños se conviertan en agentes multiplicadores
+                de esta filosofía de conciencia ambiental.
+            </li>
+            <li>
+                <strong>Las Lomas:</strong> Dan significado al nombre del colegio,
+                identificando y apropiándose del lugar.
+            </li>
+            <li>
+                <strong>El símbolo @:</strong> Introduce la tecnología como herramienta
+                educativa e innovadora en nuestra institución.
+            </li>
+        </ul>
+
+        <p class="text-center text-blue-600 font-semibold text-xl">
+            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+        </p>
+    </section>
+
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

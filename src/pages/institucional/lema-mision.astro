@@ -1,0 +1,68 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h1 class="text-4xl font-bold mb-6 text-center">LEMA</h1>
+
+        <blockquote class="mb-8 italic border-l-4 border-blue-500 pl-4">
+            "Me lo contaron y lo olvidé, lo vi y lo entendí, lo hice y lo
+            aprendí."
+        </blockquote>
+
+        <h2 class="text-3xl font-semibold mb-6 text-center">MISIÓN</h2>
+
+        <p class="mb-6 leading-relaxed">
+            El lema de nuestro colegio refleja la concepción que tenemos sobre
+            el proceso de enseñanza-aprendizaje. Partimos de la idea de un
+            conocimiento que espera ser creado y descubierto por nuestros
+            alumnos, quienes son los principales actores de este proceso.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            A través de la experiencia concreta, nuestros objetivos se hacen
+            tangibles, iluminando nuestros horizontes y guiando nuestro proceder
+            con un pensamiento crítico, reflexivo y democrático.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Buscamos crear conocimientos significativos que puedan ser aplicados
+            en múltiples contextos, favoreciendo así un aprendizaje profundo y
+            duradero.
+        </p>
+
+        <p class="text-center text-blue-600 font-semibold text-xl">
+            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+        </p>
+    </section>
+
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

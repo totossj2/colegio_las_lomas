@@ -1,0 +1,121 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h1 class="text-4xl font-bold mb-6 text-center">
+            Nuestro Proyecto Educativo
+        </h1>
+
+        <p class="mb-6 leading-relaxed">
+            El nacimiento de nuestra institución surge de un profundo deseo
+            familiar de crear un espacio educativo innovador, donde la
+            construcción del conocimiento sea un proceso colectivo que integre a
+            la familia y la escuela. Este sueño, nacido del compromiso con el
+            trabajo y el estudio, tiene como pilar fundamental la convicción de
+            que la educación concreta, responsable y comprometida es el camino
+            hacia un futuro mejor para nuestros niños.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Nuestro objetivo es ofrecer un servicio educativo de excelencia,
+            basado en las más recientes tendencias pedagógicas, con un equipo
+            docente altamente capacitado y comprometido con la formación
+            integral de cada estudiante. Creemos en un aprendizaje
+            significativo, donde la experimentación y la indagación activa
+            permiten a los niños explorar, investigar y construir su propio
+            conocimiento.
+        </p>
+
+        <blockquote class="mb-8 italic border-l-4 border-blue-500 pl-4">
+            "Me lo contaron y lo olvidé, lo vi y lo entendí, lo hice y lo
+            aprendí."
+        </blockquote>
+
+        <p class="mb-8 leading-relaxed">
+            Estamos convencidos de que el conocimiento se asimila verdaderamente
+            cuando se vive. Esta frase sintetiza nuestra filosofía educativa y
+            refleja nuestro compromiso de proporcionar una experiencia de
+            aprendizaje vivencial y enriquecedora.
+        </p>
+
+        <h2 class="text-3xl font-semibold mb-6">Nuestra Propuesta Educativa</h2>
+
+        <ul class="space-y-4">
+            <li>
+                <strong class="text-blue-600">Tecnología y Robótica:</strong> Recursos
+                fundamentales que potencian el pensamiento lógico y la creatividad.
+            </li>
+            <li>
+                <strong class="text-blue-600"
+                    >Idiomas (Inglés, Portugués y Francés):</strong
+                > Puentes hacia la comprensión intercultural y el respeto por la
+                diversidad.
+            </li>
+            <li>
+                <strong class="text-blue-600"
+                    >Cuidado del Medio Ambiente:</strong
+                > Fomentamos la conciencia ambiental y el uso responsable de los
+                recursos naturales.
+            </li>
+            <li>
+                <strong class="text-blue-600"
+                    >Actividades Deportivas, Recreativas y Yoga:</strong
+                > Promovemos la salud física y el bienestar emocional.
+            </li>
+            <li>
+                <strong class="text-blue-600">Cocina y Nutrición:</strong> Enseñamos
+                hábitos saludables para una mejor calidad de vida.
+            </li>
+            <li>
+                <strong class="text-blue-600"
+                    >Arte, Música, Danza y Teatro:</strong
+                > Estimulamos la creatividad y la expresión a través de las artes.
+            </li>
+            <li>
+                <strong class="text-blue-600"
+                    >Acciones Solidarias y Reparadoras:</strong
+                > Desarrollamos la empatía, la responsabilidad social y el compromiso
+                con la comunidad.
+            </li>
+        </ul>
+
+        <p class="mt-8 leading-relaxed">
+            En el <strong class="text-blue-600">Colegio Las Lomas</strong>,
+            abrimos nuestras puertas a todas las familias que buscan una
+            educación basada en valores, el amor, la contención y el
+            conocimiento. Creemos que, juntos, podemos formar individuos ávidos
+            de aprender, preparados para afrontar los desafíos del futuro con
+            responsabilidad y pasión.
+        </p>
+    </section>
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>
