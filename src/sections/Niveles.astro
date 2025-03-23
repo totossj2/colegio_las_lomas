@@ -2,18 +2,21 @@
 const niveles = [
     {
         titulo: "INICIAL",
-        imagen: "/fondo_posthero.webp",
-        alt: "Nivel Inicial - Niños usando computadoras",
+        imagen: "/images/inicial.webp",
+        alt: "Nivel Inicial",
+        enlace: "/proyecto-educativo/inicial",
     },
     {
         titulo: "PRIMARIO",
-        imagen: "/images/nivel-primario.jpg",
-        alt: "Nivel Primario - Alumnos dibujando",
+        imagen: "/images/primaria.webp",
+        alt: "Nivel Primario",
+        enlace: "/proyecto-educativo/primaria",
     },
     {
         titulo: "SECUNDARIO",
-        imagen: "/images/nivel-secundario.jpg",
-        alt: "Nivel Secundario - Estudiantes en formación",
+        imagen: "/images/secundaria_onu2.webp",
+        alt: "Nivel Secundario",
+        enlace: "/proyecto-educativo/secundaria",
     },
 ];
 
@@ -64,19 +67,21 @@ const areasAcademicas = [
         {
             niveles.map((nivel) => (
                 <div class="relative overflow-hidden rounded-2xl shadow-md group">
-                    <img
-                        src={nivel.imagen}
-                        alt={nivel.alt}
-                        class="w-full h-24 md:h-64 object-cover"
-                    />
-                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
-                        <h3
-                            class="text-white text-4xl font-bold tracking-wider"
-                            style="  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"
-                        >
-                            {nivel.titulo}
-                        </h3>
-                    </div>
+                    <a href={nivel.enlace} aria-label={nivel.titulo}>
+                        <img
+                            src={nivel.imagen}
+                            alt={nivel.alt}
+                            class="w-full h-24 md:h-64 object-cover"
+                        />
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                            <h3
+                                class="text-white text-4xl font-bold tracking-wider"
+                                style="  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"
+                            >
+                                {nivel.titulo}
+                            </h3>
+                        </div>
+                    </a>
                     <div class="absolute bottom-0 left-0 w-full h-1 bg-[#B2CA4D]" />
                 </div>
             ))

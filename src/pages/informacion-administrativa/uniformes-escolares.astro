@@ -1,0 +1,150 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h1 class="text-4xl font-bold mb-6 text-center">
+            El Uniforme Escolar y Deportivo
+        </h1>
+
+        <p class="mb-6 leading-relaxed">
+            En el <strong class="text-blue-600">Colegio Las Lomas</strong>, el
+            uso del uniforme es obligatorio para todos nuestros alumnos, y está
+            diseñado para fomentar un ambiente de igualdad y respeto, reflejando
+            nuestra identidad como institución educativa. Es importante que el
+            uniforme esté siempre prolijo, completo y marcado con el nombre del
+            alumno.
+        </p>
+
+        <h2 class="text-3xl font-semibold mb-6">Uniforme Escolar</h2>
+
+        <h3 class="text-2xl font-semibold mb-4">
+            Nivel Inicial: Salas de 3, 4, 5 años
+        </h3>
+        <ul class="list-disc pl-6">
+            <li>Equipo deportivo negro con escudo</li>
+            <li>Short negro reglamentario</li>
+            <li>Remera blanca con escudo</li>
+            <li>Medias blancas y zapatillas negras</li>
+            <li>Buzo celeste con escudo</li>
+            <li>Pintorcito celeste con escudo</li>
+            <li>Campera de abrigo polar negra y celeste con escudo</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mb-4">
+            Nivel Primario: de 1º a 6º año
+        </h3>
+        <ul class="list-disc pl-6">
+            <li>
+                <strong>Niñas:</strong> Pollera reglamentaria, chomba blanca con
+                escudo, pullover celeste con escudo, campera de abrigo polar negra
+                con escudo, medias ¾ o cancanes negras, zapatos, zapatillas de cuero
+                negros.
+            </li>
+            <li>
+                <strong>Niños:</strong> Pantalón de vestir o bermuda reglamentaria,
+                chomba blanca con escudo, pullover celeste con escudo, campera de
+                abrigo polar negra y celeste con escudo, medias negras, zapatos,
+                zapatillas de cuero negros.
+            </li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mb-4">
+            Nivel Secundario: de 1º a 6º año
+        </h3>
+        <ul class="list-disc pl-6">
+            <li>
+                <strong>Alumnas:</strong> Pollera reglamentaria, camisa blanca con
+                escudo, pullover negro y celeste con escudo, campera de abrigo polar
+                negra con escudo, medias ¾ o cancanes negras, zapatos, zapatillas
+                de cuero negros.
+            </li>
+            <li>
+                <strong>Alumnos:</strong> Pantalón de vestir o bermuda reglamentaria,
+                chomba blanca con escudo, pullover negro y celeste con escudo, campera
+                de abrigo polar negra y celeste con escudo, medias negras, zapatos,
+                zapatillas de cuero negros.
+            </li>
+        </ul>
+
+        <h2 class="text-3xl font-semibold mb-6">
+            Uniforme de Educación Física
+        </h2>
+
+        <h3 class="text-2xl font-semibold mb-4">
+            Nivel Inicial: Salas de 2, 3, 4, 5 años
+        </h3>
+        <ul class="list-disc pl-6">
+            <li>Equipo deportivo negro con escudo</li>
+            <li>Short negro reglamentario</li>
+            <li>Remera blanca con escudo</li>
+            <li>Medias blancas y zapatillas negras</li>
+            <li>
+                Buzo celeste con escudo (uso exclusivo para los días de deporte)
+            </li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mb-4">
+            Nivel Primario: de 1º a 6º año
+        </h3>
+        <ul class="list-disc pl-6">
+            <li>Equipo deportivo negro con escudo</li>
+            <li>Short de gimnasia negro reglamentario</li>
+            <li>Chomba celeste con escudo</li>
+            <li>Medias blancas y zapatillas negras</li>
+            <li>
+                Buzo celeste con escudo (uso exclusivo para los días de deporte)
+            </li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mb-4">
+            Nivel Secundario: de 1º a 6º año
+        </h3>
+        <ul class="list-disc pl-6">
+            <li>Equipo deportivo negro con escudo</li>
+            <li>Short de gimnasia negro reglamentario</li>
+            <li>Chomba celeste con escudo</li>
+            <li>Medias blancas y zapatillas negras</li>
+            <li>
+                Buzo celeste con escudo (uso exclusivo para los días de deporte)
+            </li>
+        </ul>
+
+        <p class="mt-8 leading-relaxed">
+            El uniforme de educación física es de uso exclusivo para los días de
+            educación física y jornadas deportivas. Les pedimos a las familias
+            que se aseguren de que sus hijos e hijas utilicen los uniformes de
+            acuerdo con las normativas para promover un ambiente de igualdad y
+            respeto dentro del colegio.
+        </p>
+    </section>
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

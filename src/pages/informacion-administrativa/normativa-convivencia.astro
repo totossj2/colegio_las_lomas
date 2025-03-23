@@ -1,0 +1,218 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <Hero
+        images={[
+            {
+                src: Image1.src,
+                alt: "Aula del Colegio Las Lomas",
+                title: "Nuestras Aulas",
+                description: "Espacios modernos diseñados para el aprendizaje",
+            },
+            {
+                src: Image2.src,
+                alt: "Frente del Colegio Las Lomas",
+                title: "Nuestras Instalaciones",
+                description: "Infraestructura moderna y segura",
+            },
+        ]}
+    />
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h1 class="text-4xl font-bold mb-6 text-center">
+            Información de Inscripción y Requisitos
+        </h1>
+
+        <h2 class="text-3xl font-semibold mb-6">
+            Documentos Requeridos para Todos los Niveles
+        </h2>
+        <ul class="list-disc pl-6 mb-6">
+            <li>Documento Nacional de Identidad y fotocopia.</li>
+            <li>Partida de Nacimiento y fotocopia.</li>
+            <li>
+                Certificado de vacunación y ficha de salud acompañada por apto
+                físico.
+            </li>
+            <li>Estudios auditivos y oftalmológicos.</li>
+            <li>
+                Si el alumno no ha cursado el año anterior en el Colegio, deberá
+                presentar el Certificado de Aprobación del mismo, Pase
+                correspondiente y el Boletín de Calificaciones.
+            </li>
+        </ul>
+
+        <h2 class="text-3xl font-semibold mb-6">Horarios de Clases</h2>
+        <p class="mb-6 leading-relaxed">
+            A continuación se detallan los horarios por niveles educativos. La
+            escolaridad es de doble turno obligatorio en todos los niveles.
+        </p>
+
+        <div class="space-y-4">
+            <h3 class="font-semibold text-lg">
+                Nivel Inicial: Salas de 3, 4, 5 años
+            </h3>
+            <ul class="list-disc pl-6">
+                <li>T.M: 08:00 a 12:00 h</li>
+                <li>T.T: 13:00 a 16:30 h</li>
+            </ul>
+
+            <h3 class="font-semibold text-lg">
+                Nivel Primario: de 1º a 6º año
+            </h3>
+            <ul class="list-disc pl-6">
+                <li>T.M: 08:00 a 12:00 h</li>
+                <li>T.T: 13:00 a 17:00 h</li>
+            </ul>
+
+            <h3 class="font-semibold text-lg">
+                Nivel Secundario: de 1º a 6º año
+            </h3>
+            <ul class="list-disc pl-6">
+                <li>T.M: 07:30 a 13:00 h</li>
+                <li>T.T: 14:00 a 17:00 h</li>
+            </ul>
+        </div>
+
+        <p class="mb-6 leading-relaxed">
+            El colegio abre sus puertas a las 07:15 horas y cierra a las 17:00
+            horas en todos sus niveles. Se solicita a los padres respetar los
+            horarios de entrada y salida para asegurar el desarrollo normal de
+            las actividades escolares.
+        </p>
+
+        <h2 class="text-3xl font-semibold mb-6">Retiros</h2>
+        <p class="mb-6 leading-relaxed">
+            Los niños se retiran únicamente con las personas autorizadas por sus
+            padres. En caso de un cambio, los padres deben notificarlo por nota
+            escrita.
+        </p>
+
+        <h2 class="text-3xl font-semibold mb-6">Uniforme Reglamentario</h2>
+        <p class="mb-6 leading-relaxed">
+            El uso del uniforme es obligatorio para todos los alumnos. Los
+            uniformes deben estar prolijos, limpios, completos y marcados con el
+            nombre del alumno.
+        </p>
+
+        <h3 class="font-semibold text-lg mb-4">
+            Nivel Inicial: Salas de 3, 4, 5 años
+        </h3>
+        <ul class="list-disc pl-6 mb-6">
+            <li>
+                Equipo deportivo negro con escudo, short negro reglamentario,
+                chomba blanca con escudo, medias negras, zapatillas negras.
+            </li>
+            <li>Pintorcito celeste con escudo.</li>
+            <li>Campera de abrigo polar negra y celeste con escudo.</li>
+        </ul>
+
+        <h3 class="font-semibold text-lg mb-4">
+            Nivel Primario: de 1º a 6º año
+        </h3>
+        <ul class="list-disc pl-6 mb-6">
+            <li>
+                <strong>Niñas:</strong> Pollera reglamentaria, chomba blanca con
+                escudo, pullover celeste con escudo, campera de abrigo polar negra
+                con escudo, medias ¾ o cancanes negras, zapatos o zapatillas de cuero
+                negros.
+            </li>
+            <li>
+                <strong>Niños:</strong> Pantalón o bermuda reglamentaria, chomba
+                blanca con escudo, pullover celeste con escudo, campera de abrigo
+                polar negra y celeste con escudo, medias negras, zapatos o zapatillas
+                de cuero negros.
+            </li>
+        </ul>
+
+        <h2 class="text-3xl font-semibold mb-6">
+            Uniforme de Educación Física
+        </h2>
+        <p class="mb-6 leading-relaxed">
+            El uniforme de educación física es exclusivo para los días de
+            actividades físicas y jornadas deportivas.
+        </p>
+
+        <h3 class="font-semibold text-lg mb-4">
+            Nivel Inicial: Salas de 3, 4, 5 años
+        </h3>
+        <ul class="list-disc pl-6 mb-6">
+            <li>
+                Equipo deportivo negro con escudo, short negro reglamentario,
+                chomba blanca con escudo, medias negras, zapatillas negras.
+            </li>
+        </ul>
+
+        <h3 class="font-semibold text-lg mb-4">
+            Nivel Primario: de 1º a 6º año
+        </h3>
+        <ul class="list-disc pl-6 mb-6">
+            <li>
+                Equipo deportivo negro con escudo, short de gimnasia negro
+                reglamentario, chomba blanca con escudo, medias negras,
+                zapatillas negras.
+            </li>
+        </ul>
+
+        <h2 class="text-3xl font-semibold mb-6">Servicios y Salud</h2>
+        <p class="mb-6 leading-relaxed">
+            El colegio ofrece diversos servicios que incluyen comedor,
+            emergencias médicas y atención especial para los alumnos. Se
+            solicita que los padres dejen los datos de salud de los alumnos en
+            las fichas médicas.
+        </p>
+
+        <h3 class="font-semibold text-lg mb-4">Servicio de Comedor</h3>
+        <p class="mb-6 leading-relaxed">
+            El servicio de comedor está a cargo de una empresa particular que
+            debe cumplir con todas las normas oficiales vigentes. La
+            contratación de este servicio es opcional y privativa de los padres.
+        </p>
+
+        <h3 class="font-semibold text-lg mb-4">Servicio de Emergencias</h3>
+        <p class="mb-6 leading-relaxed">
+            En caso de accidentes o golpes, nos comunicaremos con la emergencia
+            médica y la familia del alumno. Además, se eleva un acta que será
+            firmada por la persona que retire al alumno.
+        </p>
+
+        <h3 class="font-semibold text-lg mb-4">Enfermedades y Medicamentos</h3>
+        <p class="mb-6 leading-relaxed">
+            En caso de enfermedad, los padres deben comunicar inmediatamente la
+            causa de la ausencia. Para enfermedades infectocontagiosas, es
+            necesario presentar el certificado de alta médica para
+            reincorporarse. Según las disposiciones sobre responsabilidad civil,
+            las docentes no pueden suministrar medicamentos.
+        </p>
+
+        <h2 class="text-3xl font-semibold mb-6">Comunicaciones</h2>
+        <p class="mb-6 leading-relaxed">
+            Las comunicaciones con las familias se realizan a través del
+            cuaderno de comunicaciones. Los padres deben leerlo y enviarlo
+            firmado diariamente.
+        </p>
+
+        <h2 class="text-3xl font-semibold mb-6">
+            Entrevistas y Reuniones de Padres
+        </h2>
+        <p class="mb-6 leading-relaxed">
+            Los padres pueden concertar entrevistas con los docentes a través
+            del cuaderno de comunicaciones. Además, se realiza una reunión
+            informativa al inicio del ciclo lectivo, y dos reuniones adicionales
+            durante el año para la entrega de informes sobre el desarrollo
+            académico de los alumnos.
+        </p>
+    </section>
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

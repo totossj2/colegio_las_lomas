@@ -30,7 +30,7 @@ const { images = [] } = Astro.props as { images: SliderImage[] };
                         />
 
                         {(image.title || image.description) && (
-                            <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/70 to-transparent text-white">
+                            <div class="absolute bottom-0 left-0 w-full px-6 py-10 bg-gradient-to-t from-black/70 to-transparent text-white">
                                 {image.title && (
                                     <h2 class="text-2xl md:text-3xl font-bold mb-2">
                                         {image.title}

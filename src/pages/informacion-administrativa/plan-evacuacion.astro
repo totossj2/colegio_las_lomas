@@ -1,0 +1,144 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/sections/Hero.astro";
+import PostHero from "@/sections/PostHero.astro";
+import Inscripcion from "@/sections/Inscripcion.astro";
+
+import Image1 from "@/assets/banners/las_lomas_aula.png";
+import Image2 from "@/assets/banners/las_lomas_frente.png";
+---
+
+<Layout>
+    <section
+        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+    >
+        <h1 class="text-4xl font-bold mb-6 text-center">
+            Colegio Las Lomas de Carlos Spegazzini
+        </h1>
+
+        <p class="mb-6 leading-relaxed">
+            Nuestra institución da inicio a un nuevo concepto de educación donde
+            ponemos énfasis en el aprendizaje y cuidado de nuestros niños
+            enseñándoles que la prevención y la concientización salvan vidas.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            Nacimos como comunidad en el 2016 y desde ese mismo momento creamos
+            un plan de evacuación que va desde la capacitación del personal,
+            toma de conciencia y conocimiento hasta la realización de simulacros
+            que abarcan a toda nuestra comunidad.
+        </p>
+
+        <p class="mb-6 leading-relaxed">
+            La capacitación es tanto para alumnos como los docentes y demás
+            personal, la misma está dada por profesionales idóneos.
+        </p>
+
+        <h2 class="text-3xl font-semibold mb-6">Organización</h2>
+
+        <h3 class="text-2xl font-semibold mb-4">Grupo Director</h3>
+        <ul class="list-disc pl-8 mb-6">
+            <li>
+                <strong class="text-blue-600"
+                    >El Plan de Evacuación y Simulacro</strong
+                > se iniciará con la formación del Grupo Director de la evacuación.
+            </li>
+            <li>
+                El mismo estará formado por un Director de Evacuación, un Jefe
+                Técnico y un Jefe de Seguridad, contando con personal
+                alternativo en el caso que se produjera una vacante o una
+                ausencia en dichos cargos.
+            </li>
+            <li>
+                Al conocerse la señal de alarma, el Director se dirigirá a la
+                Dirección del Nivel Primario como base para dirigir la
+                evacuación, situado en la planta baja del edificio, y solicitará
+                la información correspondiente al piso donde se inició el
+                siniestro.
+            </li>
+            <li>Acto seguido, se procederá al toque de alarma general.</li>
+            <li>
+                El Jefe de Seguridad dará aviso al Cuerpo de Bomberos y al
+                Servicio Médico de Emergencia, una vez confirmada la alarma.
+            </li>
+            <li>
+                El Jefe Técnico dará corte a los servicios del edificio, tales
+                como gas y energía, procediendo a la evacuación.
+            </li>
+            <li>
+                En caso de traslado de accidentados, deberá disponerse el
+                acompañamiento de personal auxiliar.
+            </li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mb-4">Grupo de Emergencia</h3>
+        <ul class="list-disc pl-8 mb-6">
+            <li>
+                El Grupo de Emergencia participará en la evacuación, como
+                también en la realización de los simulacros periódicos.
+            </li>
+            <li>
+                El mismo estará constituido por un Responsable de Piso, su
+                Suplente y un Grupo Control del incendio o siniestro.
+            </li>
+            <li>
+                El Responsable de Piso informará acerca del siniestro al
+                Director y deberá proceder a la evacuación conforme con lo
+                establecido, confirmando la desocupación total del sector.
+            </li>
+            <li>
+                Mantendrá el orden en la evacuación, de modo que no se genere
+                pánico. La desocupación se realizará siempre en forma
+                descendente hacia la planta baja, siempre que sea posible.
+            </li>
+            <li>
+                El Responsable de Piso deberá informar al Director cuando todo
+                el personal haya evacuado el piso.
+            </li>
+            <li>
+                Recibida la alarma, el grupo de control de incendio evaluará la
+                situación del sector siniestrado, informará acerca de la
+                situación al Director y adoptará las medidas convenientes
+                tendientes a combatir o atenuar el foco causante del siniestro
+                hasta el arribo del Cuerpo de Bomberos.
+            </li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mb-4">
+            Pautas para el Resto del Personal
+        </h3>
+        <ul class="list-disc pl-8 mb-6">
+            <li>
+                Deberán seguir las indicaciones del Responsable de cada sector y
+                tener conocimiento de los dispositivos de seguridad y medios de
+                salida.
+            </li>
+            <li>
+                Se dirigirán al lugar asignado sin correr, cerrando puertas y
+                ventanas a su paso, sin transportar bultos ni regresar al sector
+                siniestrado.
+            </li>
+            <li>
+                Una vez fuera del edificio, se concentrarán en el lugar
+                previsto.
+            </li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mb-6">Consideraciones Generales</h3>
+        <ul class="list-disc pl-8 mb-6">
+            <li>
+                Los planos de evacuación deberán encontrarse en lugar visible,
+                al igual que la ubicación de los puntos de reunión.
+            </li>
+            <li>
+                Se deberá capacitar al personal en lo referente al plan de
+                evacuación como así también al uso de matafuegos.
+            </li>
+        </ul>
+    </section>
+
+    <div class="h-12"></div>
+    <PostHero />
+    <div class="h-24"></div>
+    <Inscripcion />
+</Layout>

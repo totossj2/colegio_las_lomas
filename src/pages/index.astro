@@ -4,11 +4,10 @@ import Hero from "@/sections/Hero.astro";
 import PostHero from "@/sections/PostHero.astro";
 import AboutUs from "@/sections/AboutUs.astro";
 import Niveles from "@/sections/Niveles.astro";
-import Bento from "@/sections/Bento.astro";
 import Inscripcion from "@/sections/Inscripcion.astro";
 
-import Image1 from "@/assets/banners/las_lomas_aula.png";
-import Image2 from "@/assets/banners/las_lomas_frente.png";
+import Image1 from "/public/images/egresaditos.webp";
+import Image2 from "/public/images/egresaditos_2.webp";
 import Testimonials from "@/sections/Testimonials.astro";
 ---
 
@@ -17,15 +16,16 @@ import Testimonials from "@/sections/Testimonials.astro";
 		images={[
 			{
 				src: Image1.src,
-				alt: "Aula del Colegio Las Lomas",
-				title: "Nuestras Aulas",
-				description: "Espacios modernos diseñados para el aprendizaje",
+				alt: "",
+				title: "Colegio Las Lomas",
+				description:
+					"Me lo contaron y lo olvidé, lo vi y lo entendí, lo hice y lo aprendí",
 			},
 			{
 				src: Image2.src,
 				alt: "Frente del Colegio Las Lomas",
-				title: "Nuestras Instalaciones",
-				description: "Infraestructura moderna y segura",
+				title: "",
+				description: "",
 			},
 		]}
 	/>

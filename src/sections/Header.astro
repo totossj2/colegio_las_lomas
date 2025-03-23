@@ -78,19 +78,43 @@ const menuItems = [
     {
         title: "Información Administrativa",
         submenu: [
-            { label: "Modalidad y Horarios", href: "#" },
-            { label: "Normativa de Convivencia", href: "#" },
-            { label: "Uniformes Escolares", href: "#" },
-            { label: "Útiles Escolares y Libros", href: "#" },
-            { label: "Servicio de Comedor", href: "#" },
-            { label: "Plan de Evacuación", href: "#" },
+            {
+                label: "Modalidad y Horarios",
+                href: "/informacion-administrativa/modalidad-horarios",
+            },
+            {
+                label: "Normativa de Convivencia",
+                href: "/informacion-administrativa/normativa-convivencia",
+            },
+            {
+                label: "Uniformes Escolares",
+                href: "/informacion-administrativa/uniformes-escolares",
+            },
+            {
+                label: "Útiles Escolares y Libros",
+                href: "/informacion-administrativa/utiles-libros",
+            },
+            {
+                label: "Servicio de Comedor",
+                href: "/informacion-administrativa/servicio-comedor",
+            },
+            {
+                label: "Plan de Evacuación",
+                href: "/informacion-administrativa/plan-evacuacion",
+            },
         ],
     },
     {
         title: "Admisión",
         submenu: [
-            { label: "Solicitud de Vacante", href: "#" },
-            { label: "Documentación de Ingreso", href: "#" },
+            {
+                label: "Solicitud de Vacante",
+                href: "/admision/solicitud-vacante",
+            },
+            {
+                label: "Documentación de Ingreso",
+                href: "/admision/documentacion-ingreso",
+            },
         ],
     },
 ];
@@ -133,7 +157,8 @@ const menuItems = [
     class="bg-gradient-to-r from-[#86CBEA] to-[#59A8CC] flex justify-between items-center p-4 fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     id="header"
 >
-    <div
+    <a
+        href="/"
         id="logo_header"
         class="flex w-[55%] md:w-[25%] justify-start md:justify-between gap-1 items-center md:px-4"
     >
@@ -142,8 +167,8 @@ const menuItems = [
             Colegio <br /> Las Lomas
         </h1>
         <div class="hidden md:flex w-0.5 h-10 bg-white"></div>
-        <a href="/" class="text-white font-bold hidden md:block">INICIO</a>
-    </div>
+        <span class="text-white font-bold hidden md:block">INICIO</span>
+    </a>
 
     <!-- Menu Desktop -->
     <div class="hidden md:flex justify-end items-center px-4 py-2">
