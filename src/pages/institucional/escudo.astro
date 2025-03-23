@@ -5,8 +5,7 @@ import PostHero from "@/sections/PostHero.astro";
 import Inscripcion from "@/sections/Inscripcion.astro";
 import Logo from "@/assets/logo.astro";
 
-import Image1 from "@/assets/banners/las_lomas_aula.png";
-import Image2 from "@/assets/banners/las_lomas_frente.png";
+import Image1 from "/public/images/escudo.jpg";
 ---
 
 <Layout>
@@ -15,18 +14,12 @@ import Image2 from "@/assets/banners/las_lomas_frente.png";
             {
                 src: Image1.src,
                 alt: "Aula del Colegio Las Lomas",
-                title: "Nuestras Aulas",
-                description: "Espacios modernos diseñados para el aprendizaje",
-            },
-            {
-                src: Image2.src,
-                alt: "Frente del Colegio Las Lomas",
-                title: "Nuestras Instalaciones",
-                description: "Infraestructura moderna y segura",
+                title: "Nuestro Escudo",
+                description:
+                    "Conoce los ideales y la convicción de nuestra institución",
             },
         ]}
     />
-
     <section
         class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
     >
