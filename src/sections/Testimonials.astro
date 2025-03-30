@@ -14,62 +14,62 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
     {
         id: "1",
-        name: "Juan Martínez",
-        role: "Propietario de Casa",
+        name: "María González",
+        role: "Madre de alumno de Primaria",
         rating: 5,
         content:
-            "La instalación fue rápida y profesional. El equipo dejó todo impecable y el resultado superó mis expectativas. Recomiendo totalmente sus servicios.",
-        initials: "JM",
+            "La dedicación de los maestros es excepcional. Mi hijo ha mejorado notablemente en sus estudios y disfruta cada día en el colegio. El ambiente es muy familiar y seguro.",
+        initials: "MG",
         colorClass: "bg-blue-100 text-blue-600",
     },
     {
         id: "2",
-        name: "Ana López",
-        role: "Gerente de Oficina",
+        name: "Carlos Rodríguez",
+        role: "Padre de alumna de Maternal",
         rating: 5,
         content:
-            "Transformaron completamente nuestro espacio de trabajo. La calidad de la instalación es excepcional y el servicio al cliente fue inigualable.",
-        initials: "AL",
+            "Mi pequeña asiste al maternal y estamos encantados. Las educadoras son muy cariñosas y profesionales. La adaptación fue muy suave gracias a su apoyo.",
+        initials: "CR",
         colorClass: "bg-green-100 text-green-600",
     },
     {
         id: "3",
-        name: "Miguel Rodríguez",
-        role: "Diseñador de Interiores",
-        rating: 4,
+        name: "Ana Pérez",
+        role: "Madre de alumno de Jardín",
+        rating: 5,
         content:
-            "Colaboré con ellos en varios proyectos y siempre entregan un trabajo de alta calidad. Sus instalaciones destacan por su atención al detalle.",
-        initials: "MR",
+            "El jardín es excelente. Las actividades son muy didácticas y mi hijo desarrolla tanto sus habilidades sociales como creativas. La infraestructura es moderna y segura.",
+        initials: "AP",
         colorClass: "bg-purple-100 text-purple-600",
     },
     {
         id: "4",
-        name: "Carla Sánchez",
-        role: "Arquitecta",
+        name: "Laura Martínez",
+        role: "Madre de alumno de Secundaria",
         rating: 5,
         content:
-            "La precisión y cuidado con el que realizaron la instalación fue extraordinaria. Cumplen con los plazos y resuelven cualquier problema rápidamente.",
-        initials: "CS",
+            "El nivel académico es muy alto y la preparación para la universidad es excelente. Los profesores motivan constantemente a los alumnos a superarse.",
+        initials: "LM",
         colorClass: "bg-pink-100 text-pink-600",
     },
     {
         id: "5",
-        name: "Roberto Gómez",
-        role: "Director de Proyectos",
+        name: "Roberto Díaz",
+        role: "Padre de dos alumnos",
         rating: 5,
         content:
-            "Hemos contratado sus servicios para múltiples proyectos y nunca nos han decepcionado. Su equipo es profesional, puntual y meticuloso.",
-        initials: "RG",
+            "Tengo dos hijos en el colegio, uno en primaria y otro en secundaria. La formación integral y los valores que inculcan son extraordinarios.",
+        initials: "RD",
         colorClass: "bg-amber-100 text-amber-600",
     },
     {
         id: "6",
-        name: "Elena Torres",
-        role: "Dueña de Restaurante",
+        name: "Patricia López",
+        role: "Madre de alumna de Jardín",
         rating: 5,
         content:
-            "Renovaron completamente nuestro local con el mínimo de interrupciones para nuestro negocio. El resultado final es espectacular y nuestros clientes lo notan.",
-        initials: "ET",
+            "El programa bilingüe es fantástico. Mi hija ya puede mantener conversaciones básicas en inglés y apenas está en jardín. El equipo docente es muy profesional.",
+        initials: "PL",
         colorClass: "bg-teal-100 text-teal-600",
     },
 ];
@@ -93,7 +93,7 @@ const duplicatedTestimonials = [...testimonials, ...testimonials];
         <div class="text-center mb-10">
             <!-- Título de la sección -->
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-light tracking-wide">
+                <h2 class="text-4xl md:text-5xl font-light tracking-wide">
                     <span class="text-lime-500">TESTIMONIOS</span>
                     <span class="text-lime-600 font-bold">DE PADRES</span>
                 </h2>
@@ -147,7 +147,7 @@ const duplicatedTestimonials = [...testimonials, ...testimonials];
                                         )}
                                     </div>
                                 </div>
-                                <p class="text-gray-700">
+                                <p class="text-gray-700 text-[14px] md:text-[16px] leading-relaxed">
                                     "{testimonial.content}"
                                 </p>
                             </div>
@@ -191,13 +191,19 @@ const duplicatedTestimonials = [...testimonials, ...testimonials];
         pointer-events: none;
     }
 
-    .testimonial-carousel::before {
-        left: 0;
-        background: linear-gradient(to right, rgb(249 250 251), transparent);
-    }
+    @media (min-width: 768px) {
+        .testimonial-carousel::before {
+            left: 0;
+            background: linear-gradient(
+                to right,
+                rgb(249 250 251),
+                transparent
+            );
+        }
 
-    .testimonial-carousel::after {
-        right: 0;
-        background: linear-gradient(to left, rgb(249 250 251), transparent);
+        .testimonial-carousel::after {
+            right: 0;
+            background: linear-gradient(to left, rgb(249 250 251), transparent);
+        }
     }
 </style>

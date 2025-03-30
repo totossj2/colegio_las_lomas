@@ -14,7 +14,7 @@ const { images = [] } = Astro.props as { images: SliderImage[] };
 ---
 
 <section class="relative w-full overflow-hidden bg-gray-900">
-    <div class="hero-slider relative w-full h-[70vh] md:h-[80vh]">
+    <div class="hero-slider relative w-full h-[40vh] md:h-[80vh]">
         <!-- Las imágenes del slider -->
         <div id="slider-container" class="w-full h-full relative">
             {
@@ -48,60 +48,66 @@ const { images = [] } = Astro.props as { images: SliderImage[] };
             }
         </div>
 
-        <!-- Controles de navegación -->
-        <div
-            class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2"
-        >
-            {
+        {images.length > 1 && (
+            <>
+            <!-- Controles de navegación -->
+            <div
+                class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2"
+            >
+                {
                 images.map((_, index) => (
                     <button
-                        class="slider-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-colors duration-300"
-                        data-index={index}
-                        aria-label={`Ir a la imagen ${index + 1}`}
+                    class="slider-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-colors duration-300"
+                    data-index={index}
+                    aria-label={`Ir a la imagen ${index + 1}`}
                     />
                 ))
-            }
-        </div>
+                }
+            </div>
 
-        <!-- Botones de anterior/siguiente -->
-        <button
-            id="prev-slide"
-            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 rounded-full p-2 transition-colors duration-300"
-            aria-label="Imagen anterior"
-        >
-            <svg
+            <!-- Botones de anterior/siguiente -->
+            <button
+                id="prev-slide"
+                class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 rounded-full p-2 transition-colors duration-300"
+                aria-label="Imagen anterior"
+            >
+                <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-6 w-6 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-            >
+                >
                 <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M15 19l-7-7 7-7"></path>
-            </svg>
-        </button>
-        <button
-            id="next-slide"
-            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 rounded-full p-2 transition-colors duration-300"
-            aria-label="Imagen siguiente"
-        >
-            <svg
+                    d="M15 19l-7-7 7-7"
+                />
+                </svg>
+            </button>
+            <button
+                id="next-slide"
+                class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 rounded-full p-2 transition-colors duration-300"
+                aria-label="Imagen siguiente"
+            >
+                <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-6 w-6 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-            >
+                >
                 <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M9 5l7 7-7 7"></path>
-            </svg>
-        </button>
+                    d="M9 5l7 7-7 7"
+                />
+                </svg>
+            </button>
+            </>
+        )}
     </div>
 </section>
 
