@@ -1,5 +1,5 @@
 ---
-import SliderBeforeNow from "@/components/SliderBeforeNow.astro";
+
 ---
 
 <section class="mt-16 px-4">
@@ -12,82 +12,144 @@ import SliderBeforeNow from "@/components/SliderBeforeNow.astro";
     </div>
     <div class="max-w-4xl mx-auto">
         <div class="space-y-6">
-            <p class="text-lg text-black leading-relaxed">
-                Nuestra institución nació de la necesidad de crear un <span
-                    class="font-bold">espacio educativo innovador</span
-                >, basado en una <span class="italic"
-                    >construcción colectiva del conocimiento</span
-                > entre la familia y la escuela. Fundada por una familia <span
-                    class="font-bold"
-                    >comprometida con el trabajo y el estudio</span
-                >, creemos que
-                <span class="font-bold"
-                    >la educación es el camino hacia un futuro mejor</span
-                >, ofreciendo una propuesta
-                <span class="font-bold"
-                    >concreta, responsable y comprometida</span
-                > con los niños.
-            </p>
-            <p class="text-lg text-black leading-relaxed">
-                Nuestra filosofía se centra en el <span class="font-bold"
-                    >aprendizaje significativo</span
-                >, donde los niños <span class="italic"
-                    >exploran, experimentan e indagan</span
-                > para construir su propio conocimiento. Guiados por nuestro lema,
-                <span class="italic"
-                    >"Me lo contaron y lo olvidé, lo vi y lo entendí, lo hice y
-                    lo aprendí"</span
-                >, buscamos que los estudiantes <span class="font-bold"
-                    >vivan el conocimiento</span
-                > para asimilarlo plenamente.
-            </p>
-        </div>
-    </div>
-    <!-- Animated Cards Section -->
-    <div class="max-w-4xl mx-auto px-4 mt-16">
-        <div class="grid md:grid-cols-2 gap-8">
-            <!-- Card 1 -->
-            <div
-                class="animate-card opacity-0 translate-y-16 bg-[#B2CA4D] rounded-lg shadow-xl hover:shadow-2xl overflow-hidden transition-all duration-700 ease-out"
-            >
-                <div class="p-6">
-                    <h3 class="text-2xl font-[600] text-black mb-4">
-                        Nuestra
-                        <span class="font-bold"> Misión</span>
-                    </h3>
-                    <p class="text-black">
-                        Promovemos un
-                        <span class="font-bold"
-                            >aprendizaje activo y experiencial</span
-                        >. Formamos estudiantes
-                        <span class="font-bold">críticos</span>, <span
-                            class="font-bold">reflexivos</span
-                        > y capaces de aplicar sus conocimientos en diversos contextos
-                        para construir un <span class="font-bold"
-                            >futuro consciente y comprometido</span
-                        >.
-                    </p>
-                </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-2">
+                    <span class="text-[#B2CA4D]"
+                        >Espacio Educativo Innovador</span
+                    >
+                </h3>
+                <p class="text-md text-black leading-relaxed">
+                    Nuestra institución nació de la necesidad de crear un
+                    <span class="font-bold text-[#2D3748]"
+                        >espacio educativo innovador</span
+                    >, basado en una
+                    <span class="italic text-[#2D3748]"
+                        >construcción colectiva del conocimiento</span
+                    >
+                    entre la familia y la escuela.
+                </p>
             </div>
 
-            <!-- Card 2 -->
-            <div
-                class="animate-card opacity-0 translate-y-16 bg-[#B2CA4D] rounded-lg shadow-xl hover:shadow-2xl overflow-hidden transition-all duration-700 ease-out delay-300"
-            >
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-black mb-4">
-                        Nuestra Visión
-                    </h3>
-                    <p class="text-black">
-                        Ser reconocidos como una institución educativa líder en
-                        innovación y excelencia académica, creando un impacto
-                        positivo en la comunidad a través de nuestros egresados.
-                    </p>
-                </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-2">
+                    <span class="text-[#B2CA4D]"
+                        >Compromiso con la Educación</span
+                    >
+                </h3>
+                <p class="text-md text-black leading-relaxed">
+                    Fundada por una familia
+                    <span class="font-bold text-[#2D3748]"
+                        >comprometida con el trabajo y el estudio</span
+                    >, creemos que
+                    <span class="font-bold text-[#2D3748]"
+                        >la educación es el camino hacia un futuro mejor</span
+                    >, ofreciendo una propuesta
+                    <span class="font-bold text-[#2D3748]"
+                        >concreta, responsable y comprometida</span
+                    >
+                    con los niños.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-2">
+                    <span class="text-[#B2CA4D]">Aprendizaje Significativo</span
+                    >
+                </h3>
+                <p class="text-md text-black leading-relaxed">
+                    Nuestra filosofía se centra en el
+                    <span class="font-bold text-[#2D3748]"
+                        >aprendizaje significativo</span
+                    >, donde los niños
+                    <span class="italic text-[#2D3748]"
+                        >exploran, experimentan e indagan</span
+                    >
+                    para construir su propio conocimiento.
+                </p>
+                <p class="text-md text-black leading-relaxed">
+                    Guiados por nuestro lema,
+                    <span class="italic text-[#2D3748]"
+                        >"Me lo contaron y lo olvidé, lo vi y lo entendí, lo
+                        hice y lo aprendí"</span
+                    >, buscamos que los estudiantes
+                    <span class="font-bold text-[#2D3748]"
+                        >vivan el conocimiento</span
+                    >
+                    para asimilarlo plenamente.
+                </p>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Animated Cards Section -->
+<div class="max-w-4xl mx-auto px-4 mt-16">
+    <!-- Toggle Buttons (Mobile Only) -->
+    <div class="md:hidden flex justify-center space-x-4 mb-8">
+        <button
+            id="misionButton"
+            class="bg-[#B2CA4D] text-black px-4 py-2 rounded-full font-bold focus:outline-none active"
+            onclick="showCard('mision')"
+        >
+            Misión
+        </button>
+        <button
+            id="visionButton"
+            class="bg-[#B2CA4D] text-black px-4 py-2 rounded-full font-bold focus:outline-none"
+            onclick="showCard('vision')"
+        >
+            Visión
+        </button>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+        <!-- Card 1 -->
+        <div
+            id="misionCard"
+            class="animate-card opacity-0 translate-y-16 bg-[#B2CA4D] rounded-lg shadow-xl hover:shadow-2xl overflow-hidden transition-all duration-700 ease-out border-l-8 border-[#96AB41]"
+        >
+            <div class="p-6">
+                <h3 class="text-2xl font-[600] text-black mb-4">
+                    Nuestra
+                    <span class="font-bold"> Misión</span>
+                </h3>
+                <p class="text-black">
+                    Promovemos un
+                    <span class="font-bold"
+                        >aprendizaje activo y experiencial</span
+                    >. Formamos estudiantes
+                    <span class="font-bold">críticos</span>, <span
+                        class="font-bold">reflexivos</span
+                    > y capaces de aplicar sus conocimientos en diversos contextos
+                    para construir un <span class="font-bold"
+                        >futuro consciente y comprometido</span
+                    >.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+            id="visionCard"
+            class="animate-card opacity-0 translate-y-16 bg-[#B2CA4D] rounded-lg shadow-xl hover:shadow-2xl overflow-hidden transition-all duration-700 ease-out delay-300 border-l-8 border-[#96AB41]"
+        >
+            <div class="p-6">
+                <h3 class="text-2xl font-bold text-black mb-4">
+                    Nuestra Visión
+                </h3>
+                <p class="text-black">
+                    Ser reconocidos como una <span class="font-bold"
+                        >institución educativa líder</span
+                    > en
+                    <span class="font-bold">innovación</span> y <span
+                        class="font-bold">excelencia académica</span
+                    >, creando un <span class="font-bold">impacto positivo</span
+                    > en la comunidad a través de nuestros egresados.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script is:inline>
     // Intersection Observer setup
@@ -109,4 +171,75 @@ import SliderBeforeNow from "@/components/SliderBeforeNow.astro";
     document.querySelectorAll(".animate-card").forEach((card) => {
         observer.observe(card);
     });
+
+    function showCard(cardId) {
+        const misionCard = document.getElementById("misionCard");
+        const visionCard = document.getElementById("visionCard");
+        const misionButton = document.getElementById("misionButton");
+        const visionButton = document.getElementById("visionButton");
+
+        misionCard.classList.remove("fade-in");
+        visionCard.classList.remove("fade-in");
+
+        if (cardId === "mision") {
+            misionCard.style.display = "block";
+            visionCard.style.display = "none";
+            misionButton.classList.add("active");
+            visionButton.classList.remove("active");
+            setTimeout(() => {
+                misionCard.classList.add("fade-in");
+            }, 10);
+        } else if (cardId === "vision") {
+            misionCard.style.display = "none";
+            visionCard.style.display = "block";
+            misionButton.classList.remove("active");
+            visionButton.classList.add("active");
+            setTimeout(() => {
+                visionCard.classList.add("fade-in");
+            }, 10);
+        }
+    }
+
+    // Initially show only the mision card on mobile
+    if (window.innerWidth < 768) {
+        showCard("mision");
+    } else {
+        document.getElementById("misionCard").style.display = "block";
+        document.getElementById("visionCard").style.display = "block";
+    }
+
+    window.addEventListener(
+        "resize",
+        function (event) {
+            if (window.innerWidth < 768) {
+                if (
+                    document
+                        .getElementById("misionButton")
+                        .classList.contains("active")
+                ) {
+                    showCard("mision");
+                } else {
+                    showCard("vision");
+                }
+            } else {
+                document.getElementById("misionCard").style.display = "block";
+                document.getElementById("visionCard").style.display = "block";
+            }
+        },
+        true,
+    );
 </script>
+<style>
+    .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>

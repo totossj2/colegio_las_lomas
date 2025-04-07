@@ -54,7 +54,7 @@ const areasAcademicas = [
 ];
 ---
 
-<section class="py-16 px-4 max-w-7xl mx-auto mt-16">
+<section class="py-16 px-4 max-w-7xl mx-auto md:mt-16">
     <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-light tracking-wide">
             <span class="text-[#B2CA4D]">PROYECTO</span>
@@ -94,8 +94,38 @@ const areasAcademicas = [
         <div class="h-1 bg-[#B2CA4D]"></div>
     </div>
 
+    <div class="w-full h-fit md:h-50 flex flex-col md:flex-row gap">
+        <div class="w-full md:w-[35%] h-36 md:h-full bg-blue-500">
+            imagen chicos estudiando
+        </div>
+        <div class="w-[5%] h-4 md:h-full"></div>
+        <div class="w-full md:w-[60%] h-full flex items-center flex-col">
+            <p>
+                Somos un <strong>centro educativo</strong>, que además de la
+                disciplina intelectual y de un alto nivel académico, pone
+                énfasis en el desarrollo de una escala de valores coronada por
+                la trascendencia.
+            </p><p>
+                Otorgamos títulos <strong>nacionales</strong> e <strong
+                    >internacionales</strong
+                >; estos últimos por acuerdos homologados con la Universidad de
+                Cambridge, Reino Unido, y la Organización del Bachillerato
+                Internacional con sede administrativa en Ginebra, Suiza y
+                pedagógica en Gales.
+            </p>
+            <a
+                href="https://maps.app.goo.gl/gwq4QewBjq57a3M39"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block mt-4 px-6 py-2 bg-[#B2CA4D] text-white rounded-lg hover:bg-[#9eb644] transition-colors"
+            >
+                ¿Dónde estamos?
+            </a>
+        </div>
+    </div>
+
     <!-- Áreas Académicas -->
-    <div class="grid grid-cols-12 gap-4 mb-8">
+    <!--<div class="grid grid-cols-12 gap-4 mb-8">
         {
             areasAcademicas.map((area) => (
                 <div
@@ -112,7 +142,7 @@ const areasAcademicas = [
                 </div>
             ))
         }
-    </div>
+    </div>-->
 
     <!-- Separador final -->
     <div class="h-3 bg-[#B2CA4D] rounded-full mt-16"></div>
