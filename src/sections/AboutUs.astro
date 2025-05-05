@@ -88,14 +88,14 @@
     <div class="md:hidden flex justify-center space-x-4 mb-8">
         <button
             id="misionButton"
-            class="bg-[#B2CA4D] text-black px-4 py-2 rounded-full font-bold focus:outline-none active"
+            class="button_card bg-[#B2CA4D] text-black px-4 py-2 rounded-full font-bold focus:outline-none active"
             onclick="showCard('mision')"
         >
             Misión
         </button>
         <button
             id="visionButton"
-            class="bg-[#B2CA4D] text-black px-4 py-2 rounded-full font-bold focus:outline-none"
+            class="button_card bg-[#B2CA4D] text-black px-4 py-2 rounded-full font-bold focus:outline-none"
             onclick="showCard('vision')"
         >
             Visión
@@ -150,6 +150,13 @@
         </div>
     </div>
 </div>
+
+<style>
+    .button_card.active {
+        background-color: #96ab41;
+        border: 1px solid #b2ca4d;
+    }
+</style>
 
 <script is:inline>
     // Intersection Observer setup
