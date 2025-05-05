@@ -9,192 +9,197 @@ const currentYear = new Date().getFullYear();
 
 <section
     id="footer"
-    class="bg-gradient-to-b from-[#86CBEA] to-[#59A8CC] flex flex-col h-fit px-4 md:px-20 py-10 gap-y-8 mt-24"
+    class="bg-gradient-to-b from-[#86CBEA] to-[#59A8CC] flex flex-col h-fit mt-24"
 >
-    <div
-        class="flex w-full justify-between text-white font-semibold size-4 flex-col md:flex-row h-fit gap-y-4"
-    >
-        <a
-            href="https://maps.app.goo.gl/gQWPWMFnmZfUroyV8"
-            target="_blank"
-            class="md:w-fit md:whitespace-nowrap flex md:items-center gap-x-2 flex-col md:flex-row text-start"
+    <div class="px-4 md:px-20 py-10 gap-y-8 flex flex-col">
+        <div
+            class="flex w-full justify-between text-white font-semibold size-4 flex-col md:flex-row h-fit gap-y-4"
         >
-            <span>Colegio Las Lomas -</span>
-            <span>Cañada de Gómez 70, Barrio Las Lomas - Carlos Spegazzini</span
+            <a
+                href="https://maps.app.goo.gl/gQWPWMFnmZfUroyV8"
+                target="_blank"
+                class="md:w-fit md:whitespace-nowrap flex md:items-center gap-x-2 flex-col md:flex-row text-start"
             >
-        </a>
-        <a
-            href="mailto:secretaria@colegiolaslomas.com"
-            target="_blank"
-            class="w-fit whitespace-nowrap"
+                <span>Colegio Las Lomas -</span>
+                <span
+                    >Cañada de Gómez 70, Barrio Las Lomas - Carlos Spegazzini</span
+                >
+            </a>
+            <a
+                href="mailto:secretaria@colegiolaslomas.com"
+                target="_blank"
+                class="w-fit whitespace-nowrap"
+            >
+                secretaria@colegiolaslomas.com
+            </a>
+        </div>
+        <div
+            class="flex w-full flex-col justify-between text-white font-semibold gap-y-6 size-4 h-fit"
         >
-            secretaria@colegiolaslomas.com
-        </a>
+            <div
+                class="flex flex-col md:flex-row gap-6 md:gap-x-4 md:justify-between"
+            >
+                <div class="flex flex-col md:flex-row gap-2">
+                    <button
+                        class="flex justify-between items-center md:hidden w-full"
+                    >
+                        <strong>Administración</strong>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <strong class="hidden md:block">Administración</strong>
+                    <span class="hidden md:block">|</span>
+                    <div
+                        class="contact-content hidden md:flex md:flex-row gap-2"
+                    >
+                        <a href="tel:1150958777" target="_blank" class="w-fit">
+                            11 5095-8777
+                        </a>
+                        <a
+                            href="mailto:administracion@colegiolaslomas.com"
+                            target="_blank"
+                            class="w-fit"
+                        >
+                            administracion@colegiolaslomas.com
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-2">
+                    <button
+                        class="flex justify-between items-center md:hidden w-full"
+                    >
+                        <strong>Nivel Inicial</strong>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <strong class="hidden md:block">Nivel Inicial</strong>
+                    <span class="hidden md:block">|</span>
+                    <div
+                        class="contact-content hidden md:flex md:flex-row gap-2"
+                    >
+                        <a href="tel:1150368172" target="_blank" class="w-fit">
+                            11 5036-8172
+                        </a>
+                        <a
+                            href="mailto:direccionjardin@colegiolaslomas.com"
+                            target="_blank"
+                            class="w-fit"
+                        >
+                            direccionjardin@colegiolaslomas.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex flex-col md:flex-row gap-6 md:gap-x-4 md:justify-between"
+            >
+                <div class="flex flex-col md:flex-row gap-2">
+                    <button
+                        class="flex justify-between items-center md:hidden w-full"
+                    >
+                        <strong>Nivel Primario</strong>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <strong class="hidden md:block">Nivel Primario</strong>
+                    <span class="hidden md:block">|</span>
+                    <!-- añadimos min-w-0 aquí -->
+                    <div
+                        class="contact-content hidden md:flex md:flex-row gap-2 min-w-0"
+                    >
+                        <a href="tel:1150374569" target="_blank" class="w-fit">
+                            11 5037-4569
+                        </a>
+                        <a
+                            href="mailto:direccionprimaria@colegiolaslomas.com"
+                            target="_blank"
+                            class="truncate block max-w-xs md:max-w-none md:truncate-none"
+                            title="direccionprimaria@colegiolaslomas.com"
+                        >
+                            direccionprimaria@colegiolaslomas.com
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-2">
+                    <button
+                        class="flex justify-between items-center md:hidden w-full"
+                    >
+                        <strong>Nivel Secundario</strong>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <strong class="hidden md:block">Nivel Secundario</strong>
+                    <span class="hidden md:block">|</span>
+                    <!-- min-w-0 también aquí -->
+                    <div
+                        class="contact-content hidden md:flex md:flex-row gap-2 min-w-0"
+                    >
+                        <a href="tel:1150373248" target="_blank" class="w-fit">
+                            11 5037-3248
+                        </a>
+                        <a
+                            href="mailto:direccionsecundaria@colegiolaslomas.com"
+                            target="_blank"
+                            class="truncate md:truncate-none block max-w-xs md:max-w-none"
+                            title="direccionsecundaria@colegiolaslomas.com"
+                        >
+                            direccionsecundaria@colegiolaslomas.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div
-        class="flex w-full flex-col justify-between text-white font-semibold gap-y-6 size-4 h-fit"
+        class="flex w-full justify-between text-white font-semibold size-4 flex-row h-fit border-t-2 border-[#86CBEA] pt-4 mt-4 md:mt-0"
     >
         <div
-            class="flex flex-col md:flex-row gap-6 md:gap-x-4 md:justify-between"
+            class="flex justify-between gap-x-4 flex-col md:flex-row w-full px-4 md:px-20"
         >
-            <div class="flex flex-col md:flex-row gap-2">
-                <button
-                    class="flex justify-between items-center md:hidden w-full"
-                >
-                    <strong>Administración</strong>
-                    <span class="accordion-icon">+</span>
-                </button>
-                <strong class="hidden md:block">Administración</strong>
-                <span class="hidden md:block">|</span>
-                <div class="contact-content hidden md:flex md:flex-row gap-2">
-                    <a href="tel:1150958777" target="_blank" class="w-fit">
-                        11 5095-8777
-                    </a>
-                    <a
-                        href="mailto:administracion@colegiolaslomas.com"
-                        target="_blank"
-                        class="w-fit"
-                    >
-                        administracion@colegiolaslomas.com
-                    </a>
-                </div>
-            </div>
-            <div class="flex flex-col md:flex-row gap-2">
-                <button
-                    class="flex justify-between items-center md:hidden w-full"
-                >
-                    <strong>Nivel Inicial</strong>
-                    <span class="accordion-icon">+</span>
-                </button>
-                <strong class="hidden md:block">Nivel Inicial</strong>
-                <span class="hidden md:block">|</span>
-                <div class="contact-content hidden md:flex md:flex-row gap-2">
-                    <a href="tel:1150368172" target="_blank" class="w-fit">
-                        11 5036-8172
-                    </a>
-                    <a
-                        href="mailto:direccionjardin@colegiolaslomas.com"
-                        target="_blank"
-                        class="w-fit"
-                    >
-                        direccionjardin@colegiolaslomas.com
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div
-            class="flex flex-col md:flex-row gap-6 md:gap-x-4 md:justify-between"
-        >
-            <div class="flex flex-col md:flex-row gap-2">
-                <button
-                    class="flex justify-between items-center md:hidden w-full"
-                >
-                    <strong>Nivel Primario</strong>
-                    <span class="accordion-icon">+</span>
-                </button>
-                <strong class="hidden md:block">Nivel Primario</strong>
-                <span class="hidden md:block">|</span>
-                <!-- añadimos min-w-0 aquí -->
-                <div
-                    class="contact-content hidden md:flex md:flex-row gap-2 min-w-0"
-                >
-                    <a href="tel:1150374569" target="_blank" class="w-fit">
-                        11 5037-4569
-                    </a>
-                    <a
-                        href="mailto:direccionprimaria@colegiolaslomas.com"
-                        target="_blank"
-                        class="truncate block max-w-xs"
-                        title="direccionprimaria@colegiolaslomas.com"
-                    >
-                        direccionprimaria@colegiolaslomas.com
-                    </a>
-                </div>
-            </div>
-            <div class="flex flex-col md:flex-row gap-2">
-                <button
-                    class="flex justify-between items-center md:hidden w-full"
-                >
-                    <strong>Nivel Secundario</strong>
-                    <span class="accordion-icon">+</span>
-                </button>
-                <strong class="hidden md:block">Nivel Secundario</strong>
-                <span class="hidden md:block">|</span>
-                <!-- min-w-0 también aquí -->
-                <div
-                    class="contact-content hidden md:flex md:flex-row gap-2 min-w-0"
-                >
-                    <a href="tel:1150373248" target="_blank" class="w-fit">
-                        11 5037-3248
-                    </a>
-                    <a
-                        href="mailto:direccionsecundaria@colegiolaslomas.com"
-                        target="_blank"
-                        class="truncate block max-w-xs"
-                        title="direccionsecundaria@colegiolaslomas.com"
-                    >
-                        direccionsecundaria@colegiolaslomas.com
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div
-            class="flex w-full justify-between text-white font-semibold size-4 flex-row h-fit"
-        >
-            <div class="flex gap-x-4 flex-col md:flex-row w-full">
-                <div class="flex justify-center gap-x-4 flex-row mb-5">
-                    <a
-                        href="https://www.facebook.com/profile.php?id=100063531022668"
-                        target="_blank"
-                    >
-                        <FacebookIcon width="24" height="24" color="white" />
-                    </a>
-                    <a
-                        href="https://www.instagram.com/colegio_las_lomas/"
-                        target="_blank"
-                    >
-                        <InstagramIcon width="24" height="24" color="white" />
-                    </a>
-                    <a
-                        href="https://www.youtube.com/channel/UCLlDCM7bWN2NktdL1jMFbgA"
-                        target="_blank"
-                    >
-                        <YoutubeIcon width="auto" height="24" color="white" />
-                    </a>
-                    <Logo width="auto" height="24" />
-                </div>
+            <div class="flex justify-between gap-x-4 flex-row mb-5">
                 <a
-                    href="/"
-                    class="w-fit md:whitespace-nowrap text-center w-full"
+                    href="https://www.facebook.com/profile.php?id=100063531022668"
+                    target="_blank"
                 >
-                    Colegio Las Lomas Carlos Spegazzini © {currentYear}
+                    <FacebookIcon width="24" height="24" color="white" />
                 </a>
+                <a
+                    href="https://www.instagram.com/colegio_las_lomas/"
+                    target="_blank"
+                >
+                    <InstagramIcon width="24" height="24" color="white" />
+                </a>
+                <a
+                    href="https://www.youtube.com/channel/UCLlDCM7bWN2NktdL1jMFbgA"
+                    target="_blank"
+                >
+                    <YoutubeIcon width="auto" height="24" color="white" />
+                </a>
+                <Logo width="auto" height="24" />
             </div>
+            <a href="/" class="w-fit md:whitespace-nowrap text-center">
+                Colegio Las Lomas Carlos Spegazzini © {currentYear}
+            </a>
         </div>
     </div>
-    <script>
-        document.querySelectorAll("button").forEach((button) => {
-            button.addEventListener("click", () => {
-                const content =
-                    button.nextElementSibling?.nextElementSibling
-                        ?.nextElementSibling;
-                const icon = button.querySelector(".accordion-icon");
-
-                if (content && icon) {
-                    content.classList.toggle("hidden");
-                    icon.textContent = content.classList.contains("hidden")
-                        ? "+"
-                        : "-";
-                }
-            });
-        });
-    </script>
-
-    <style>
-        .accordion-icon {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-    </style>
 </section>
+<script>
+    document.querySelectorAll("button").forEach((button) => {
+        button.addEventListener("click", () => {
+            const content =
+                button.nextElementSibling?.nextElementSibling
+                    ?.nextElementSibling;
+            const icon = button.querySelector(".accordion-icon");
+
+            if (content && icon) {
+                content.classList.toggle("hidden");
+                icon.textContent = content.classList.contains("hidden")
+                    ? "+"
+                    : "-";
+            }
+        });
+    });
+</script>
+
+<style>
+    .accordion-icon {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+</style>
