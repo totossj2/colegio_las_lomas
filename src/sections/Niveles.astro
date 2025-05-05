@@ -1,6 +1,12 @@
 ---
 const niveles = [
     {
+        titulo: "MATERNAL",
+        imagen: "/images/inicial.webp",
+        alt: "Nivel Maternal",
+        enlace: "/proyecto-educativo/Maternal",
+    },
+    {
         titulo: "INICIAL",
         imagen: "/images/inicial.webp",
         alt: "Nivel Inicial",
@@ -60,10 +66,16 @@ const areasAcademicas = [
             <span class="text-[#B2CA4D]">PROYECTO</span>
             <span class="text-[#B2CA4D] font-bold">EDUCATIVO</span>
         </h2>
+        <div
+            class="flex flex-row w-full text-nowrap justify-center text-center mt-2 text-sm md:text-base font-light text-gray-500"
+        >
+            Nivel Inicial DIEGEP 8521 | Nivel Primario DIEGEP 8591 | Nivel
+            Secundario DIEGEP 9128
+        </div>
     </div>
 
     <!-- Niveles Educativos -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-20">
         {
             niveles.map((nivel) => (
                 <div class="relative overflow-hidden rounded-2xl shadow-md group">
@@ -76,7 +88,7 @@ const areasAcademicas = [
                         <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
                             <h3
                                 class="text-white text-4xl font-bold tracking-wider"
-                                style="  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"
+                                style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"
                             >
                                 {nivel.titulo}
                             </h3>
