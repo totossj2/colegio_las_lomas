@@ -1,0 +1,292 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/sections/Hero.astro';
+import PostHero from '@/sections/PostHero.astro';
+import Inscripcion from '@/sections/Inscripcion.astro';
+import Logo from '@/assets/logo.astro';
+
+import Image1 from '/public/images/primaria.webp';
+import Image2 from '/public/images/chicos_mundo.webp';
+---
+
+<Layout>
+  <script>
+    // Función para manejar la animación de las secciones
+    function handleScrollAnimation() {
+      const sections = document.querySelectorAll('.section-fade');
+
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight * 0.75) {
+          section.classList.add('visible');
+        }
+      });
+    }
+
+    // Ejecutar al cargar la página
+    document.addEventListener('DOMContentLoaded', handleScrollAnimation);
+
+    // Ejecutar al hacer scroll
+    window.addEventListener('scroll', handleScrollAnimation);
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #2563eb; /* blue-600 */
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .section-fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+    }
+
+    .section-fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+  <Hero
+    images={[
+      {
+        src: Image1.src,
+        alt: 'Aula del Colegio Las Lomas',
+        title: '',
+        description: '',
+      },
+      {
+        src: Image2.src,
+        alt: 'Aula del Colegio Las Lomas',
+        title: '',
+        description: '',
+      },
+    ]}
+  />
+
+  <section
+    id="primaria"
+    class="section-fade text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+  >
+    <!-- Navegación lateral (solo desktop) -->
+    <nav class="hidden md:flex justify-center pr-8 pt-8">
+      <ul class="sticky flex gap-6 top-8">
+        <li class="mb-4">
+          <a
+            href="#primaria"
+            class="nav-link text-blue-600 hover:text-blue-800 font-medium"
+          >
+            EDUCACIÓN PRIMARIA
+          </a>
+        </li>
+        <li>
+          <a
+            href="#propuesta"
+            class="nav-link text-blue-600 hover:text-blue-800 font-medium"
+          >
+            PROPUESTA PEDAGÓGICA
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <h2 class="text-3xl font-semibold mb-6 text-center">
+      PROYECTO INSTITUCIONAL
+    </h2>
+    <h3 class="text-2xl font-semibold mb-4 text-center">EDUCACIÓN PRIMARIA</h3>
+
+    <p class="mb-6 leading-relaxed">
+      El Colegio Las Lomas de Carlos Spegazzini proyecta su Educación Primaria
+      teniendo en cuenta las nuevas tendencias educativas. Creemos que el ser
+      humano tiene la disposición natural para aprender, pero solo aquello a lo
+      que le encuentra sentido o lógica, tendiendo a rechazar lo que no se
+      relaciona con sus conocimientos previos.
+    </p>
+
+    <p class="mb-6 leading-relaxed">
+      En nuestra institución, trabajamos para potenciar que el alumno construya
+      su propio aprendizaje, desarrollando la competencia de aprender a
+      aprender. Como institución educativa, formamos a nuestros niños con
+      pilares sólidos que sustentan nuestra labor educativa.
+    </p>
+
+    <p class="mb-6 leading-relaxed">
+      El aprendizaje significativo, basado en los conocimientos previos y
+      sumando los nuevos a través del descubrimiento, será la clave para obtener
+      un aprendizaje permanente, a largo plazo y beneficioso para los niños.
+    </p>
+
+    <p class="mb-6 leading-relaxed">
+      Activando las metodologías y estrategias adecuadas, y con un personal
+      proactivo y preparado, acompañamos a los niños en la apropiación de dichos
+      conocimientos.
+    </p>
+
+    <p class="mb-6 leading-relaxed">
+      Unificamos nuestra propuesta curricular y extracurricular, lo que resulta
+      en una educación significativa y constructiva, acompañada de valores y
+      principios. Es nuestra prioridad que cada niño se sienta querido,
+      contenido y cuidado por su Colegio, ya que solo así crecerá libre,
+      desplegará su creatividad e iniciativa, e incorporará el conocimiento de
+      manera efectiva.
+    </p>
+
+    <p class="mb-6 leading-relaxed">
+      Un niño seguro de sí mismo se valoriza y, a su vez, podrá valorar a los
+      demás con un sentido solidario y humanista.
+    </p>
+
+    <!-- Separador -->
+    <div
+      class="section-fade separator h-1 w-full mx-auto bg-gray-600 my-8 rounded-full"
+    >
+    </div>
+
+    <!-- Propuesta Pedagógica -->
+    <div
+      id="propuesta"
+      class="section-fade text-gray-800 rounded-2xl mb-4 mx-auto"
+    >
+      <h2 class="text-3xl font-semibold mb-6 text-center">
+        PROPUESTA PEDAGÓGICA
+      </h2>
+
+      <a
+        href="/public/propuestas/PP_NIVEL_PRIMARIO_CLL.docx"
+        class="text-blue-600 hover:text-blue-800 font-medium flex justify-center mb-6"
+      >
+        Descargar Propuesta Pedagógica
+      </a>
+
+      <section class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4">Primer Ciclo</h3>
+        <h4 class="text-xl font-medium mb-2">
+          Módulos Curriculares (Turno Mañana)
+        </h4>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Prácticas del Lenguaje</li>
+          <li>Matemática</li>
+          <li>Ciencias Sociales</li>
+          <li>Ciencias Naturales</li>
+          <li>Educación Física</li>
+          <li>Artística (Arte)</li>
+        </ul>
+        <p class="mt-2 text-sm text-gray-600">
+          + Talleres jornada simple: Inglés, Lengua de Señas, Emociones, Danza
+          Folclórica.
+        </p>
+        <p class="mt-2 text-sm text-gray-600">
+          + Talleres jornada completa: Inglés, Tecnología, Robótica, Lenguaje de
+          señas, danza folclórica, emociones, tarde deportiva, cocina/nutrición,
+          apoyo escolar, arte.
+        </p>
+      </section>
+
+      <!-- Segundo Ciclo -->
+      <section class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4">Segundo Ciclo</h3>
+        <h4 class="text-xl font-medium mb-2">
+          Módulos Curriculares (Turno Mañana)
+        </h4>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Prácticas del Lenguaje</li>
+          <li>Matemática</li>
+          <li>Ciencias Sociales</li>
+          <li>Ciencias Naturales</li>
+          <li>Educación Física</li>
+          <li>Artística (Arte)</li>
+          <li>Inglés</li>
+        </ul>
+        <p class="mt-2 text-sm text-gray-600">
+          + Talleres jornada simple: Inglés, Lengua de Señas, Emociones,
+          Tecnología.
+        </p>
+        <p class="mt-2 text-sm text-gray-600">
+          + Talleres jornada completa: Inglés, Tecnología, Robótica, Lenguaje de
+          señas, danza folclórica, emociones, musica/banda, tarde deportiva,
+          cocina/nutrición, apoyo escolar, arte.
+        </p>
+      </section>
+
+      <!-- Horarios y servicios -->
+      <section>
+        <h3 class="text-xl md:text-2xl font-semibold mb-4">
+          Horarios y servicios
+        </h3>
+        <table
+          class="text-sm md:text-base w-full text-left border-collapse mb-4"
+        >
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="p-2 border">Modalidad</th>
+              <th class="p-2 border">Ingreso</th>
+              <th class="p-2 border">Salida</th>
+              <th class="p-2 border">Almuerzo / Recreación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-2 border">Jornada Simple</td>
+              <td class="p-2 border">08:00</td>
+              <td class="p-2 border">12:45</td>
+              <td class="p-2 border">—</td>
+            </tr>
+            <tr>
+              <td class="p-2 border">Jornada Doble</td>
+              <td class="p-2 border">08:00</td>
+              <td class="p-2 border">17:00</td>
+              <td class="p-2 border">12:00 – 13:00</td>
+            </tr>
+          </tbody>
+        </table>
+        <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
+          <li>
+            Apertura del edificio: 07:35 horas a cargo de los directivos del
+            nivel (hasta 07:45 bajo supervisión de directora)
+          </li>
+          <li>Cierre del edificio Jornada Simple: 12:50 horas</li>
+          <li>Cierre del edificio Jornada Doble: 17:10 horas</li>
+          <li>
+            *Los talleres pueden sufrir cambios según disponibilidad docente.
+          </li>
+          <li>
+            *Los talleres dependerán del nivel y jornada en que se encuentre el
+            alumno/a.
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="text-center text-blue-600 font-semibold text-xl">
+      COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+    </p>
+  </section>
+
+  <div class="h-12"></div>
+  <PostHero />
+  <div class="h-24"></div>
+  <Inscripcion />
+</Layout>

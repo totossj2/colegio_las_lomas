@@ -1,0 +1,288 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/sections/Hero.astro';
+import PostHero from '@/sections/PostHero.astro';
+import Inscripcion from '@/sections/Inscripcion.astro';
+import Logo from '@/assets/logo.astro';
+
+import Image1 from '/public/images/inicial.webp';
+import Image2 from '/public/images/jardin.webp';
+---
+
+<Layout>
+  <script>
+    // Función para manejar la animación de las secciones
+    function handleScrollAnimation() {
+      const sections = document.querySelectorAll('.section-fade');
+
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight * 0.75) {
+          section.classList.add('visible');
+        }
+      });
+    }
+
+    // Ejecutar al cargar la página
+    document.addEventListener('DOMContentLoaded', handleScrollAnimation);
+
+    // Ejecutar al hacer scroll
+    window.addEventListener('scroll', handleScrollAnimation);
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #2563eb; /* blue-600 */
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .section-fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+    }
+
+    .section-fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+  <Hero
+    images={[
+      {
+        src: Image2.src,
+        alt: 'Frente del Colegio Las Lomas',
+        title: '',
+        description: '',
+      },
+    ]}
+  />
+
+  <section
+    class="section-fade bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+  >
+    <nav class="hidden md:flex justify-center pr-8 pt-8">
+      <ul class="sticky flex gap-6 top-8">
+        <li class="mb-4">
+          <a
+            href="#maternal"
+            class="nav-link text-blue-600 hover:text-blue-800 font-medium"
+          >
+            EDUCACIÓN MATERNAL
+          </a>
+        </li>
+        <li>
+          <a
+            href="#propuesta"
+            class="nav-link text-blue-600 hover:text-blue-800 font-medium"
+          >
+            PROPUESTA PEDAGÓGICA
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <h2 id="maternal" class="text-3xl font-semibold mb-6 text-center">
+      SALA DE 2 AÑOS
+    </h2>
+    <h3 class="text-2xl font-semibold mb-4 text-center">
+      FUNDAMENTACIÓN INSTITUCIONAL
+    </h3>
+
+    <p class="mb-6 leading-relaxed">
+      El Colegio Las Lomas de Carlos Spegazzini en el Nivel Inicial, creado en
+      2016, ha tenido una gran aceptación en la comunidad, ofreciendo jornada
+      simple y doble desde la sala de 3 años. Nuestra institución fue pensada
+      para dar respuesta a aquellos padres que, por diversas razones, trabajan
+      ambos, brindando un espacio cómodo, cálido y con lineamientos pedagógicos
+      de calidad. Garantizamos una puerta de entrada al mundo escolar,
+      contemplando las capacidades y habilidades de cada niño, pensándolo como
+      un ser único, con derechos, y fortaleciéndolo a lo largo de su trayectoria
+      escolar.
+    </p>
+
+    <p class="mb-6 leading-relaxed">
+      A partir de la demanda de nuestra comunidad educativa y la comunidad
+      externa que rodea a Las Lomas, quienes expresaron la necesidad de un
+      jardín maternal desde los 2 años, vimos la oportunidad de dar respuesta,
+      ya que en las inmediaciones no existía una propuesta similar.
+    </p>
+
+    <p class="mb-6 leading-relaxed">
+      Nos sentimos privilegiados por las expresiones de apoyo y pedido de
+      nuestra comunidad, que reconocen el esmero y la dedicación de nuestro
+      personal y de toda la institución en la tarea educativa y formativa de los
+      niños que forman parte de nuestra matrícula actual.
+    </p>
+
+    <h3 class="text-2xl font-semibold mb-4 text-center">
+      FUNDAMENTACIÓN PEDAGÓGICA
+    </h3>
+
+    <p class="mb-6 leading-relaxed">
+      Los aprendizajes que los niños y niñas construyen en las primeras
+      secciones de la Educación Inicial constituyen un pilar esencial para
+      futuros saberes en múltiples lenguajes y campos del conocimiento. Valores,
+      conceptos y habilidades integradas conforman una base sólida para un
+      aprendizaje potente y significativo.
+    </p>
+
+    <p class="mb-6 leading-relaxed">
+      Consideramos fundamental la valoración de los diferentes contextos de
+      crianza y tradiciones socioculturales, respetando la infancia y trabajando
+      mancomunadamente con las familias para ampliar las capacidades y bagajes
+      culturales de los niños y las niñas.
+    </p>
+
+    <p class="mb-6 leading-relaxed">
+      Las transformaciones sociales, culturales y económicas de nuestra sociedad
+      han impactado en las formas de crianza, y los jardines maternales han
+      evolucionado de una función asistencial a una función pedagógica integral,
+      atendiendo específicamente las demandas de la primera infancia.
+    </p>
+
+    <p class="mb-6 leading-relaxed">
+      La Ley de Educación Nacional N° 26.206 (2006) estructura el sistema
+      educativo incluyendo el primer ciclo del Nivel Inicial, estableciendo en
+      su artículo 24 que “los jardines maternales atenderán a los/as niños/as
+      desde los cuarenta y cinco (45) días hasta los dos (2) años de edad
+      inclusive”. Asimismo, el artículo 21 señala la responsabilidad de las
+      instituciones de “asegurar la atención, el cuidado y la educación integral
+      de los/as niños/as”.
+    </p>
+
+    <p class="mb-6 leading-relaxed">
+      Especialistas coinciden en la importancia de la educación en los primeros
+      años para el desarrollo integral de los niños, impactando positivamente
+      tanto en el ámbito social como individual. El acceso al jardín maternal
+      ofrece oportunidades para ampliar los conocimientos y experiencias
+      familiares mediante propuestas educativas específicas.
+    </p>
+
+    <p class="mb-6 leading-relaxed">
+      Buscamos promover la formación integral de los alumnos en sus dimensiones
+      social, afectiva emocional, corporal y motriz, expresiva, estética,
+      cognitiva y ética. Esta misión institucional se realiza en estrecha
+      colaboración con las familias, tal como establece la Ley Nacional de
+      Educación en su artículo 20: “Propiciar la participación de las familias
+      en el cuidado y la tarea educativa, promoviendo la comunicación y el
+      respeto mutuo”.
+    </p>
+
+    <div
+      class="section-fade separator h-1 w-full mx-auto bg-gray-600 my-8 rounded-full"
+    >
+    </div>
+
+    <div
+      id="propuesta"
+      class="section-fade bg-white text-gray-800 rounded-2xl mb-4 mx-auto"
+    >
+      <h2 class="text-3xl font-semibold mb-6 text-center">
+        PROPUESTA PEDAGÓGICA
+      </h2>
+
+      <a
+        href="/public/propuestas/PP_MATERNA-NIVEL_INICIAL_CLL.docx"
+        class="text-blue-600 hover:text-blue-800 font-medium flex justify-center mb-6"
+      >
+        Descargar Propuesta Pedagógica
+      </a>
+
+      <!-- Maternal – Sala 2 años -->
+      <section class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4">Maternal – Sala 2 años</h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Área de formación personal y social</li>
+          <li>Área de exploración del ambiente</li>
+          <li>Área de desarrollo motriz</li>
+          <li>Área de comunicación y expresión</li>
+          <li>Área de juego</li>
+          <li>Música</li>
+          <li>Educación Física</li>
+        </ul>
+        <p class="mt-4 text-sm text-gray-600">
+          + Talleres extracurriculares: Inglés, Tecnología, Deporte, Artística,
+          Cocina/Nutrición, Obras Teatrales, Filosofía, Ecología, Emociones.
+          (sujeto a disponibilidad docente)
+        </p>
+      </section>
+
+      <!-- Horarios -->
+      <section>
+        <h3 class="text-2xl font-semibold mb-4">Horarios y servicios</h3>
+        <table class="w-full text-left border-collapse mb-4">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="p-2 border">Modalidad</th>
+              <th class="p-2 border">Ingreso</th>
+              <th class="p-2 border">Salida</th>
+              <th class="p-2 border">Almuerzo / Recreación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-2 border">Jornada Simple</td>
+              <td class="p-2 border">08:00</td>
+              <td class="p-2 border">12:00</td>
+              <td class="p-2 border">—</td>
+            </tr>
+            <tr>
+              <td class="p-2 border">Jornada Completa</td>
+              <td class="p-2 border">08:00</td>
+              <td class="p-2 border">16:30</td>
+              <td class="p-2 border">12:00 – 13:00</td>
+            </tr>
+          </tbody>
+        </table>
+        <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
+          <li>
+            Apertura edificio: 07:35 h (hasta 07:45 bajo supervisión de
+            directora)
+          </li>
+          <li>Cierre Simple: 12:00 h · Cierre Completa: 17:00 h</li>
+          <li>Recreación diaria: ½ h</li>
+          <li>Almuerzo y merienda: ½ h cada uno según jornada</li>
+          <li>
+            Siesta: ½ h en salas 2 y 3 años (4 años si solicita, sólo en doble
+            jornada)
+          </li>
+          <li>Parque: ½ h en cada jornada</li>
+          <li>Inglés extendido: ½ h extra semanal</li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="text-center text-blue-600 font-semibold text-xl">
+      COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+    </p>
+  </section>
+
+  <div class="h-12"></div>
+  <PostHero />
+  <div class="h-24"></div>
+  <Inscripcion />
+</Layout>
