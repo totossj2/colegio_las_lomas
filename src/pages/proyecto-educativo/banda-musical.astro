@@ -1,0 +1,140 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/sections/Hero.astro';
+import PostHero from '@/sections/PostHero.astro';
+import Inscripcion from '@/sections/Inscripcion.astro';
+import Logo from '@/assets/logo.astro';
+
+import Image1 from '@/assets/banners/las_lomas_aula.png';
+import Image2 from '@/assets/banners/las_lomas_frente.png';
+---
+
+<Layout>
+  <Hero
+    images={[
+      {
+        src: Image1.src,
+        alt: 'Aula del Colegio Las Lomas',
+        title: 'Nuestras Aulas',
+        description: 'Espacios modernos diseñados para el aprendizaje',
+      },
+      {
+        src: Image2.src,
+        alt: 'Frente del Colegio Las Lomas',
+        title: 'Nuestras Instalaciones',
+        description: 'Infraestructura moderna y segura',
+      },
+    ]}
+  />
+
+  <section
+    class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+  >
+    <h2 class="text-3xl font-semibold mb-6 text-center">
+      PROYECTO INSTITUCIONAL
+    </h2>
+    <h3 class="text-2xl font-semibold mb-4 text-center">BANDA MUSICAL</h3>
+
+    <p class="mb-6 leading-relaxed">
+      “Una agrupación musical es un conjunto de personas, que, mediante el uso
+      de diversos instrumentos, interpretan obras musicales pertenecientes a
+      diversos géneros”. Esta definición nos acerca a la idea de nuestro
+      proyecto.
+    </p>
+    <p class="mb-6 leading-relaxed">
+      En el marco del trabajo institucional y los avances logrados en años de
+      preparación de musicales, obras teatrales y fechas patrias, surge la
+      necesidad de formalizar nuestra “BANDA MUSICAL COLEGIO LAS LOMAS”.
+    </p>
+    <p class="mb-6 leading-relaxed">
+      El proyecto enfatiza la importancia de la música en nuestras vidas: el
+      interés, la preparación, el trabajo progresivo y el sentido de
+      pertenencia, profundizando en la producción musical, la ejecución grupal y
+      el trabajo entre pares.
+    </p>
+    <p class="mb-6 leading-relaxed">
+      La música se transforma en construcción de significados socioculturales
+      que definen nuestra identidad institucional y la personalidad de nuestros
+      alumnos.
+    </p>
+
+    <h3 class="text-2xl font-semibold mb-4 text-center">OBJETIVOS</h3>
+    <ul class="list-disc list-inside mb-6 space-y-2">
+      <li>
+        Identificar y denominar los materiales y la organización del lenguaje
+        musical presentes en las obras en análisis descriptivo.
+      </li>
+      <li>
+        Comprender los principios sintácticos y semánticos del lenguaje musical.
+      </li>
+      <li>
+        Ejecutar concertadamente producciones musicales propias, con fluidez y
+        continuidad.
+      </li>
+      <li>
+        Relacionar los componentes sonoros y roles en producciones audiovisuales
+        en términos de intencionalidad comunicativa.
+      </li>
+      <li>
+        Representar gráficamente producciones musicales mediante grafías
+        analógicas.
+      </li>
+      <li>Valorar la importancia del trabajo en conjunto.</li>
+    </ul>
+
+    <h3 class="text-2xl font-semibold mb-4 text-center">TIEMPO ESTIMADO</h3>
+    <ul class="list-disc list-inside mb-6 space-y-2">
+      <li>Desarrollo del proyecto durante todo el año.</li>
+      <li>Conocimiento y preparación de canciones en el primer período.</li>
+      <li>Ensayos y preparación para eventos escolares a lo largo del año.</li>
+    </ul>
+
+    <h3 class="text-2xl font-semibold mb-4 text-center">RECURSOS DIDÁCTICOS</h3>
+    <ul class="list-disc list-inside mb-6 space-y-2">
+      <li>Materiales con diversos timbres y sonoridades.</li>
+      <li>Recursos audiovisuales: videos, grabaciones, etc.</li>
+      <li>Variedad de instrumentos disponibles en la institución.</li>
+    </ul>
+
+    <h3 class="text-2xl font-semibold mb-4 text-center">CRONOGRAMA ANUAL</h3>
+    <p class="mb-6 leading-relaxed">
+      La Banda Musical colaborará en las efemérides de la institución; el
+      cronograma es aproximado y sujeto a cambios.
+    </p>
+    <ul class="list-disc list-inside mb-6 space-y-2">
+      <li>25 de mayo</li>
+      <li>20 de junio</li>
+      <li>9 de julio</li>
+      <li>10 de noviembre</li>
+      <li>Efemérides y eventos de todos los niveles.</li>
+    </ul>
+
+    <h3 class="text-2xl font-semibold mb-4 text-center">EVALUACIÓN</h3>
+    <p class="mb-6 leading-relaxed">
+      La evaluación brinda insumos para conocer el avance de la tarea conjunta,
+      superando errores mediante la interacción con otros y la materia.
+    </p>
+    <ul class="list-disc list-inside mb-6 space-y-2">
+      <li>Participación en clase.</li>
+      <li>Revisión progresiva de actividades orales y escritas.</li>
+      <li>Trabajo entre pares, distribución de tareas y roles.</li>
+      <li>Interpretaciones grupales e individuales.</li>
+      <li>Audiciones individuales y grupales.</li>
+      <li>Producto final: participación en eventos escolares.</li>
+    </ul>
+
+    <p class="mb-6 leading-relaxed">
+      El proyecto arranca en Nivel Primario con la Minibanda Level 2 (3° y 4°
+      grado) y culmina con la Banda en Nivel Secundario del Ciclo Superior.
+    </p>
+
+    <p class="text-center text-blue-600 font-semibold text-xl">
+      COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+    </p>
+  </section>
+
+  <div class="h-12"></div>
+  <PostHero />
+  <div class="h-24"></div>
+  <Inscripcion />
+</Layout>

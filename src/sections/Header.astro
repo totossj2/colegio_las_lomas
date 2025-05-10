@@ -1,328 +1,327 @@
 ---
-import Logo from "@/assets/logo.astro";
+import Logo from '@/assets/logo.astro';
 
-import { getCollection } from "astro:content";
-const posts = await getCollection("posts");
+import { getCollection } from 'astro:content';
+const posts = await getCollection('posts');
 
 const menuItems = [
-    {
-        title: "Institucional",
-        submenu: [
-            {
-                label: "Carta de Presentación",
-                href: "../institucional/carta-presentacion",
-            },
-            { label: "Ideario", href: "../institucional/ideario" },
-            { label: "Lema y Misión", href: "../institucional/lema-mision" },
-            {
-                label: "Nombre del colegio",
-                href: "../institucional/nombre-colegio",
-            },
-            { label: "Escudo", href: "../institucional/escudo" },
-            {
-                label: "Galería de Fotos",
-                href: "../institucional/galeria-fotos",
-            },
-        ],
-    },
-    {
-        title: "Niveles Educativos",
-        submenu: [
-            { label: "Maternal", href: "/niveles/maternal" },
-            { label: "Jardín", href: "/niveles/inicial" },
-            {
-                label: "Educación Primaria",
-                href: "/niveles/primaria",
-            },
-            {
-                    label: "Educación Secundaria",
-                    href: "/niveles/secundaria",
-            },
-        ],
-    },
-    {
-        title: "Proyecto Educativo",
-        submenu: [
-            { label: "Inglés", href: "/proyecto-educativo/ingles" },
-            {
-                label: "Tecnología Informática",
-                href: "/proyecto-educativo/tecnologia-informatica",
-            },
-            { label: "Música", href: "/proyecto-educativo/musica" },
-            {
-                label: "Escuelita Deportiva",
-                href: "/proyecto-educativo/escuelita-deportiva",
-            },
-            {
-                label: "Medio Ambiente",
-                href: "/proyecto-educativo/medio-ambiente",
-            },
-            {
-                label: "Taller de Artes Visuales",
-                href: "/proyecto-educativo/taller-artes-visuales",
-            },
-            { label: "Cocina", href: "/proyecto-educativo/cocina" },
-            { label: "Nutrición", href: "/proyecto-educativo/nutricion" },
-            {
-                label: "Clases de Apoyo",
-                href: "/proyecto-educativo/clases-apoyo",
-            },
-            { label: "Danza", href: "/proyecto-educativo/danza" },
-            { label: "Teatro", href: "/proyecto-educativo/teatro" },
-            { label: "Yoga", href: "/proyecto-educativo/yoga" },
-            {
-                label: "Equipo de Orientación Externo",
-                href: "/proyecto-educativo/equipo-orientacion-externo",
-            },
-        ],
-    },
-    {
-        title: "Información Administrativa",
-        submenu: [
-            {
-                label: "Modalidad y Horarios",
-                href: "/informacion-administrativa/modalidad-horarios",
-            },
-            {
-                label: "Normativa de Convivencia",
-                href: "/informacion-administrativa/normativa-convivencia",
-            },
-            {
-                label: "Uniformes Escolares",
-                href: "/informacion-administrativa/uniformes-escolares",
-            },
-            {
-                label: "Útiles Escolares y Libros",
-                href: "/informacion-administrativa/utiles-libros",
-            },
-            {
-                label: "Servicio de Comedor",
-                href: "/informacion-administrativa/servicio-comedor",
-            },
-            {
-                label: "Plan de Evacuación",
-                href: "/informacion-administrativa/plan-evacuacion",
-            },
-        ],
-    },
-    {
-        title: "Admisión",
-        submenu: [
-            {
-                label: "Solicitud de Vacante",
-                href: "/admision/solicitud-vacante",
-            },
-            {
-                label: "Documentación de Ingreso",
-                href: "/admision/documentacion-ingreso",
-            },
-        ],
-    },
+  {
+    title: 'Institucional',
+    submenu: [
+      {
+        label: 'Carta de Presentación',
+        href: '../institucional/carta-presentacion',
+      },
+      { label: 'Ideario', href: '../institucional/ideario' },
+      { label: 'Lema y Misión', href: '../institucional/lema-mision' },
+      {
+        label: 'Nombre del colegio',
+        href: '../institucional/nombre-colegio',
+      },
+      { label: 'Escudo', href: '../institucional/escudo' },
+      {
+        label: 'Galería de Fotos',
+        href: '../institucional/galeria-fotos',
+      },
+    ],
+  },
+  {
+    title: 'Niveles Educativos',
+    submenu: [
+      { label: 'Maternal', href: '/niveles/maternal' },
+      { label: 'Jardín', href: '/niveles/inicial' },
+      {
+        label: 'Educación Primaria',
+        href: '/niveles/primaria',
+      },
+      {
+        label: 'Educación Secundaria',
+        href: '/niveles/secundaria',
+      },
+    ],
+  },
+  {
+    title: 'Proyecto Educativo',
+    submenu: [
+      { label: 'Inglés', href: '/proyecto-educativo/ingles' },
+      {
+        label: 'Tecnología Informática',
+        href: '/proyecto-educativo/tecnologia-informatica',
+      },
+      { label: 'Música', href: '/proyecto-educativo/musica' },
+      { label: 'Banda Musical', href: '/proyecto-educativo/banda-musical' },
+
+      {
+        label: 'Escuelita Deportiva',
+        href: '/proyecto-educativo/escuelita-deportiva',
+      },
+      {
+        label: 'Medio Ambiente',
+        href: '/proyecto-educativo/medio-ambiente',
+      },
+      {
+        label: 'Taller de Artes Visuales',
+        href: '/proyecto-educativo/taller-artes-visuales',
+      },
+      { label: 'Cocina', href: '/proyecto-educativo/cocina' },
+      { label: 'Nutrición', href: '/proyecto-educativo/nutricion' },
+      {
+        label: 'Clases de Apoyo',
+        href: '/proyecto-educativo/clases-apoyo',
+      },
+      { label: 'Danza', href: '/proyecto-educativo/danza' },
+      { label: 'Teatro', href: '/proyecto-educativo/teatro' },
+      { label: 'Yoga', href: '/proyecto-educativo/yoga' },
+      {
+        label: 'Equipo de Orientación Externo',
+        href: '/proyecto-educativo/equipo-orientacion-externo',
+      },
+    ],
+  },
+  {
+    title: 'Información Administrativa',
+    submenu: [
+      {
+        label: 'Modalidad y Horarios',
+        href: '/informacion-administrativa/modalidad-horarios',
+      },
+      {
+        label: 'Normativa de Convivencia',
+        href: '/informacion-administrativa/normativa-convivencia',
+      },
+      {
+        label: 'Uniformes Escolares',
+        href: '/informacion-administrativa/uniformes-escolares',
+      },
+      {
+        label: 'Útiles Escolares y Libros',
+        href: '/informacion-administrativa/utiles-libros',
+      },
+      {
+        label: 'Servicio de Comedor',
+        href: '/informacion-administrativa/servicio-comedor',
+      },
+      {
+        label: 'Plan de Evacuación',
+        href: '/informacion-administrativa/plan-evacuacion',
+      },
+    ],
+  },
+  {
+    title: 'Admisión',
+    submenu: [
+      {
+        label: 'Solicitud de Vacante',
+        href: '/admision/solicitud-vacante',
+      },
+      {
+        label: 'Documentación de Ingreso',
+        href: '/admision/documentacion-ingreso',
+      },
+    ],
+  },
 ];
 ---
 
 <!-- Modifica el script añadiendo la lógica del scroll -->
 <script>
-    const header = document.getElementById("header");
-    const logo = document.getElementById("logo_header")?.querySelector("svg");
+  const header = document.getElementById('header');
+  const logo = document.getElementById('logo_header')?.querySelector('svg');
 
-    if (logo) {
-        logo.style.transition = "width 0.3s ease, height 0.3s ease";
+  if (logo) {
+    logo.style.transition = 'width 0.3s ease, height 0.3s ease';
+  }
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header?.classList.add('py-1');
+      if (window.innerWidth >= 768) {
+        header?.classList.remove('p-4');
+      }
+
+      logo?.setAttribute('width', '80');
+      logo?.setAttribute('height', '80');
+    } else {
+      header?.classList.remove('py-1');
+      header?.classList.add('p-4');
+      logo?.setAttribute('width', '100');
+      logo?.setAttribute('height', '100');
     }
-
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-            header?.classList.add("py-1");
-            if (window.innerWidth >= 768) {
-                header?.classList.remove("p-4");
-            }
-
-            logo?.setAttribute("width", "80");
-            logo?.setAttribute("height", "80");
-        } else {
-            header?.classList.remove("py-1");
-            header?.classList.add("p-4");
-            logo?.setAttribute("width", "100");
-            logo?.setAttribute("height", "100");
-        }
-    });
+  });
 </script>
 
 <style>
-    header {
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+  header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 </style>
 
 <header
-    class="bg-gradient-to-r from-[#86CBEA] to-[#59A8CC] flex justify-between items-center p-4 fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-    id="header"
+  class="bg-gradient-to-r from-[#86CBEA] to-[#59A8CC] flex justify-between items-center p-4 fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+  id="header"
 >
+  <a
+    href="/"
+    id="logo_header"
+    class="flex w-[55%] md:w-fit justify-start md:justify-between gap-1 md:gap-5 items-center md:px-4"
+  >
+    <Logo width="100" height="100" />
+    <h1 class="text-md md:text-xl text-white font-black w-[100px] md:w-fit">
+      Colegio <br /> Las Lomas
+    </h1>
+    <div class="hidden md:flex w-0.5 h-10 bg-white"></div>
+    <span class="text-white font-bold hidden md:block">INICIO</span>
+  </a>
+
+  <!-- Menu Desktop -->
+  <div class="hidden md:flex justify-end items-center px-4 py-2">
+    <nav class="flex space-x-8">
+      {
+        menuItems.map((item) => (
+          <div class="relative group w-fit flex">
+            <button class="text-white font-bold flex items-center space-x-1 uppercase w-full justify-between hover:text-[#DBFA9B] group-hover:text-[#DBFA9B] transition-colors duration-300">
+              <span class="w-min whitespace-normal">{item.title}</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-200"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+
+            <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible top-full left-0 mt-2 min-w-full w-max bg-white rounded-md shadow-lg z-50 transition-all duration-500 delay-150">
+              <div class="max-h-[80vh] overflow-y-auto mb-4">
+                <a class="flex justify-center mt-0.5 ml-auto mr-auto w-[98%] py-0.5 bg-[#86CBEA] rounded-full" />
+                {item.submenu.map((subItem, index) => (
+                  <a
+                    href={subItem.href}
+                    class={`block px-4 py-2 text-gray-800 hover:bg-[#F5F5DC] transition-colors duration-500 ${index !== item.submenu.length - 1 ? 'border-b border-[#454545]' : ''}`}
+                  >
+                    {subItem.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </nav>
     <a
+      href="#"
+      class="bg-[#B2CA4D] text-white px-6 py-2 rounded-[4px] ml-5 font-bold"
+      >CONTACTO</a
+    >
+  </div>
+
+  <!-- Menu Mobile -->
+  <button id="menuToggle" class="md:hidden text-white text-3xl">☰</button>
+
+  <div
+    id="mobileMenu"
+    class="fixed top-0 right-[-100%] h-full bg-[#59A8CC] w-[90%] bg-opacity-90 z-50 flex flex-col items-center justify-center space-y-6 transition-all duration-300 pointer-events-none"
+  >
+    <button id="closeMenu" class="absolute top-6 right-4 text-white text-5xl"
+      >&times;</button
+    >
+    <div class="absolute top-0 mt-20">
+      <!-- Enlace de inicio -->
+      <a
         href="/"
-        id="logo_header"
-        class="flex w-[55%] md:w-fit justify-start md:justify-between gap-1 md:gap-5 items-center md:px-4"
-    >
-        <Logo width="100" height="100" />
-        <h1 class="text-md md:text-xl text-white font-black w-[100px] md:w-fit">
-            Colegio <br /> Las Lomas
-        </h1>
-        <div class="hidden md:flex w-0.5 h-10 bg-white"></div>
-        <span class="text-white font-bold hidden md:block">INICIO</span>
-    </a>
+        class="w-full flex border-b border-white/20 justify-between items-center p-4 text-white font-bold uppercase hover:bg-[#86CBEA] transition-colors"
+      >
+        INICIO
+      </a>
+      <nav class="flex flex-col">
+        {
+          menuItems.map((item) => (
+            <div class="border-b border-white/20">
+              <button class="accordion-button w-full flex justify-between items-center p-4 text-white font-bold uppercase hover:bg-[#86CBEA] transition-colors">
+                <span>{item.title}</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 transition-transform duration-200"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
 
-    <!-- Menu Desktop -->
-    <div class="hidden md:flex justify-end items-center px-4 py-2">
-        <nav class="flex space-x-8">
-            {
-                menuItems.map((item) => (
-                    <div class="relative group w-fit flex">
-                        <button class="text-white font-bold flex items-center space-x-1 uppercase w-full justify-between hover:text-[#DBFA9B] group-hover:text-[#DBFA9B] transition-colors duration-300">
-                            <span class="w-min whitespace-normal">
-                                {item.title}
-                            </span>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-200"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            >
-                                <polyline points="6 9 12 15 18 9" />
-                            </svg>
-                        </button>
-
-                        <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible top-full left-0 mt-2 min-w-full w-max bg-white rounded-md shadow-lg z-50 transition-all duration-500 delay-150">
-                            <div>
-                                <a class="flex justify-center mt-0.5 ml-auto mr-auto w-[98%] py-0.5 bg-[#86CBEA] rounded-full" />
-                                {item.submenu.map((subItem) => (
-                                    <a
-                                        href={subItem.href}
-                                        class="block px-4 py-2 text-gray-800 hover:bg-[#F5F5DC] transition-colors duration-500 border-b border-[#454545]"
-                                    >
-                                        {subItem.label}
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                ))
-            }
-        </nav>
-        <a
-            href="#"
-            class="bg-[#B2CA4D] text-white px-6 py-2 rounded-[4px] ml-5 font-bold"
-            >CONTACTO</a
-        >
-    </div>
-
-    <!-- Menu Mobile -->
-    <button id="menuToggle" class="md:hidden text-white text-3xl">☰</button>
-
-    <div
-        id="mobileMenu"
-        class="fixed top-0 right-[-100%] h-full bg-[#59A8CC] w-[90%] bg-opacity-90 z-50 flex flex-col items-center justify-center space-y-6 transition-all duration-300 pointer-events-none"
-    >
-        <button
-            id="closeMenu"
-            class="absolute top-6 right-4 text-white text-5xl">&times;</button
-        >
-        <div class="absolute top-0 mt-20">
-            <!-- Enlace de inicio -->
-            <a
-                href="/"
-                class="w-full flex border-b border-white/20 justify-between items-center p-4 text-white font-bold uppercase hover:bg-[#86CBEA] transition-colors"
-            >
-                INICIO
-            </a>
-            <nav class="flex flex-col">
-                {
-                    menuItems.map((item) => (
-                        <div class="border-b border-white/20">
-                            <button class="accordion-button w-full flex justify-between items-center p-4 text-white font-bold uppercase hover:bg-[#86CBEA] transition-colors">
-                                <span>{item.title}</span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="w-4 h-4 transition-transform duration-200"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <polyline points="6 9 12 15 18 9" />
-                                </svg>
-                            </button>
-
-                            <div class="hidden bg-white/10">
-                                {item.submenu.map((subItem) => (
-                                    <a
-                                        href={subItem.href}
-                                        class="block px-6 py-3 text-white hover:bg-white/20 transition-colors border-t border-white/10"
-                                    >
-                                        {subItem.label}
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-                    ))
-                }
-            </nav>
-            <a
-                href="#"
-                class="w-full border-b border-white/20 flex justify-between items-center p-4 text-white font-bold uppercase hover:bg-[#86CBEA] transition-colors"
-                >CONTACTO</a
-            >
-        </div>
-    </div>
-
-    <script>
-        const menuToggle = document.getElementById("menuToggle");
-        const closeMenu = document.getElementById("closeMenu");
-        const mobileMenu = document.getElementById("mobileMenu");
-        const accordionButtons = document.querySelectorAll(".accordion-button");
-
-        if (menuToggle && closeMenu && mobileMenu) {
-            menuToggle.addEventListener("click", (e) => {
-                e.stopPropagation();
-                mobileMenu.style.pointerEvents = "auto";
-                requestAnimationFrame(() => {
-                    mobileMenu.style.right = "0";
-                });
-            });
-
-            closeMenu.addEventListener("click", () => {
-                mobileMenu.style.right = "-100%";
-                mobileMenu.style.pointerEvents = "none";
-            });
-
-            // Close menu when clicking outside
-            document.addEventListener("click", (e) => {
-                if (
-                    mobileMenu.style.right === "0px" &&
-                    !mobileMenu.contains(e.target as HTMLElement) &&
-                    e.target !== menuToggle
-                ) {
-                    mobileMenu.style.right = "-100%";
-                    mobileMenu.style.pointerEvents = "none";
-                }
-            });
+              <div class="hidden bg-white/10">
+                {item.submenu.map((subItem) => (
+                  <a
+                    href={subItem.href}
+                    class="block px-6 py-3 text-white hover:bg-white/20 transition-colors border-t border-white/10"
+                  >
+                    {subItem.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))
         }
+      </nav>
+      <a
+        href="#"
+        class="w-full border-b border-white/20 flex justify-between items-center p-4 text-white font-bold uppercase hover:bg-[#86CBEA] transition-colors"
+        >CONTACTO</a
+      >
+    </div>
+  </div>
 
-        accordionButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-                const content = button.nextElementSibling;
-                if (content) {
-                    content.classList.toggle("hidden");
-                    button.querySelector("svg")?.classList.toggle("rotate-180");
-                }
-            });
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const closeMenu = document.getElementById('closeMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+
+    if (menuToggle && closeMenu && mobileMenu) {
+      menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mobileMenu.style.pointerEvents = 'auto';
+        requestAnimationFrame(() => {
+          mobileMenu.style.right = '0';
         });
-    </script>
+      });
+
+      closeMenu.addEventListener('click', () => {
+        mobileMenu.style.right = '-100%';
+        mobileMenu.style.pointerEvents = 'none';
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (
+          mobileMenu.style.right === '0px' &&
+          !mobileMenu.contains(e.target as HTMLElement) &&
+          e.target !== menuToggle
+        ) {
+          mobileMenu.style.right = '-100%';
+          mobileMenu.style.pointerEvents = 'none';
+        }
+      });
+    }
+
+    accordionButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        if (content) {
+          content.classList.toggle('hidden');
+          button.querySelector('svg')?.classList.toggle('rotate-180');
+        }
+      });
+    });
+  </script>
 </header>
 
 <div class="h-[130px]"></div>
