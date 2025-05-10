@@ -1,0 +1,131 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/sections/Hero.astro';
+import PostHero from '@/sections/PostHero.astro';
+import Inscripcion from '@/sections/Inscripcion.astro';
+import Logo from '@/assets/logo.astro';
+
+import Image1 from '@/assets/banners/las_lomas_aula.png';
+import Image2 from '@/assets/banners/las_lomas_frente.png';
+---
+
+<Layout>
+  <Hero
+    images={[
+      {
+        src: Image1.src,
+        alt: 'Aula del Colegio Las Lomas',
+        title: 'Acciones Reparadoras',
+        description: 'Restitución y reconciliación en el ámbito escolar',
+      },
+      {
+        src: Image2.src,
+        alt: 'Frente del Colegio Las Lomas',
+        title: 'Proyecto Institucional',
+        description: 'Construcción de valores y convivencia',
+      },
+    ]}
+  />
+
+  <section
+    class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+  >
+    <h2 class="text-3xl font-semibold mb-6 text-center">
+      PROYECTO INSTITUCIONAL
+    </h2>
+    <h3 class="text-2xl font-semibold mb-4 text-center">
+      ACCIONES REPARADORAS
+    </h3>
+
+    <h3 class="text-xl font-semibold mb-4">FUNDAMENTACIÓN</h3>
+    <p class="mb-6 leading-relaxed">
+      Las acciones reparadoras son entendidas como toda acción pedagógica que
+      busca enmendar y compensar daños causados a otras personas. Son acciones
+      que pretenden restablecer las relaciones o el ambiente escolar de
+      confianza y solidaridad.
+    </p>
+    <p class="mb-6 leading-relaxed">
+      Se trata de un recurso utilizado dentro del ámbito escolar que pueda ser
+      útil en el desarrollo de relaciones saludables entre pares y favorecer un
+      clima de trabajo armonioso entre compañeros.
+    </p>
+    <p class="mb-6 leading-relaxed">
+      Los niños, en relación con el entorno adquieren y construyen aprendizajes
+      que tienen que ver no solo con el conocimiento y los contenidos que deben
+      enseñarse según la currícula escolar, también aprenden a relacionarse, a
+      formar amistades, a desempeñar un rol dentro de un grupo, aprenden a
+      resolver conflictos cuando se presentan diferencias…
+    </p>
+    <p class="mb-6 leading-relaxed">
+      Como adultos somos responsables en poder transmitir y enseñar a los niños
+      formas adecuadas para la resolución de dichos conflictos, debemos
+      propiciar herramientas y actividades que fomenten las buenas relaciones.
+    </p>
+    <p class="mb-6 leading-relaxed">
+      Creemos que para que ello suceda los niños deben experimentar, por medio
+      de acciones y en compañía de adultos que los guíen, la posibilidad de
+      interactuar de forma positiva con aquellos compañeros a los cuales le
+      ocasionaron un daño, para que un suceso determinado no condicione a los
+      niños en la construcción de sus valores y de su formación como ciudadanos,
+      sino que puedan a partir de esa acción inadecuada reflexionar y reparar el
+      daño ocasionado.
+    </p>
+    <p class="mb-6 leading-relaxed">
+      Resulta indispensable proveer espacios y herramientas para que los
+      estudiantes crezcan y desarrollen una autonomía responsable, así como un
+      uso de la libertad y un sentido de responsabilidad de sus actos en el
+      marco de una convivencia donde se valoren las diferencias, la solidaridad
+      y un sentido de construir con el otro, su propia individualidad y el
+      desarrollo de su proyecto de vida.
+    </p>
+
+    <h3 class="text-xl font-semibold mb-4">OBJETIVOS</h3>
+    <ul class="list-disc list-inside mb-6 space-y-2">
+      <li>Promover la reflexión y entendimiento de sus acciones.</li>
+      <li>Trabajar la empatía y las emociones.</li>
+      <li>
+        Que los niños experimenten la posibilidad de actuar de manera correcta
+        luego de haber cometido un daño.
+      </li>
+      <li>
+        Que los niños comprendan que todos cometemos errores pero que tenemos la
+        posibilidad de enmendar nuestros actos.
+      </li>
+      <li>
+        Que los niños sean parte de una comunidad en donde primen los valores y
+        la importancia del otro en dicha comunidad.
+      </li>
+      <li>
+        Proveer espacios y herramientas para que puedan desarrollarse de manera
+        autónoma y saludable frente a la resolución de conflictos.
+      </li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mb-4">COMUNICACIÓN A LAS FAMILIAS</h3>
+    <p class="mb-6 leading-relaxed">
+      Se comunicará a las familias cuando los niños deban realizar sus acciones
+      reparadoras a fin de que puedan acompañarlos y fortalecerlos en la
+      formación de estos valores trabajando en conjunto con los niños, familias
+      y escuela.
+    </p>
+
+    <p class="mb-6 leading-relaxed underline">
+      Las acciones reparadoras se realizarán en el contexto escolar, durante un
+      recreo o varios recreos, clase u hora especial; será considerado lo
+      acontecido por el equipo de profesionales externos, docentes y directivos.
+    </p>
+    <p class="mb-6 leading-relaxed">
+      Si dichas acciones persisten, se dará intervención al equipo y se
+      realizarán otro tipo de acciones más específicas y con apoyo externo.
+    </p>
+
+    <p class="text-center text-blue-600 font-semibold text-xl">
+      COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+    </p>
+  </section>
+
+  <div class="h-12"></div>
+  <PostHero />
+  <div class="h-24"></div>
+  <Inscripcion />
+</Layout>
