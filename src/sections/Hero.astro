@@ -16,7 +16,7 @@ const { images = [] } = Astro.props as { images: SliderImage[] };
 <section class="relative w-full overflow-hidden bg-gray-900">
     <div class="hero-slider relative w-full h-[40vh] md:h-[80vh]">
         <!-- Las imágenes del slider -->
-        <div id="slider-container" class="w-full h-full relative">
+        <div id="slider-container" class="w-full h-full relative touch-pan-x">
             {
                 images.map((image, index) => (
                     <div
@@ -27,10 +27,11 @@ const { images = [] } = Astro.props as { images: SliderImage[] };
                             src={image.src}
                             alt={image.alt}
                             class="w-full h-full object-cover object-center"
+                            draggable="false"
                         />
 
                         {(image.title || image.description) && (
-                            <div class="absolute bottom-0 left-0 w-full px-6 py-10 bg-gradient-to-t from-black/70 to-transparent text-white">
+                            <div class="absolute bottom-0 left-0 w-full px-4 md:px-6 py-4 md:py-10 bg-gradient-to-t from-black/70 to-transparent text-white">
                                 {image.title && (
                                     <h2 class="text-2xl md:text-3xl font-bold mb-2">
                                         {image.title}
@@ -52,7 +53,7 @@ const { images = [] } = Astro.props as { images: SliderImage[] };
             <>
             <!-- Controles de navegación -->
             <div
-                class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2"
+                class="absolute bottom-5 left-1/2 transform -translate-x-1/2 hidden md:flex space-x-2"
             >
                 {
                 images.map((_, index) => (
@@ -68,7 +69,7 @@ const { images = [] } = Astro.props as { images: SliderImage[] };
             <!-- Botones de anterior/siguiente -->
             <button
                 id="prev-slide"
-                class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 rounded-full p-2 transition-colors duration-300"
+                class="absolute hidden md:block top-1/2 left-4 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 rounded-full p-2 transition-colors duration-300"
                 aria-label="Imagen anterior"
             >
                 <svg
@@ -88,7 +89,7 @@ const { images = [] } = Astro.props as { images: SliderImage[] };
             </button>
             <button
                 id="next-slide"
-                class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 rounded-full p-2 transition-colors duration-300"
+                class="absolute hidden md:block top-1/2 right-4 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 rounded-full p-2 transition-colors duration-300"
                 aria-label="Imagen siguiente"
             >
                 <svg
@@ -114,6 +115,7 @@ const { images = [] } = Astro.props as { images: SliderImage[] };
 <script>
     // Script para la funcionalidad del slider
     document.addEventListener("DOMContentLoaded", () => {
+        const sliderContainer = document.getElementById("slider-container");
         const sliderItems = document.querySelectorAll(".slider-item");
         const sliderDots = document.querySelectorAll(".slider-dot");
         const prevBtn = document.getElementById("prev-slide");
@@ -121,6 +123,11 @@ const { images = [] } = Astro.props as { images: SliderImage[] };
 
         let currentIndex = 0;
         const totalSlides = sliderItems.length;
+
+        // Variables para el touch slide
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const minSwipeDistance = 50; // Distancia mínima para considerar un swipe
 
         // Si no hay imágenes, no hacemos nada
         if (totalSlides === 0) return;
@@ -166,6 +173,40 @@ const { images = [] } = Astro.props as { images: SliderImage[] };
         function goToPrevSlide() {
             currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
             updateSlider();
+        }
+
+        // Manejadores de eventos touch
+        function handleTouchStart(event: TouchEvent) {
+            touchStartX = event.touches[0].clientX;
+        }
+
+        function handleTouchMove(event: TouchEvent) {
+            touchEndX = event.touches[0].clientX;
+        }
+
+        function handleTouchEnd() {
+            const swipeDistance = touchEndX - touchStartX;
+            
+            if (Math.abs(swipeDistance) > minSwipeDistance) {
+                if (swipeDistance > 0) {
+                    // Deslizamiento hacia la derecha - imagen anterior
+                    goToPrevSlide();
+                } else {
+                    // Deslizamiento hacia la izquierda - siguiente imagen
+                    goToNextSlide();
+                }
+            }
+            
+            // Reiniciar valores
+            touchStartX = 0;
+            touchEndX = 0;
+        }
+
+        // Agregamos event listeners para touch events
+        if (sliderContainer) {
+            sliderContainer.addEventListener("touchstart", handleTouchStart, { passive: true });
+            sliderContainer.addEventListener("touchmove", handleTouchMove, { passive: true });
+            sliderContainer.addEventListener("touchend", handleTouchEnd);
         }
 
         // Agregamos event listeners a los botones y dots

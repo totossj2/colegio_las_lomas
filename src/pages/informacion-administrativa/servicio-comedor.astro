@@ -1,95 +1,94 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Hero from "@/sections/Hero.astro";
-import PostHero from "@/sections/PostHero.astro";
-import Inscripcion from "@/sections/Inscripcion.astro";
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/sections/Hero.astro';
+import PostHero from '@/sections/PostHero.astro';
+import Inscripcion from '@/sections/Inscripcion.astro';
 
-import Image1 from "@/assets/banners/las_lomas_aula.png";
-import Image2 from "@/assets/banners/las_lomas_frente.png";
+import Image1 from '@/assets/banners/las_lomas_aula.png';
+import Image2 from '@/assets/banners/las_lomas_frente.png';
 ---
 
 <Layout>
-    <Hero
-        images={[
-            {
-                src: Image1.src,
-                alt: "Aula del Colegio Las Lomas",
-                title: "Nuestras Aulas",
-                description: "Espacios modernos diseñados para el aprendizaje",
-            },
-            {
-                src: Image2.src,
-                alt: "Frente del Colegio Las Lomas",
-                title: "Nuestras Instalaciones",
-                description: "Infraestructura moderna y segura",
-            },
-        ]}
-    />
-    <section
-        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
-    >
-        <h1 class="text-4xl font-bold mb-6 text-center">
-            Servicios de Comedor en el Colegio Las Lomas
-        </h1>
+  <Hero
+    images={[
+      {
+        src: Image1.src,
+        alt: 'Aula del Colegio Las Lomas',
+        title: 'Nuestras Aulas',
+        description: 'Espacios modernos diseñados para el aprendizaje',
+      },
+      {
+        src: Image2.src,
+        alt: 'Frente del Colegio Las Lomas',
+        title: 'Nuestras Instalaciones',
+        description: 'Infraestructura moderna y segura',
+      },
+    ]}
+  />
+  <section
+    class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+  >
+    <h1 class="text-4xl font-bold mb-6 text-center">
+      Servicios de Comedor en el Colegio Las Lomas
+    </h1>
 
-        <p class="mb-6 leading-relaxed">
-            En el Colegio Las Lomas de Carlos Spegazzini, ofrecemos dos
-            modalidades de servicio de comedor para adaptarnos a las necesidades
-            de nuestras familias.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      En el Colegio Las Lomas de Carlos Spegazzini, ofrecemos dos modalidades de
+      servicio de comedor para adaptarnos a las necesidades de nuestras
+      familias.
+    </p>
 
-        <h2 class="text-3xl font-semibold mb-6">Vianda de la Casa</h2>
-        <p class="mb-6 leading-relaxed">
-            La modalidad de Vianda de la Casa permite que los niños traigan su
-            comida desde casa, con la posibilidad de calentarla en el colegio.
-            Es importante tener en cuenta que el envase debe ser apto para
-            microondas, y los padres deben garantizar la conservación adecuada
-            de los alimentos según el tipo de comida que se traiga.
-        </p>
+    <h2 class="text-3xl font-semibold mb-6">Vianda de la Casa</h2>
+    <p class="mb-6 leading-relaxed">
+      La modalidad de Vianda de la Casa permite que los niños traigan su comida
+      desde casa, con la posibilidad de calentarla en el colegio. Es importante
+      tener en cuenta que el envase debe ser apto para microondas, y los padres
+      deben garantizar la conservación adecuada de los alimentos según el tipo
+      de comida que se traiga.
+    </p>
 
-        <h2 class="text-3xl font-semibold mb-6">Servicio de Catering</h2>
-        <p class="mb-6 leading-relaxed">
-            El servicio de Catering es un servicio externo contratado
-            exclusivamente por los padres. Para acceder a este servicio, los
-            padres deben establecer un menú mensual con la empresa proveedora
-            del catering. El pago se realiza directamente con la empresa, y si
-            se requiere el servicio en situaciones esporádicas, deben contactar
-            a la empresa antes de las 10:00 horas del día en cuestión para que
-            la comida sea entregada ese mismo día.
-        </p>
+    <h2 class="text-3xl font-semibold mb-6">Servicio de Catering</h2>
+    <p class="mb-6 leading-relaxed">
+      El servicio de Catering es un servicio externo contratado exclusivamente
+      por los padres. Para acceder a este servicio, los padres deben establecer
+      un menú mensual con la empresa proveedora del catering. El pago se realiza
+      directamente con la empresa, y si se requiere el servicio en situaciones
+      esporádicas, deben contactar a la empresa antes de las 10:00 horas del día
+      en cuestión para que la comida sea entregada ese mismo día.
+    </p>
 
-        <h2 class="text-3xl font-semibold mb-6">Aclaraciones</h2>
-        <ul class="space-y-4">
-            <li>
-                <strong class="text-blue-600">Microondas y Bebidas:</strong> Sin
-                costo adicional, el colegio proporciona el servicio de microondas
-                y agua o jugo tipo Clight para los niños.
-            </li>
-            <li>
-                <strong class="text-blue-600">Capacidad del Comedor:</strong> El
-                comedor está preparado para recibir a todo un nivel completo de alumnos.
-            </li>
-            <li>
-                <strong class="text-blue-600">Horarios Diferenciados:</strong> Cada
-                nivel (Inicial, Primaria y Secundario) tiene horarios de almuerzo
-                diferenciados para una mayor comodidad y organización.
-            </li>
-            <li>
-                <strong class="text-blue-600">Atención Especializada:</strong> El
-                colegio cuenta con personal propio para ayudar y atender a los niños
-                durante el horario de almuerzo.
-            </li>
-        </ul>
+    <h2 class="text-3xl font-semibold mb-6">Aclaraciones</h2>
+    <ul class="space-y-4">
+      <li>
+        <strong class="text-blue-600">Microondas y Bebidas:</strong> Sin costo adicional,
+        el colegio proporciona el servicio de microondas y agua o jugo tipo Clight
+        para los niños.
+      </li>
+      <li>
+        <strong class="text-blue-600">Capacidad del Comedor:</strong> El comedor
+        está preparado para recibir a todo un nivel completo de alumnos.
+      </li>
+      <li>
+        <strong class="text-blue-600">Horarios Diferenciados:</strong> Cada nivel
+        (Inicial, Primaria y Secundario) tiene horarios de almuerzo diferenciados
+        para una mayor comodidad y organización.
+      </li>
+      <li>
+        <strong class="text-blue-600">Atención Especializada:</strong> El colegio
+        cuenta con personal propio para ayudar y atender a los niños durante el horario
+        de almuerzo.
+      </li>
+    </ul>
 
-        <p class="mt-8 leading-relaxed">
-            En el <strong class="text-blue-600">Colegio Las Lomas</strong>, nos
-            aseguramos de ofrecer un servicio de comedor que se adapte a las
-            necesidades de cada familia, con opciones flexibles y un ambiente
-            cómodo para que los niños disfruten de su tiempo de almuerzo.
-        </p>
-    </section>
-    <div class="h-12"></div>
-    <PostHero />
-    <div class="h-24"></div>
-    <Inscripcion />
+    <p class="mt-8 leading-relaxed">
+      En el <strong class="text-blue-600">Colegio Las Lomas</strong>, nos
+      aseguramos de ofrecer un servicio de comedor que se adapte a las
+      necesidades de cada familia, con opciones flexibles y un ambiente cómodo
+      para que los niños disfruten de su tiempo de almuerzo.
+    </p>
+  </section>
+  <div class="h-12"></div>
+  <PostHero />
+  <div class="h-24"></div>
+  <Inscripcion />
 </Layout>

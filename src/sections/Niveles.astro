@@ -1,143 +1,143 @@
 ---
 const niveles = [
-    {
-        titulo: "MATERNAL",
-        imagen: "/images/inicial.webp",
-        alt: "Nivel Maternal",
-        enlace: "/niveles/maternal",
-    },
-    {
-        titulo: "INICIAL",
-        imagen: "/images/inicial.webp",
-        alt: "Nivel Inicial",
-        enlace: "/niveles/inicial",
-    },
-    {
-        titulo: "PRIMARIO",
-        imagen: "/images/primaria.webp",
-        alt: "Nivel Primario",
-        enlace: "/niveles/primaria",
-    },
-    {
-        titulo: "SECUNDARIO",
-        imagen: "/images/secundaria_onu2.webp",
-        alt: "Nivel Secundario",
-        enlace: "/niveles/secundaria",
-    },
+  {
+    titulo: 'MATERNAL',
+    imagen: '/images/inicial.webp',
+    alt: 'Nivel Maternal',
+    enlace: '/niveles/maternal',
+  },
+  {
+    titulo: 'INICIAL',
+    imagen: '/images/inicial.webp',
+    alt: 'Nivel Inicial',
+    enlace: '/niveles/inicial',
+  },
+  {
+    titulo: 'PRIMARIO',
+    imagen: '/images/primaria.webp',
+    alt: 'Nivel Primario',
+    enlace: '/niveles/primaria',
+  },
+  {
+    titulo: 'SECUNDARIO',
+    imagen: '/images/secundaria_onu2.webp',
+    alt: 'Nivel Secundario',
+    enlace: '/niveles/secundaria',
+  },
 ];
 
 const areasAcademicas = [
-    {
-        titulo: { prefijo: "TECNOLOGÍA", sufijo: "INFORMÁTICA" },
-        color: "bg-[#B2CA4D]",
-        cols: "col-span-12 md:col-span-6 lg:col-span-5",
-    },
-    {
-        titulo: { prefijo: "", sufijo: "INGLÉS" },
-        color: "bg-sky-400",
-        cols: "col-span-6 md:col-span-6 lg:col-span-3",
-    },
-    {
-        titulo: { prefijo: "", sufijo: "MÚSICA" },
-        color: "bg-sky-400",
-        cols: "col-span-6 md:col-span-3 lg:col-span-3",
-    },
-    {
-        titulo: { prefijo: "ESCUELITA", sufijo: "DEPORTIVA" },
-        color: "bg-[#B2CA4D]",
-        cols: "col-span-12 md:col-span-9 lg:col-span-6",
-    },
-    {
-        titulo: { prefijo: "", sufijo: "COCINA" },
-        color: "bg-[#B2CA4D]",
-        cols: "col-span-6 md:col-span-3 lg:col-span-3",
-    },
-    {
-        titulo: { prefijo: "", sufijo: "DANZA" },
-        color: "bg-sky-400",
-        cols: "col-span-6 md:col-span-3 lg:col-span-3",
-    },
+  {
+    titulo: { prefijo: 'TECNOLOGÍA', sufijo: 'INFORMÁTICA' },
+    color: 'bg-[#B2CA4D]',
+    cols: 'col-span-12 md:col-span-6 lg:col-span-5',
+  },
+  {
+    titulo: { prefijo: '', sufijo: 'INGLÉS' },
+    color: 'bg-sky-400',
+    cols: 'col-span-6 md:col-span-6 lg:col-span-3',
+  },
+  {
+    titulo: { prefijo: '', sufijo: 'MÚSICA' },
+    color: 'bg-sky-400',
+    cols: 'col-span-6 md:col-span-3 lg:col-span-3',
+  },
+  {
+    titulo: { prefijo: 'ESCUELITA', sufijo: 'DEPORTIVA' },
+    color: 'bg-[#B2CA4D]',
+    cols: 'col-span-12 md:col-span-9 lg:col-span-6',
+  },
+  {
+    titulo: { prefijo: '', sufijo: 'COCINA' },
+    color: 'bg-[#B2CA4D]',
+    cols: 'col-span-6 md:col-span-3 lg:col-span-3',
+  },
+  {
+    titulo: { prefijo: '', sufijo: 'DANZA' },
+    color: 'bg-sky-400',
+    cols: 'col-span-6 md:col-span-3 lg:col-span-3',
+  },
 ];
 ---
 
 <section class="py-16 px-4 max-w-7xl mx-auto md:mt-16">
-    <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-light tracking-wide">
-            <span class="text-[#B2CA4D]">PROYECTO</span>
-            <span class="text-[#B2CA4D] font-bold">EDUCATIVO</span>
-        </h2>
-        <div
-            class="flex flex-row w-full md:text-nowrap justify-center text-center mt-2 text-sm md:text-base font-light text-gray-500"
-        >
-            Nivel Inicial DIEGEP 8521 | Nivel Primario DIEGEP 8591 | Nivel
-            Secundario DIEGEP 9128
+  <div class="text-center mb-16">
+    <h2 class="text-4xl md:text-5xl font-light tracking-wide">
+      <span class="text-[#B2CA4D]">PROYECTO</span>
+      <span class="text-[#B2CA4D] font-bold">EDUCATIVO</span>
+    </h2>
+    <div
+      class="flex flex-row w-full md:text-nowrap justify-center text-center mt-2 text-sm md:text-base font-semibold text-gray-500"
+    >
+      Nivel Inicial DIEGEP 8521 | Nivel Primario DIEGEP 8591 | Nivel Secundario
+      DIEGEP 9128
+    </div>
+  </div>
+
+  <!-- Niveles Educativos -->
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-20">
+    {
+      niveles.map((nivel) => (
+        <div class="relative overflow-hidden rounded-2xl shadow-md group">
+          <a href={nivel.enlace} aria-label={nivel.titulo}>
+            <img
+              src={nivel.imagen}
+              alt={nivel.alt}
+              class="w-full h-24 md:h-64 object-cover"
+            />
+            <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+              <h3
+                class="text-white text-4xl font-bold tracking-wider"
+                style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"
+              >
+                {nivel.titulo}
+              </h3>
+            </div>
+          </a>
+          <div class="absolute bottom-0 left-0 w-full h-1 bg-[#B2CA4D]" />
         </div>
-    </div>
+      ))
+    }
+  </div>
 
-    <!-- Niveles Educativos -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-20">
-        {
-            niveles.map((nivel) => (
-                <div class="relative overflow-hidden rounded-2xl shadow-md group">
-                    <a href={nivel.enlace} aria-label={nivel.titulo}>
-                        <img
-                            src={nivel.imagen}
-                            alt={nivel.alt}
-                            class="w-full h-24 md:h-64 object-cover"
-                        />
-                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
-                            <h3
-                                class="text-white text-4xl font-bold tracking-wider"
-                                style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"
-                            >
-                                {nivel.titulo}
-                            </h3>
-                        </div>
-                    </a>
-                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#B2CA4D]" />
-                </div>
-            ))
-        }
-    </div>
+  <!-- Separadores -->
+  <div class="grid grid-cols-2 gap-x-20 gap-y-8 mb-12">
+    <div class="h-1 bg-[#B2CA4D]"></div>
+    <div class="h-1 bg-[#B2CA4D]"></div>
+  </div>
 
-    <!-- Separadores -->
-    <div class="grid grid-cols-2 gap-x-20 gap-y-8 mb-12">
-        <div class="h-1 bg-[#B2CA4D]"></div>
-        <div class="h-1 bg-[#B2CA4D]"></div>
+  <div class="w-full h-fit md:h-50 flex flex-col md:flex-row gap">
+    <img
+      src="/images/estudiando.jpeg"
+      alt="Chicos estudiando"
+      class="w-full md:w-[35%] h-36 md:h-full object-cover rounded-2xl"
+    />
+    <div class="w-[5%] h-4 md:h-full"></div>
+    <div class="w-full md:w-[60%] h-full flex items-center flex-col">
+      <p>
+        Somos un <strong>centro educativo</strong>, que además de la disciplina
+        intelectual y de un alto nivel académico, pone énfasis en el desarrollo
+        de una escala de valores coronada por la trascendencia.
+      </p><p>
+        Otorgamos títulos <strong>nacionales</strong> e <strong
+          >internacionales</strong
+        >; estos últimos por acuerdos homologados con la Universidad de
+        Cambridge, Reino Unido, y la Organización del Bachillerato Internacional
+        con sede administrativa en Ginebra, Suiza y pedagógica en Gales.
+      </p>
+      <a
+        href="https://maps.app.goo.gl/gwq4QewBjq57a3M39"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block mt-4 px-6 py-2 bg-[#B2CA4D] text-white rounded-lg hover:bg-[#9eb644] transition-colors"
+      >
+        ¿Dónde estamos?
+      </a>
     </div>
+  </div>
 
-    <div class="w-full h-fit md:h-50 flex flex-col md:flex-row gap">
-        <div class="w-full md:w-[35%] h-36 md:h-full bg-blue-500">
-            imagen chicos estudiando
-        </div>
-        <div class="w-[5%] h-4 md:h-full"></div>
-        <div class="w-full md:w-[60%] h-full flex items-center flex-col">
-            <p>
-                Somos un <strong>centro educativo</strong>, que además de la
-                disciplina intelectual y de un alto nivel académico, pone
-                énfasis en el desarrollo de una escala de valores coronada por
-                la trascendencia.
-            </p><p>
-                Otorgamos títulos <strong>nacionales</strong> e <strong
-                    >internacionales</strong
-                >; estos últimos por acuerdos homologados con la Universidad de
-                Cambridge, Reino Unido, y la Organización del Bachillerato
-                Internacional con sede administrativa en Ginebra, Suiza y
-                pedagógica en Gales.
-            </p>
-            <a
-                href="https://maps.app.goo.gl/gwq4QewBjq57a3M39"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-block mt-4 px-6 py-2 bg-[#B2CA4D] text-white rounded-lg hover:bg-[#9eb644] transition-colors"
-            >
-                ¿Dónde estamos?
-            </a>
-        </div>
-    </div>
-
-    <!-- Áreas Académicas -->
-    <!--<div class="grid grid-cols-12 gap-4 mb-8">
+  <!-- Áreas Académicas -->
+  <!--<div class="grid grid-cols-12 gap-4 mb-8">
         {
             areasAcademicas.map((area) => (
                 <div
@@ -156,17 +156,17 @@ const areasAcademicas = [
         }
     </div>-->
 
-    <!-- Separador final -->
-    <div class="h-3 bg-[#B2CA4D] rounded-full mt-16"></div>
+  <!-- Separador final -->
+  <div class="h-3 bg-[#B2CA4D] rounded-full mt-16"></div>
 </section>
 
 <style>
-    .group:hover img {
-        transform: scale(1.05);
-        transition: transform 0.5s ease;
-    }
+  .group:hover img {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+  }
 
-    img {
-        transition: transform 0.3s ease;
-    }
+  img {
+    transition: transform 0.3s ease;
+  }
 </style>

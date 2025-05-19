@@ -1,102 +1,99 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Hero from "@/sections/Hero.astro";
-import PostHero from "@/sections/PostHero.astro";
-import Inscripcion from "@/sections/Inscripcion.astro";
-import Logo from "@/assets/logo.astro";
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/sections/Hero.astro';
+import PostHero from '@/sections/PostHero.astro';
+import Inscripcion from '@/sections/Inscripcion.astro';
+import Logo from '@/assets/logo.astro';
 
-import Image1 from "@/assets/banners/las_lomas_aula.png";
-import Image2 from "@/assets/banners/las_lomas_frente.png";
+import Image1 from '@/assets/banners/las_lomas_aula.png';
+import Image2 from '@/assets/banners/las_lomas_frente.png';
 ---
 
 <Layout>
-    <Hero
-        images={[
-            {
-                src: Image1.src,
-                alt: "Aula del Colegio Las Lomas",
-                title: "Nuestras Aulas",
-                description: "Espacios modernos diseñados para el aprendizaje",
-            },
-            {
-                src: Image2.src,
-                alt: "Frente del Colegio Las Lomas",
-                title: "Nuestras Instalaciones",
-                description: "Infraestructura moderna y segura",
-            },
-        ]}
-    />
+  <Hero
+    images={[
+      {
+        src: Image1.src,
+        alt: 'Aula del Colegio Las Lomas',
+        title: 'Nuestras Aulas',
+        description: 'Espacios modernos diseñados para el aprendizaje',
+      },
+      {
+        src: Image2.src,
+        alt: 'Frente del Colegio Las Lomas',
+        title: 'Nuestras Instalaciones',
+        description: 'Infraestructura moderna y segura',
+      },
+    ]}
+  />
 
-    <section
-        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
-    >
-        <h2 class="text-3xl font-semibold mb-6 text-center">
-            PROYECTO INSTITUCIONAL
-        </h2>
-        <h3 class="text-2xl font-semibold mb-4 text-center">MEDIO AMBIENTE</h3>
+  <section
+    class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+  >
+    <h2 class="text-3xl font-semibold mb-6 text-center">
+      PROYECTO INSTITUCIONAL
+    </h2>
+    <h3 class="text-2xl font-semibold mb-4 text-center">MEDIO AMBIENTE</h3>
 
-        <p class="mb-6 leading-relaxed">
-            La Educación Ambiental en nuestra institución tiene como objetivo
-            formar y consolidar desde la más temprana edad una cultura de
-            conciencia, compromiso, protección y cuidado del medio ambiente.
-            Esto es considerado un factor estratégico en el desarrollo integral
-            de todos los educandos, promoviendo un entendimiento profundo sobre
-            la importancia de nuestra relación con la naturaleza.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      La Educación Ambiental en nuestra institución tiene como objetivo formar y
+      consolidar desde la más temprana edad una cultura de conciencia,
+      compromiso, protección y cuidado del medio ambiente. Esto es considerado
+      un factor estratégico en el desarrollo integral de todos los educandos,
+      promoviendo un entendimiento profundo sobre la importancia de nuestra
+      relación con la naturaleza.
+    </p>
 
-        <p class="mb-6 leading-relaxed">
-            El propósito principal de este proyecto es fomentar conocimientos,
-            valores, habilidades prácticas y actitudes positivas entre alumnos,
-            docentes y familias para generar acciones responsables y eficaces en
-            la prevención y solución de problemas ambientales. Además,
-            trabajamos en la gestión de la calidad del medio ambiente próximo
-            escolar, creando un entorno saludable para todos.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      El propósito principal de este proyecto es fomentar conocimientos,
+      valores, habilidades prácticas y actitudes positivas entre alumnos,
+      docentes y familias para generar acciones responsables y eficaces en la
+      prevención y solución de problemas ambientales. Además, trabajamos en la
+      gestión de la calidad del medio ambiente próximo escolar, creando un
+      entorno saludable para todos.
+    </p>
 
-        <p class="mb-6 leading-relaxed">
-            Este proyecto también impulsa la creación de procesos y materiales
-            educativos que contribuyan a prevenir, reducir, controlar y revertir
-            el deterioro ambiental, con el objetivo de mejorar la calidad
-            educativa y la vida de las familias del Colegio Las Lomas de Carlos
-            Spegazzini.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      Este proyecto también impulsa la creación de procesos y materiales
+      educativos que contribuyan a prevenir, reducir, controlar y revertir el
+      deterioro ambiental, con el objetivo de mejorar la calidad educativa y la
+      vida de las familias del Colegio Las Lomas de Carlos Spegazzini.
+    </p>
 
-        <p class="mb-6 leading-relaxed">
-            El Proyecto de Educación Ambiental es una aportación creativa y
-            fundamental para establecer permanentemente la comprensión,
-            cooperación, intercambio y aprendizaje sobre los problemas
-            ambientales. Desde el nivel inicial, impulsamos acciones de
-            prevención, restauración y protección del equilibrio ecológico,
-            promoviendo la idea de un desarrollo sustentable para garantizar una
-            calidad de vida adecuada para las generaciones actuales y futuras.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      El Proyecto de Educación Ambiental es una aportación creativa y
+      fundamental para establecer permanentemente la comprensión, cooperación,
+      intercambio y aprendizaje sobre los problemas ambientales. Desde el nivel
+      inicial, impulsamos acciones de prevención, restauración y protección del
+      equilibrio ecológico, promoviendo la idea de un desarrollo sustentable
+      para garantizar una calidad de vida adecuada para las generaciones
+      actuales y futuras.
+    </p>
 
-        <p class="mb-6 leading-relaxed">
-            Este proyecto abarca la Educación Inicial, Primaria y Secundaria, y
-            más que limitarse a un aspecto concreto del proceso educativo, busca
-            propiciar una práctica educativa abierta a la vida social. Así,
-            todos los miembros de la comunidad educativa pueden participar
-            activamente, siendo una oportunidad clara para sensibilizar y
-            concientizar sobre la importancia de un enfoque ecológico y
-            responsable.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      Este proyecto abarca la Educación Inicial, Primaria y Secundaria, y más
+      que limitarse a un aspecto concreto del proceso educativo, busca propiciar
+      una práctica educativa abierta a la vida social. Así, todos los miembros
+      de la comunidad educativa pueden participar activamente, siendo una
+      oportunidad clara para sensibilizar y concientizar sobre la importancia de
+      un enfoque ecológico y responsable.
+    </p>
 
-        <p class="mb-6 leading-relaxed">
-            Estamos convencidos de que docentes, alumnos y familias lograrán,
-            con entusiasmo y responsabilidad, construir una Cultura Ambiental
-            renovada y positiva. La relación entre educación y medio ambiente
-            debe concebirse como un objetivo fundamental para afrontar el reto
-            de la sustentabilidad y la equidad en el desarrollo de nuestra
-            sociedad.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      Estamos convencidos de que docentes, alumnos y familias lograrán, con
+      entusiasmo y responsabilidad, construir una Cultura Ambiental renovada y
+      positiva. La relación entre educación y medio ambiente debe concebirse
+      como un objetivo fundamental para afrontar el reto de la sustentabilidad y
+      la equidad en el desarrollo de nuestra sociedad.
+    </p>
 
-        <p class="text-center text-blue-600 font-semibold text-xl">
-            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
-        </p>
-    </section>
+    <p class="text-center text-blue-600 font-semibold text-xl">
+      COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+    </p>
+  </section>
 
-    <div class="h-12"></div>
-    <PostHero />
-    <div class="h-24"></div>
-    <Inscripcion />
+  <div class="h-12"></div>
+  <PostHero />
+  <div class="h-24"></div>
+  <Inscripcion />
 </Layout>

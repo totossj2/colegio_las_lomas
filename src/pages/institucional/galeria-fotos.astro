@@ -1,34 +1,34 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Hero from "@/sections/Hero.astro";
-import PostHero from "@/sections/PostHero.astro";
-import Inscripcion from "@/sections/Inscripcion.astro";
-import Logo from "@/assets/logo.astro";
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/sections/Hero.astro';
+import PostHero from '@/sections/PostHero.astro';
+import Inscripcion from '@/sections/Inscripcion.astro';
+import Logo from '@/assets/logo.astro';
 
-import Image1 from "@/assets/banners/las_lomas_aula.png";
-import Image2 from "@/assets/banners/las_lomas_frente.png";
+import Image1 from '@/assets/banners/las_lomas_aula.png';
+import Image2 from '@/assets/banners/las_lomas_frente.png';
 ---
 
 <Layout>
-    <Hero
-        images={[
-            {
-                src: Image1.src,
-                alt: "Aula del Colegio Las Lomas",
-                title: "Nuestras Aulas",
-                description: "Espacios modernos diseñados para el aprendizaje",
-            },
-            {
-                src: Image2.src,
-                alt: "Frente del Colegio Las Lomas",
-                title: "Nuestras Instalaciones",
-                description: "Infraestructura moderna y segura",
-            },
-        ]}
-    />
+  <Hero
+    images={[
+      {
+        src: Image1.src,
+        alt: 'Aula del Colegio Las Lomas',
+        title: 'Nuestras Aulas',
+        description: 'Espacios modernos diseñados para el aprendizaje',
+      },
+      {
+        src: Image2.src,
+        alt: 'Frente del Colegio Las Lomas',
+        title: 'Nuestras Instalaciones',
+        description: 'Infraestructura moderna y segura',
+      },
+    ]}
+  />
 
-    <div class="h-12"></div>
-    <PostHero />
-    <div class="h-24"></div>
-    <Inscripcion />
+  <div class="h-12"></div>
+  <PostHero />
+  <div class="h-24"></div>
+  <Inscripcion />
 </Layout>

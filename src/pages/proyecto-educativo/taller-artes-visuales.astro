@@ -1,160 +1,157 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Hero from "@/sections/Hero.astro";
-import PostHero from "@/sections/PostHero.astro";
-import Inscripcion from "@/sections/Inscripcion.astro";
-import Logo from "@/assets/logo.astro";
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/sections/Hero.astro';
+import PostHero from '@/sections/PostHero.astro';
+import Inscripcion from '@/sections/Inscripcion.astro';
+import Logo from '@/assets/logo.astro';
 
-import Image1 from "@/assets/banners/las_lomas_aula.png";
-import Image2 from "@/assets/banners/las_lomas_frente.png";
+import Image1 from '@/assets/banners/las_lomas_aula.png';
+import Image2 from '@/assets/banners/las_lomas_frente.png';
 ---
 
 <Layout>
-    <Hero
-        images={[
-            {
-                src: Image1.src,
-                alt: "Aula del Colegio Las Lomas",
-                title: "Nuestras Aulas",
-                description: "Espacios modernos diseñados para el aprendizaje",
-            },
-            {
-                src: Image2.src,
-                alt: "Frente del Colegio Las Lomas",
-                title: "Nuestras Instalaciones",
-                description: "Infraestructura moderna y segura",
-            },
-        ]}
-    />
-    <section
-        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
-    >
-        <h2 class="text-3xl font-semibold mb-6 text-center">
-            PROYECTO INSTITUCIONAL
-        </h2>
-        <h3 class="text-2xl font-semibold mb-4 text-center">
-            TALLER DE ARTES VISUALES
-        </h3>
+  <Hero
+    images={[
+      {
+        src: Image1.src,
+        alt: 'Aula del Colegio Las Lomas',
+        title: 'Nuestras Aulas',
+        description: 'Espacios modernos diseñados para el aprendizaje',
+      },
+      {
+        src: Image2.src,
+        alt: 'Frente del Colegio Las Lomas',
+        title: 'Nuestras Instalaciones',
+        description: 'Infraestructura moderna y segura',
+      },
+    ]}
+  />
+  <section
+    class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+  >
+    <h2 class="text-3xl font-semibold mb-6 text-center">
+      PROYECTO INSTITUCIONAL
+    </h2>
+    <h3 class="text-2xl font-semibold mb-4 text-center">
+      TALLER DE ARTES VISUALES
+    </h3>
 
-        <p class="mb-6 leading-relaxed">
-            El arte es una actividad dinámica y unificadora, con un rol
-            potencialmente vital en la educación de nuestros niños.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      El arte es una actividad dinámica y unificadora, con un rol potencialmente
+      vital en la educación de nuestros niños.
+    </p>
 
-        <p class="mb-6 leading-relaxed">
-            El cerebro humano ha desarrollado una extraordinaria capacidad para
-            crear imágenes mentales internas. Incluso, se ha demostrado en
-            estudios con neuroimágenes que se activan las mismas regiones
-            cerebrales al ver una escena real que al imaginarla (Thompson et
-            al., 2009). Esto resalta la importancia de la visualización como
-            herramienta en los procesos de memorización.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      El cerebro humano ha desarrollado una extraordinaria capacidad para crear
+      imágenes mentales internas. Incluso, se ha demostrado en estudios con
+      neuroimágenes que se activan las mismas regiones cerebrales al ver una
+      escena real que al imaginarla (Thompson et al., 2009). Esto resalta la
+      importancia de la visualización como herramienta en los procesos de
+      memorización.
+    </p>
 
-        <p class="mb-6 leading-relaxed">
-            Si preguntáramos a los alumnos qué aprendieron en las clases de
-            artes visuales, seguramente muchos responderían que aprendieron a
-            dibujar, pintar o representar gráficos. Sin embargo, en las clases
-            de arte se aprenden muchas más cosas. Winner y sus colaboradores
-            (2006) han identificado ocho disposiciones (rutinas mentales) que
-            los alumnos pueden desarrollar en las clases de artes visuales, que
-            se transfieren a otros dominios del aprendizaje:
-        </p>
+    <p class="mb-6 leading-relaxed">
+      Si preguntáramos a los alumnos qué aprendieron en las clases de artes
+      visuales, seguramente muchos responderían que aprendieron a dibujar,
+      pintar o representar gráficos. Sin embargo, en las clases de arte se
+      aprenden muchas más cosas. Winner y sus colaboradores (2006) han
+      identificado ocho disposiciones (rutinas mentales) que los alumnos pueden
+      desarrollar en las clases de artes visuales, que se transfieren a otros
+      dominios del aprendizaje:
+    </p>
 
-        <ul class="list-inside list-disc mb-6">
-            <li>
-                <strong>Utilización de herramientas y materiales:</strong> los alumnos
-                aprenden técnicas utilizando pinceles, lápices, pintura y arcilla.
-            </li>
-            <li>
-                <strong>Participación y perseverancia:</strong> los alumnos aprenden
-                a comprometerse con la materia a través de proyectos realizados.
-            </li>
-            <li>
-                <strong>Imaginación:</strong> los alumnos aprenden a visualizar e
-                imaginar situaciones que van más allá de la observación.
-            </li>
-            <li>
-                <strong>Expresión:</strong> los alumnos aprenden a transmitir una
-                visión personal en sus trabajos.
-            </li>
-            <li>
-                <strong>Observación:</strong> los alumnos aprenden a utilizar una
-                mirada propia y a percibir detalles menos obvios.
-            </li>
-            <li>
-                <strong>Reflexión:</strong> los alumnos aprenden a explicar, justificar
-                y evaluar lo que realizan con un espíritu crítico.
-            </li>
-            <li>
-                <strong>Exploración:</strong> los alumnos aprenden a ir más allá
-                de sus creaciones, tomar nuevos riesgos y aprender de sus errores.
-            </li>
-            <li>
-                <strong>Comprensión del mundo artístico:</strong> los alumnos aprenden
-                a relacionarse con el arte y a entender todo lo asociado a él, como
-                galerías, museos, etc.
-            </li>
-        </ul>
+    <ul class="list-inside list-disc mb-6">
+      <li>
+        <strong>Utilización de herramientas y materiales:</strong> los alumnos aprenden
+        técnicas utilizando pinceles, lápices, pintura y arcilla.
+      </li>
+      <li>
+        <strong>Participación y perseverancia:</strong> los alumnos aprenden a comprometerse
+        con la materia a través de proyectos realizados.
+      </li>
+      <li>
+        <strong>Imaginación:</strong> los alumnos aprenden a visualizar e imaginar
+        situaciones que van más allá de la observación.
+      </li>
+      <li>
+        <strong>Expresión:</strong> los alumnos aprenden a transmitir una visión
+        personal en sus trabajos.
+      </li>
+      <li>
+        <strong>Observación:</strong> los alumnos aprenden a utilizar una mirada
+        propia y a percibir detalles menos obvios.
+      </li>
+      <li>
+        <strong>Reflexión:</strong> los alumnos aprenden a explicar, justificar y
+        evaluar lo que realizan con un espíritu crítico.
+      </li>
+      <li>
+        <strong>Exploración:</strong> los alumnos aprenden a ir más allá de sus creaciones,
+        tomar nuevos riesgos y aprender de sus errores.
+      </li>
+      <li>
+        <strong>Comprensión del mundo artístico:</strong> los alumnos aprenden a
+        relacionarse con el arte y a entender todo lo asociado a él, como galerías,
+        museos, etc.
+      </li>
+    </ul>
 
-        <p class="mb-6 leading-relaxed">
-            Principios y criterios relacionados con esta pedagogía de las artes
-            visuales:
-        </p>
+    <p class="mb-6 leading-relaxed">
+      Principios y criterios relacionados con esta pedagogía de las artes
+      visuales:
+    </p>
 
-        <ul class="list-inside list-disc mb-6">
-            <li>
-                La pedagogía del arte infantil apoya la necesidad natural de
-                expresión, ofreciendo múltiples posibilidades para dar cauce a
-                la percepción e interpretación de la realidad por parte del
-                niño.
-            </li>
-            <li>
-                Acepta los sentimientos del niño volcados en sus actividades
-                artísticas, entendiendo su contexto de desarrollo.
-            </li>
-            <li>
-                Desarrolla la capacidad creadora, estimulando el pensamiento
-                divergente, valorando la originalidad y la independencia
-                intelectual.
-            </li>
-            <li>
-                Promueve las diferencias en los niños, inculcando confianza y
-                seguridad.
-            </li>
-            <li>
-                La libertad es un valor, enmarcado dentro de límites que
-                proporcionan respeto mutuo entre los niños.
-            </li>
-            <li>
-                Fomenta la cooperación entre los niños como "artistas natos",
-                animando sus facultades creativas.
-            </li>
-            <li>
-                El valor principal está en el proceso artístico, no en el
-                producto final.
-            </li>
-            <li>
-                El programa artístico está centrado en el niño, acorde con su
-                edad y habilidad.
-            </li>
-            <li>
-                Busca el desarrollo estético, propiciando experiencias que
-                lleven al niño a madurar sus formas de expresión y a captar la
-                belleza en la naturaleza y en su interior.
-            </li>
-            <li>
-                Promueve una imagen positiva de sí mismo en los niños, alentando
-                su confianza en sus medios de expresión.
-            </li>
-        </ul>
+    <ul class="list-inside list-disc mb-6">
+      <li>
+        La pedagogía del arte infantil apoya la necesidad natural de expresión,
+        ofreciendo múltiples posibilidades para dar cauce a la percepción e
+        interpretación de la realidad por parte del niño.
+      </li>
+      <li>
+        Acepta los sentimientos del niño volcados en sus actividades artísticas,
+        entendiendo su contexto de desarrollo.
+      </li>
+      <li>
+        Desarrolla la capacidad creadora, estimulando el pensamiento divergente,
+        valorando la originalidad y la independencia intelectual.
+      </li>
+      <li>
+        Promueve las diferencias en los niños, inculcando confianza y seguridad.
+      </li>
+      <li>
+        La libertad es un valor, enmarcado dentro de límites que proporcionan
+        respeto mutuo entre los niños.
+      </li>
+      <li>
+        Fomenta la cooperación entre los niños como "artistas natos", animando
+        sus facultades creativas.
+      </li>
+      <li>
+        El valor principal está en el proceso artístico, no en el producto
+        final.
+      </li>
+      <li>
+        El programa artístico está centrado en el niño, acorde con su edad y
+        habilidad.
+      </li>
+      <li>
+        Busca el desarrollo estético, propiciando experiencias que lleven al
+        niño a madurar sus formas de expresión y a captar la belleza en la
+        naturaleza y en su interior.
+      </li>
+      <li>
+        Promueve una imagen positiva de sí mismo en los niños, alentando su
+        confianza en sus medios de expresión.
+      </li>
+    </ul>
 
-        <p class="text-center text-blue-600 font-semibold text-xl">
-            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
-        </p>
-    </section>
+    <p class="text-center text-blue-600 font-semibold text-xl">
+      COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+    </p>
+  </section>
 
-    <div class="h-12"></div>
-    <PostHero />
-    <div class="h-24"></div>
-    <Inscripcion />
+  <div class="h-12"></div>
+  <PostHero />
+  <div class="h-24"></div>
+  <Inscripcion />
 </Layout>

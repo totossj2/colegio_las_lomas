@@ -1,109 +1,104 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Hero from "@/sections/Hero.astro";
-import PostHero from "@/sections/PostHero.astro";
-import Inscripcion from "@/sections/Inscripcion.astro";
-import Logo from "@/assets/logo.astro";
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/sections/Hero.astro';
+import PostHero from '@/sections/PostHero.astro';
+import Inscripcion from '@/sections/Inscripcion.astro';
+import Logo from '@/assets/logo.astro';
 
-import Image1 from "@/assets/banners/las_lomas_aula.png";
-import Image2 from "@/assets/banners/las_lomas_frente.png";
+import Image1 from '@/assets/banners/las_lomas_aula.png';
+import Image2 from '@/assets/banners/las_lomas_frente.png';
 ---
 
 <Layout>
-    <Hero
-        images={[
-            {
-                src: Image1.src,
-                alt: "Aula del Colegio Las Lomas",
-                title: "Nuestras Aulas",
-                description: "Espacios modernos diseñados para el aprendizaje",
-            },
-            {
-                src: Image2.src,
-                alt: "Frente del Colegio Las Lomas",
-                title: "Nuestras Instalaciones",
-                description: "Infraestructura moderna y segura",
-            },
-        ]}
-    />
+  <Hero
+    images={[
+      {
+        src: Image1.src,
+        alt: 'Aula del Colegio Las Lomas',
+        title: 'Nuestras Aulas',
+        description: 'Espacios modernos diseñados para el aprendizaje',
+      },
+      {
+        src: Image2.src,
+        alt: 'Frente del Colegio Las Lomas',
+        title: 'Nuestras Instalaciones',
+        description: 'Infraestructura moderna y segura',
+      },
+    ]}
+  />
 
-    <section
-        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
-    >
-        <h2 class="text-3xl font-semibold mb-6 text-center">
-            PROYECTO INSTITUCIONAL
-        </h2>
-        <h3 class="text-2xl font-semibold mb-4 text-center">DE NUTRICIÓN</h3>
+  <section
+    class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+  >
+    <h2 class="text-3xl font-semibold mb-6 text-center">
+      PROYECTO INSTITUCIONAL
+    </h2>
+    <h3 class="text-2xl font-semibold mb-4 text-center">DE NUTRICIÓN</h3>
 
-        <p class="mb-6 leading-relaxed">
-            En el Colegio Las Lomas de Carlos Spegazzini entendemos la nutrición
-            como la ciencia de los alimentos, los nutrientes y su acción,
-            interacción y balance en relación a la salud y la enfermedad.
-            También abarca el estudio de los hábitos alimentarios, desde la
-            producción hasta el consumo de los alimentos, con un enfoque
-            integral que toma en cuenta variables sociales, económicas,
-            culturales y psicológicas.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      En el Colegio Las Lomas de Carlos Spegazzini entendemos la nutrición como
+      la ciencia de los alimentos, los nutrientes y su acción, interacción y
+      balance en relación a la salud y la enfermedad. También abarca el estudio
+      de los hábitos alimentarios, desde la producción hasta el consumo de los
+      alimentos, con un enfoque integral que toma en cuenta variables sociales,
+      económicas, culturales y psicológicas.
+    </p>
 
-        <p class="mb-6 leading-relaxed">
-            En la actualidad, nuestro país enfrenta un aumento en la prevalencia
-            de enfermedades crónicas no transmisibles, como sobrepeso, obesidad,
-            diabetes, hipertensión e hiperlipemias, que históricamente fueron
-            asociadas a adultos y hoy también afectan a nuestros alumnos. El
-            ámbito escolar está estrechamente vinculado con los hábitos
-            alimentarios de los niños, ya que es el lugar donde realizan la
-            mayor parte de sus actividades diarias, adquieren conocimientos y se
-            relacionan con sus pares.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      En la actualidad, nuestro país enfrenta un aumento en la prevalencia de
+      enfermedades crónicas no transmisibles, como sobrepeso, obesidad,
+      diabetes, hipertensión e hiperlipemias, que históricamente fueron
+      asociadas a adultos y hoy también afectan a nuestros alumnos. El ámbito
+      escolar está estrechamente vinculado con los hábitos alimentarios de los
+      niños, ya que es el lugar donde realizan la mayor parte de sus actividades
+      diarias, adquieren conocimientos y se relacionan con sus pares.
+    </p>
 
-        <p class="mb-6 leading-relaxed">
-            Como parte de un proyecto integrador, se llevará a cabo "La Huerta",
-            en colaboración con otras áreas curriculares. Los niños, cada vez
-            más alejados del entorno natural, tendrán la oportunidad de ver cómo
-            crecen los vegetales que consumen, algo que a menudo resulta difícil
-            de observar en un entorno urbano. La huerta se convierte en un
-            espacio de trabajo en equipo, dentro de un contexto de aprendizaje
-            informal, donde se podrán trasladar conceptos aprendidos en diversas
-            áreas fuera del aula.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      Como parte de un proyecto integrador, se llevará a cabo "La Huerta", en
+      colaboración con otras áreas curriculares. Los niños, cada vez más
+      alejados del entorno natural, tendrán la oportunidad de ver cómo crecen
+      los vegetales que consumen, algo que a menudo resulta difícil de observar
+      en un entorno urbano. La huerta se convierte en un espacio de trabajo en
+      equipo, dentro de un contexto de aprendizaje informal, donde se podrán
+      trasladar conceptos aprendidos en diversas áreas fuera del aula.
+    </p>
 
-        <p class="mb-6 leading-relaxed">
-            Con este proyecto buscamos que nuestros alumnos concienticen e
-            incorporen conocimientos que les servirán de por vida, garantizando
-            una vida saludable. Entre los objetivos de este proyecto se
-            incluyen:
-        </p>
+    <p class="mb-6 leading-relaxed">
+      Con este proyecto buscamos que nuestros alumnos concienticen e incorporen
+      conocimientos que les servirán de por vida, garantizando una vida
+      saludable. Entre los objetivos de este proyecto se incluyen:
+    </p>
 
-        <ul class="list-inside list-disc mb-6">
-            <li>Identificar los diferentes grupos de alimentos.</li>
-            <li>
-                Reconocer los componentes de los alimentos que consumimos y sus
-                funciones en nuestro organismo.
-            </li>
-            <li>Desarrollar un concepto conjunto de alimentación saludable.</li>
-            <li>Identificar de dónde provienen los alimentos que consumen.</li>
-            <li>
-                Ser capaces de reconocer las formas de producción de los
-                alimentos.
-            </li>
-            <li>
-                Fomentar el trabajo en equipo, integrando conceptos de
-                diferentes áreas para obtener un producto final.
-            </li>
-            <li>
-                Obtener un producto de su trabajo e incorporarlo a diversas
-                preparaciones.
-            </li>
-            <li>Poder transmitir a sus familias los conceptos aprendidos.</li>
-        </ul>
+    <ul class="list-inside list-disc mb-6">
+      <li>Identificar los diferentes grupos de alimentos.</li>
+      <li>
+        Reconocer los componentes de los alimentos que consumimos y sus
+        funciones en nuestro organismo.
+      </li>
+      <li>Desarrollar un concepto conjunto de alimentación saludable.</li>
+      <li>Identificar de dónde provienen los alimentos que consumen.</li>
+      <li>
+        Ser capaces de reconocer las formas de producción de los alimentos.
+      </li>
+      <li>
+        Fomentar el trabajo en equipo, integrando conceptos de diferentes áreas
+        para obtener un producto final.
+      </li>
+      <li>
+        Obtener un producto de su trabajo e incorporarlo a diversas
+        preparaciones.
+      </li>
+      <li>Poder transmitir a sus familias los conceptos aprendidos.</li>
+    </ul>
 
-        <p class="text-center text-blue-600 font-semibold text-xl">
-            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
-        </p>
-    </section>
+    <p class="text-center text-blue-600 font-semibold text-xl">
+      COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+    </p>
+  </section>
 
-    <div class="h-12"></div>
-    <PostHero />
-    <div class="h-24"></div>
-    <Inscripcion />
+  <div class="h-12"></div>
+  <PostHero />
+  <div class="h-24"></div>
+  <Inscripcion />
 </Layout>

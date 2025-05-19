@@ -1,135 +1,127 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Hero from "@/sections/Hero.astro";
-import PostHero from "@/sections/PostHero.astro";
-import Inscripcion from "@/sections/Inscripcion.astro";
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/sections/Hero.astro';
+import PostHero from '@/sections/PostHero.astro';
+import Inscripcion from '@/sections/Inscripcion.astro';
 
-import Image1 from "/public/images/equipo.webp";
+import Image1 from '/public/images/equipo.webp';
 ---
 
 <Layout>
-    <Hero
-        images={[
-            {
-                src: Image1.src,
-                alt: "Aula del Colegio Las Lomas",
-                title: "Colegio Las Lomas",
-                description: "",
-            },
-        ]}
-    />
-    <section
-        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
-    >
-        <h1 class="text-4xl font-bold mb-6 text-center">
-            Nuestro Proyecto Educativo
-        </h1>
+  <Hero
+    images={[
+      {
+        src: Image1.src,
+        alt: 'Aula del Colegio Las Lomas',
+        title: 'Colegio Las Lomas',
+        description: '',
+      },
+    ]}
+  />
+  <section
+    class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+  >
+    <h1 class="text-4xl font-bold mb-6 text-center">
+      Nuestro Proyecto Educativo
+    </h1>
 
-        <p class="mb-6 leading-relaxed">
-            El nacimiento de nuestra institución surge de un profundo deseo
-            familiar de crear un espacio educativo innovador, donde la
-            construcción del conocimiento sea un proceso colectivo que integre a
-            la familia y la escuela. Este sueño, nacido del compromiso con el
-            trabajo y el estudio, tiene como pilar fundamental la convicción de
-            que la educación concreta, responsable y comprometida es el camino
-            hacia un futuro mejor para nuestros niños.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      El nacimiento de nuestra institución surge de un profundo deseo familiar
+      de crear un espacio educativo innovador, donde la construcción del
+      conocimiento sea un proceso colectivo que integre a la familia y la
+      escuela. Este sueño, nacido del compromiso con el trabajo y el estudio,
+      tiene como pilar fundamental la convicción de que la educación concreta,
+      responsable y comprometida es el camino hacia un futuro mejor para
+      nuestros niños.
+    </p>
 
-        <p class="mb-6 leading-relaxed">
-            Nuestro objetivo es ofrecer un servicio educativo de excelencia,
-            basado en las más recientes tendencias pedagógicas, con un equipo
-            docente altamente capacitado y comprometido con la formación
-            integral de cada estudiante. Creemos en un aprendizaje
-            significativo, donde la experimentación y la indagación activa
-            permiten a los niños explorar, investigar y construir su propio
-            conocimiento.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      Nuestro objetivo es ofrecer un servicio educativo de excelencia, basado en
+      las más recientes tendencias pedagógicas, con un equipo docente altamente
+      capacitado y comprometido con la formación integral de cada estudiante.
+      Creemos en un aprendizaje significativo, donde la experimentación y la
+      indagación activa permiten a los niños explorar, investigar y construir su
+      propio conocimiento.
+    </p>
 
-        <blockquote class="mb-8 italic border-l-4 border-blue-500 pl-4">
-            "Me lo contaron y lo olvidé, lo vi y lo entendí, lo hice y lo
-            aprendí."
-        </blockquote>
+    <blockquote class="mb-8 italic border-l-4 border-blue-500 pl-4">
+      "Me lo contaron y lo olvidé, lo vi y lo entendí, lo hice y lo aprendí."
+    </blockquote>
 
-        <p class="mb-8 leading-relaxed">
-            Estamos convencidos de que el conocimiento se asimila verdaderamente
-            cuando se vive. Esta frase sintetiza nuestra filosofía educativa y
-            refleja nuestro compromiso de proporcionar una experiencia de
-            aprendizaje vivencial y enriquecedora.
-        </p>
+    <p class="mb-8 leading-relaxed">
+      Estamos convencidos de que el conocimiento se asimila verdaderamente
+      cuando se vive. Esta frase sintetiza nuestra filosofía educativa y refleja
+      nuestro compromiso de proporcionar una experiencia de aprendizaje
+      vivencial y enriquecedora.
+    </p>
 
-        <h2 class="text-3xl font-semibold mb-6">Nuestra Propuesta Educativa</h2>
+    <h2 class="text-3xl font-semibold mb-6">Nuestra Propuesta Educativa</h2>
 
-        <ul class="space-y-4">
-            <li>
-                <strong class="text-blue-600">Tecnología y Robótica:</strong> Recursos
-                fundamentales que potencian el pensamiento lógico y la creatividad.
-            </li>
-            <li>
-                <strong class="text-blue-600">Idiomas:</strong> Puentes hacia la
-                comprensión intercultural y el respeto por la diversidad.
-            </li>
-            <li>
-                <strong class="text-blue-600"
-                    >Cuidado del Medio Ambiente:</strong
-                > Fomentamos la conciencia ambiental y el uso responsable de los
-                recursos naturales.
-            </li>
-            <li>
-                <strong class="text-blue-600"
-                    >Actividades Deportivas y Recreativas:</strong
-                > Promovemos la salud física y el bienestar emocional.
-            </li>
-            <li>
-                <strong class="text-blue-600">Cocina y Nutrición:</strong> Enseñamos
-                hábitos saludables para una mejor calidad de vida.
-            </li>
-            <li>
-                <strong class="text-blue-600">Arte, Música y Danza:</strong> Estimulamos
-                la creatividad y la expresión a través de las artes.
-            </li>
-            <li>
-                <strong class="text-blue-600">Banda Escolar:</strong> Fomentamos
-                el placer por la melodía, la música y la composición musical, muestro
-                proyecto de banda acompaña nuestros eventos más importantes con banda
-                en vivo.
-            </li>
-            <li>
-                <strong class="text-blue-600">Lengua de Señas:</strong> Impartimos
-                la comunicación en todas sus formas, la lengua de señas nos permite
-                comunicarnos, incluir y poder llegar a todas las personas, más allá
-                de las diferencias.
-            </li>
-            <li>
-                <strong class="text-blue-600">Clases de Apoyo:</strong> Permite a
-                nuestros estudiantes de doble jornada tener un espacio para realizar
-                y reforzar sus aprendizajes.
-            </li>
-            <li>
-                <strong class="text-blue-600"
-                    >Acciones Solidarias y Reparadoras:</strong
-                > Desarrollamos la empatía, la responsabilidad social y el compromiso
-                con la comunidad.
-            </li>
-        </ul>
+    <ul class="space-y-4">
+      <li>
+        <strong class="text-blue-600">Tecnología y Robótica:</strong> Recursos fundamentales
+        que potencian el pensamiento lógico y la creatividad.
+      </li>
+      <li>
+        <strong class="text-blue-600">Idiomas:</strong> Puentes hacia la comprensión
+        intercultural y el respeto por la diversidad.
+      </li>
+      <li>
+        <strong class="text-blue-600">Cuidado del Medio Ambiente:</strong> Fomentamos
+        la conciencia ambiental y el uso responsable de los recursos naturales.
+      </li>
+      <li>
+        <strong class="text-blue-600"
+          >Actividades Deportivas y Recreativas:</strong
+        > Promovemos la salud física y el bienestar emocional.
+      </li>
+      <li>
+        <strong class="text-blue-600">Cocina y Nutrición:</strong> Enseñamos hábitos
+        saludables para una mejor calidad de vida.
+      </li>
+      <li>
+        <strong class="text-blue-600">Arte, Música y Danza:</strong> Estimulamos
+        la creatividad y la expresión a través de las artes.
+      </li>
+      <li>
+        <strong class="text-blue-600">Banda Escolar:</strong> Fomentamos el placer
+        por la melodía, la música y la composición musical, muestro proyecto de banda
+        acompaña nuestros eventos más importantes con banda en vivo.
+      </li>
+      <li>
+        <strong class="text-blue-600">Lengua de Señas:</strong> Impartimos la comunicación
+        en todas sus formas, la lengua de señas nos permite comunicarnos, incluir
+        y poder llegar a todas las personas, más allá de las diferencias.
+      </li>
+      <li>
+        <strong class="text-blue-600">Clases de Apoyo:</strong> Permite a nuestros
+        estudiantes de doble jornada tener un espacio para realizar y reforzar sus
+        aprendizajes.
+      </li>
+      <li>
+        <strong class="text-blue-600">Acciones Solidarias y Reparadoras:</strong
+        > Desarrollamos la empatía, la responsabilidad social y el compromiso con
+        la comunidad.
+      </li>
+    </ul>
 
-        <p class="mt-8 leading-relaxed">
-            En el <strong class="text-blue-600">Colegio Las Lomas</strong>,
-            abrimos nuestras puertas a todas las familias que buscan una
-            educación basada en valores, el amor, la contención y el
-            conocimiento. Creemos que, juntos, podemos formar individuos ávidos
-            de aprender, preparados para afrontar los desafíos del futuro con
-            responsabilidad y pasión.
-        </p>
-        <p class="mt-8 text-sm text-gray-500 text-center mb-4">
-            Nivel Inicial DIEGEP 8521 | Nivel Primario DIEGEP 8591 | Nivel
-            Secundario DIEGEP 9128
-        </p>
-        <p class="text-center text-blue-600 font-semibold text-xl">
-            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
-        </p>
-    </section>
-    <div class="h-12"></div>
-    <PostHero />
-    <div class="h-24"></div>
-    <Inscripcion />
+    <p class="mt-8 leading-relaxed">
+      En el <strong class="text-blue-600">Colegio Las Lomas</strong>, abrimos
+      nuestras puertas a todas las familias que buscan una educación basada en
+      valores, el amor, la contención y el conocimiento. Creemos que, juntos,
+      podemos formar individuos ávidos de aprender, preparados para afrontar los
+      desafíos del futuro con responsabilidad y pasión.
+    </p>
+    <p class="mt-8 text-sm text-gray-500 text-center mb-4">
+      Nivel Inicial DIEGEP 8521 | Nivel Primario DIEGEP 8591 | Nivel Secundario
+      DIEGEP 9128
+    </p>
+    <p class="text-center text-blue-600 font-semibold text-xl">
+      COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+    </p>
+  </section>
+  <div class="h-12"></div>
+  <PostHero />
+  <div class="h-24"></div>
+  <Inscripcion />
 </Layout>

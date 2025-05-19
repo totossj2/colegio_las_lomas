@@ -1,124 +1,119 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Hero from "@/sections/Hero.astro";
-import PostHero from "@/sections/PostHero.astro";
-import Inscripcion from "@/sections/Inscripcion.astro";
-import Logo from "@/assets/logo.astro";
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/sections/Hero.astro';
+import PostHero from '@/sections/PostHero.astro';
+import Inscripcion from '@/sections/Inscripcion.astro';
+import Logo from '@/assets/logo.astro';
 
-import Image1 from "@/assets/banners/las_lomas_aula.png";
-import Image2 from "@/assets/banners/las_lomas_frente.png";
+import Image1 from '@/assets/banners/las_lomas_aula.png';
+import Image2 from '@/assets/banners/las_lomas_frente.png';
 ---
 
 <Layout>
-    <Hero
-        images={[
-            {
-                src: Image1.src,
-                alt: "Aula del Colegio Las Lomas",
-                title: "Nuestras Aulas",
-                description: "Espacios modernos diseñados para el aprendizaje",
-            },
-            {
-                src: Image2.src,
-                alt: "Frente del Colegio Las Lomas",
-                title: "Nuestras Instalaciones",
-                description: "Infraestructura moderna y segura",
-            },
-        ]}
-    />
-    <section
-        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
-    >
-        <h2 class="text-3xl font-semibold mb-6 text-center">
-            PROYECTO INSTITUCIONAL
-        </h2>
-        <h3 class="text-2xl font-semibold mb-4 text-center">DE COCINA</h3>
+  <Hero
+    images={[
+      {
+        src: Image1.src,
+        alt: 'Aula del Colegio Las Lomas',
+        title: 'Nuestras Aulas',
+        description: 'Espacios modernos diseñados para el aprendizaje',
+      },
+      {
+        src: Image2.src,
+        alt: 'Frente del Colegio Las Lomas',
+        title: 'Nuestras Instalaciones',
+        description: 'Infraestructura moderna y segura',
+      },
+    ]}
+  />
+  <section
+    class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+  >
+    <h2 class="text-3xl font-semibold mb-6 text-center">
+      PROYECTO INSTITUCIONAL
+    </h2>
+    <h3 class="text-2xl font-semibold mb-4 text-center">DE COCINA</h3>
 
-        <p class="mb-6 leading-relaxed">
-            La comida es salud, bajo este lema buscamos alentar a nuestros
-            alumnos a encarar nuevos desafíos en un taller de cocina, donde se
-            cumplen roles de guía y motivación, animando a los niños a plantear
-            y resolver recetas y propuestas alimenticias. En este espacio,
-            pondrán en práctica sus conocimientos previos y aprenderán sobre la
-            preparación de alimentos, proponiendo metas diarias.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      La comida es salud, bajo este lema buscamos alentar a nuestros alumnos a
+      encarar nuevos desafíos en un taller de cocina, donde se cumplen roles de
+      guía y motivación, animando a los niños a plantear y resolver recetas y
+      propuestas alimenticias. En este espacio, pondrán en práctica sus
+      conocimientos previos y aprenderán sobre la preparación de alimentos,
+      proponiendo metas diarias.
+    </p>
 
-        <p class="mb-6 leading-relaxed">
-            A través de este taller, nos proponemos enseñar a los niños sobre la
-            importancia de la alimentación sana y equilibrada, lo cual es
-            fundamental para su desarrollo y crecimiento. Los objetivos de este
-            proyecto son:
-        </p>
+    <p class="mb-6 leading-relaxed">
+      A través de este taller, nos proponemos enseñar a los niños sobre la
+      importancia de la alimentación sana y equilibrada, lo cual es fundamental
+      para su desarrollo y crecimiento. Los objetivos de este proyecto son:
+    </p>
 
-        <ul class="list-inside list-disc mb-6">
-            <li>
-                Aprender con alegría, disciplina, responsabilidad y respeto a
-                través del entusiasmo por cocinar, haciendo énfasis en lo
-                saludable.
-            </li>
-            <li>
-                Trabajar en equipo, ya que esta habilidad es fundamental en el
-                desarrollo del área.
-            </li>
-            <li>
-                Mejorar su nivel de atención y capacidad para alcanzar metas.
-            </li>
-            <li>
-                Entender la importancia de una alimentación variada y
-                equilibrada.
-            </li>
-            <li>Respetar las normas de seguridad e higiene en la cocina.</li>
-        </ul>
+    <ul class="list-inside list-disc mb-6">
+      <li>
+        Aprender con alegría, disciplina, responsabilidad y respeto a través del
+        entusiasmo por cocinar, haciendo énfasis en lo saludable.
+      </li>
+      <li>
+        Trabajar en equipo, ya que esta habilidad es fundamental en el
+        desarrollo del área.
+      </li>
+      <li>Mejorar su nivel de atención y capacidad para alcanzar metas.</li>
+      <li>
+        Entender la importancia de una alimentación variada y equilibrada.
+      </li>
+      <li>Respetar las normas de seguridad e higiene en la cocina.</li>
+    </ul>
 
-        <p class="mb-6 leading-relaxed">
-            Los principales desafíos del taller incluyen aprender a manejarse
-            adecuadamente en un ambiente de cocina. Esto incluye la rutina de
-            lavado de utensilios, organización del área de trabajo y el manejo
-            cuidadoso de instrumentos y alimentos. También se hará énfasis en
-            evitar el derroche de alimentos y en desarrollar hábitos y
-            disciplina durante las actividades diarias.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      Los principales desafíos del taller incluyen aprender a manejarse
+      adecuadamente en un ambiente de cocina. Esto incluye la rutina de lavado
+      de utensilios, organización del área de trabajo y el manejo cuidadoso de
+      instrumentos y alimentos. También se hará énfasis en evitar el derroche de
+      alimentos y en desarrollar hábitos y disciplina durante las actividades
+      diarias.
+    </p>
 
-        <p class="mb-6 leading-relaxed">
-            Para enriquecer la experiencia, trabajaremos en conjunto con la
-            huerta escolar, lo que proporcionará recursos naturales y permitirá
-            un enfoque integral con los maestros de grado. A lo largo del año,
-            pondremos especial énfasis en la nutrición, ayudando a los
-            estudiantes a adoptar hábitos alimenticios saludables. Además, el
-            inglés será una herramienta fundamental, ya que se incorporará
-            vocabulario relacionado con la gastronomía.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      Para enriquecer la experiencia, trabajaremos en conjunto con la huerta
+      escolar, lo que proporcionará recursos naturales y permitirá un enfoque
+      integral con los maestros de grado. A lo largo del año, pondremos especial
+      énfasis en la nutrición, ayudando a los estudiantes a adoptar hábitos
+      alimenticios saludables. Además, el inglés será una herramienta
+      fundamental, ya que se incorporará vocabulario relacionado con la
+      gastronomía.
+    </p>
 
-        <p class="mb-6 leading-relaxed">
-            Los contenidos estarán adaptados según las edades de los alumnos:
-        </p>
+    <p class="mb-6 leading-relaxed">
+      Los contenidos estarán adaptados según las edades de los alumnos:
+    </p>
 
-        <ul class="list-inside list-disc mb-6">
-            <li>
-                <strong>De primer a tercer grado:</strong> Los alumnos conocerán
-                los alimentos a través de juegos y recetas sencillas. Se trabajará
-                la creatividad como iniciativa y se abordarán temas de matemáticas,
-                lectura, seguridad e higiene, habilidades motrices, entre otras disciplinas,
-                con un nivel de dificultad bajo.
-            </li>
-            <li>
-                <strong>De cuarto a sexto grado:</strong> Enfocaremos en nociones
-                matemáticas más complejas, como mediciones, secuencias, comprensión
-                del tiempo, lectura numérica, símbolos y reconocimiento de palabras.
-                Además, se trabajará en la combinación de ingredientes, temperaturas,
-                causa y efecto, normas de seguridad e higiene, paciencia y autocontrol.
-                Los estudiantes aprenderán a respetar las instrucciones, mejorar
-                sus habilidades motrices y aumentar sus conocimientos sobre los alimentos.
-            </li>
-        </ul>
+    <ul class="list-inside list-disc mb-6">
+      <li>
+        <strong>De primer a tercer grado:</strong> Los alumnos conocerán los alimentos
+        a través de juegos y recetas sencillas. Se trabajará la creatividad como
+        iniciativa y se abordarán temas de matemáticas, lectura, seguridad e higiene,
+        habilidades motrices, entre otras disciplinas, con un nivel de dificultad
+        bajo.
+      </li>
+      <li>
+        <strong>De cuarto a sexto grado:</strong> Enfocaremos en nociones matemáticas
+        más complejas, como mediciones, secuencias, comprensión del tiempo, lectura
+        numérica, símbolos y reconocimiento de palabras. Además, se trabajará en
+        la combinación de ingredientes, temperaturas, causa y efecto, normas de seguridad
+        e higiene, paciencia y autocontrol. Los estudiantes aprenderán a respetar
+        las instrucciones, mejorar sus habilidades motrices y aumentar sus conocimientos
+        sobre los alimentos.
+      </li>
+    </ul>
 
-        <p class="text-center text-blue-600 font-semibold text-xl">
-            COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
-        </p>
-    </section>
+    <p class="text-center text-blue-600 font-semibold text-xl">
+      COLEGIO LAS LOMAS DE CARLOS SPEGAZZINI
+    </p>
+  </section>
 
-    <div class="h-12"></div>
-    <PostHero />
-    <div class="h-24"></div>
-    <Inscripcion />
+  <div class="h-12"></div>
+  <PostHero />
+  <div class="h-24"></div>
+  <Inscripcion />
 </Layout>

@@ -1,99 +1,92 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Hero from "@/sections/Hero.astro";
-import PostHero from "@/sections/PostHero.astro";
-import Inscripcion from "@/sections/Inscripcion.astro";
-import Image1 from "@/assets/banners/solicitud_vacante.png";
+import Layout from '@/layouts/Layout.astro';
+import PostHero from '@/sections/PostHero.astro';
+import Inscripcion from '@/sections/Inscripcion.astro';
 ---
 
 <Layout>
-    <section
-        class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+  <section
+    class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto"
+  >
+    <h1 class="text-4xl font-bold mb-6 text-center">Solicitud de Vacante</h1>
+
+    <p class="mb-6 leading-relaxed">
+      El proceso de admisión comienza con el envío del siguiente formulario. El
+      Colegio confirmará su recepción por medio de un correo electrónico. Muchas
+      gracias por confiar en nosotros para la educación de tus hijos.
+    </p>
+
+    <a
+      class="mb-6 leading-relaxed text-blue-600 underline"
+      href="/RESERVA DE VACANTE WEB.xls"
     >
-        <h1 class="text-4xl font-bold mb-6 text-center">
-            Solicitud de Vacante
-        </h1>
+      Descargar Formulario de Solicitud
+    </a>
 
-        <p class="mb-6 leading-relaxed">
-            El proceso de admisión comienza con el envío del siguiente
-            formulario. El Colegio confirmará su recepción por medio de un
-            correo electrónico. Muchas gracias por confiar en nosotros para la
-            educación de tus hijos.
-        </p>
+    <p class="mb-6 leading-relaxed">
+      A través de este sencillo formulario, podrás iniciar el proceso para que
+      tu hijo o hija forme parte de nuestra comunidad educativa. Una vez que
+      recibimos tu solicitud, nos encargamos de revisar los datos y, en caso de
+      ser necesario, nos pondremos en contacto contigo para completar la
+      información requerida.
+    </p>
 
-        <a
-            class="mb-6 leading-relaxed text-blue-600 underline"
-            href="/RESERVA DE VACANTE WEB.xls"
-        >
-            Descargar Formulario de Solicitud
-        </a>
+    <p class="mb-6 leading-relaxed">
+      Queremos que este proceso sea lo más fácil y claro posible, por lo que
+      contamos con un equipo dispuesto a ayudarte en cada paso.
+    </p>
 
-        <p class="mb-6 leading-relaxed">
-            A través de este sencillo formulario, podrás iniciar el proceso para
-            que tu hijo o hija forme parte de nuestra comunidad educativa. Una
-            vez que recibimos tu solicitud, nos encargamos de revisar los datos
-            y, en caso de ser necesario, nos pondremos en contacto contigo para
-            completar la información requerida.
-        </p>
+    <blockquote class="mb-8 italic border-l-4 border-blue-500 pl-4">
+      "El primer paso hacia el futuro es darlo con confianza."
+    </blockquote>
 
-        <p class="mb-6 leading-relaxed">
-            Queremos que este proceso sea lo más fácil y claro posible, por lo
-            que contamos con un equipo dispuesto a ayudarte en cada paso.
-        </p>
+    <p class="mb-8 leading-relaxed">
+      Desde el momento en que completes tu solicitud, trabajaremos para
+      brindarte toda la información necesaria y asegurar que el proceso de
+      admisión sea lo más fluido y transparente posible.
+    </p>
 
-        <blockquote class="mb-8 italic border-l-4 border-blue-500 pl-4">
-            "El primer paso hacia el futuro es darlo con confianza."
-        </blockquote>
+    <h2 class="text-3xl font-semibold mb-6">
+      Pasos para Solicitar una Vacante
+    </h2>
 
-        <p class="mb-8 leading-relaxed">
-            Desde el momento en que completes tu solicitud, trabajaremos para
-            brindarte toda la información necesaria y asegurar que el proceso de
-            admisión sea lo más fluido y transparente posible.
-        </p>
+    <ul class="space-y-4">
+      <li>
+        <strong class="text-blue-600">Formulario de Solicitud:</strong> Completa
+        el formulario con los datos solicitados para iniciar el proceso.
+      </li>
+      <li>
+        <strong class="text-blue-600">Confirmación de Recepción:</strong> El colegio
+        enviará un correo electrónico/WhatsApp confirmando que hemos recibido tu
+        solicitud.
+      </li>
+      <li>
+        <strong class="text-blue-600">Revisión y Contacto:</strong> En caso de ser
+        necesario, nos pondremos en contacto contigo para completar la información.
+      </li>
+      <li>
+        <strong class="text-blue-600">Instancias de Entrevistas:</strong> Primera
+        entrevista con Administración (conocer la propuesta educativa y aranceles),
+        segunda entrevista con Equipo Directivo (para conocer al alumno/a postulante)
+        y tercer entrevista confirmación de vacante (entrega de documentación y matriculación).
+      </li>
+      <li>
+        <strong class="text-blue-600">Confirmación de Vacante:</strong> Te notificaremos
+        cuándo podrás realizar la entrega de documentación y concretar el pago de
+        la matrícula.
+      </li>
+    </ul>
 
-        <h2 class="text-3xl font-semibold mb-6">
-            Pasos para Solicitar una Vacante
-        </h2>
-
-        <ul class="space-y-4">
-            <li>
-                <strong class="text-blue-600">Formulario de Solicitud:</strong> Completa
-                el formulario con los datos solicitados para iniciar el proceso.
-            </li>
-            <li>
-                <strong class="text-blue-600">Confirmación de Recepción:</strong
-                > El colegio enviará un correo electrónico/WhatsApp confirmando que
-                hemos recibido tu solicitud.
-            </li>
-            <li>
-                <strong class="text-blue-600">Revisión y Contacto:</strong> En caso
-                de ser necesario, nos pondremos en contacto contigo para completar
-                la información.
-            </li>
-            <li>
-                <strong class="text-blue-600">Instancias de Entrevistas:</strong
-                > Primera entrevista con Administración (conocer la propuesta educativa
-                y aranceles), segunda entrevista con Equipo Directivo (para conocer
-                al alumno/a postulante) y tercer entrevista confirmación de vacante
-                (entrega de documentación y matriculación).
-            </li>
-            <li>
-                <strong class="text-blue-600">Confirmación de Vacante:</strong> Te
-                notificaremos cuándo podrás realizar la entrega de documentación
-                y concretar el pago de la matrícula.
-            </li>
-        </ul>
-
-        <p class="mt-8 leading-relaxed">
-            Agradecemos tu interés en el <strong class="text-blue-600"
-                >Colegio Las Lomas</strong
-            >. Estamos emocionados por la posibilidad de acompañar a tu hijo o
-            hija en su proceso educativo. Para más información, no dudes en
-            ponerte en contacto con nosotros.
-        </p>
-    </section>
-    <div class="h-12"></div>
-    <PostHero />
-    <div class="h-24"></div>
-    <Inscripcion />
+    <p class="mt-8 leading-relaxed">
+      Agradecemos tu interés en el <strong class="text-blue-600"
+        >Colegio Las Lomas</strong
+      >. Estamos emocionados por la posibilidad de acompañar a tu hijo o hija en
+      su proceso educativo. Para más información, no dudes en ponerte en
+      contacto con nosotros.
+    </p>
+  </section>
+  <div class="h-12"></div>
+  <PostHero />
+  <div class="h-24"></div>
+  <Inscripcion />
 </Layout>
