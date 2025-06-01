@@ -162,15 +162,17 @@ const menuItems = [
     class="flex w-full md:w-fit justify-start md:justify-between gap-1 md:gap-5 items-center md:px-4"
   >
     <Logo width="100" height="100" />
-    <h1 class="text-md md:text-xl text-white font-black w-fit md:w-fit">
-      Colegio <br /> Las Lomas
+    <h1
+      class="text-md md:text-xl hidden md:block text-white font-black w-fit md:w-fit"
+    >
+      Colegio Las Lomas
     </h1>
-    <div class="hidden md:flex w-0.5 h-10 bg-white"></div>
-    <span class="text-white font-bold hidden md:block">INICIO</span>
+    <div class="hidden xl:flex w-0.5 h-10 bg-white"></div>
+    <span class="text-white font-bold hidden xl:block">INICIO</span>
   </a>
 
   <!-- Menu Desktop -->
-  <div class="hidden md:flex justify-end items-center px-4 py-2">
+  <div class="hidden 2xl:flex justify-end items-center px-4 py-2">
     <nav class="flex space-x-8">
       {
         menuItems.map((item) => (
@@ -216,16 +218,16 @@ const menuItems = [
   </div>
 
   <!-- Menu Mobile -->
-  <button id="menuToggle" class="md:hidden text-white text-3xl">☰</button>
+  <button id="menuToggle" class="2xl:hidden text-white text-3xl">☰</button>
 
   <div
     id="mobileMenu"
-    class="fixed top-0 right-[-100%] h-full bg-[#59A8CC] w-[90%] bg-opacity-90 z-50 flex flex-col items-center justify-center space-y-6 transition-all duration-300 pointer-events-none"
+    class="fixed top-0 right-[-100%] h-full bg-[#59A8CC] w-[90%] md:w-[40%] bg-opacity-90 z-50 flex flex-col items-center justify-center space-y-6 transition-all duration-300 pointer-events-none"
   >
     <button id="closeMenu" class="absolute top-6 right-4 text-white text-5xl"
       >&times;</button
     >
-    <div class="absolute top-0 mt-20">
+    <div class="absolute top-0 mt-20 w-full">
       <!-- Enlace de inicio -->
       <a
         href="/"

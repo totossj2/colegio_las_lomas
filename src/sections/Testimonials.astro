@@ -1,77 +1,77 @@
 ---
 // TestimonialCarousel.astro
 interface Testimonial {
-    id: string;
-    name: string;
-    role: string;
-    rating: number;
-    content: string;
-    initials: string;
-    colorClass: string;
+  id: string;
+  name: string;
+  role: string;
+  rating: number;
+  content: string;
+  initials: string;
+  colorClass: string;
 }
 
 // Datos de testimonios
 const testimonials: Testimonial[] = [
-    {
-        id: "1",
-        name: "María González",
-        role: "Madre de alumno de Primaria",
-        rating: 5,
-        content:
-            "La dedicación de los maestros es excepcional. Mi hijo ha mejorado notablemente en sus estudios y disfruta cada día en el colegio. El ambiente es muy familiar y seguro.",
-        initials: "MG",
-        colorClass: "bg-blue-100 text-blue-600",
-    },
-    {
-        id: "2",
-        name: "Carlos Rodríguez",
-        role: "Padre de alumna de Maternal",
-        rating: 5,
-        content:
-            "Mi pequeña asiste al maternal y estamos encantados. Las educadoras son muy cariñosas y profesionales. La adaptación fue muy suave gracias a su apoyo.",
-        initials: "CR",
-        colorClass: "bg-green-100 text-green-600",
-    },
-    {
-        id: "3",
-        name: "Ana Pérez",
-        role: "Madre de alumno de Jardín",
-        rating: 5,
-        content:
-            "El jardín es excelente. Las actividades son muy didácticas y mi hijo desarrolla tanto sus habilidades sociales como creativas. La infraestructura es moderna y segura.",
-        initials: "AP",
-        colorClass: "bg-purple-100 text-purple-600",
-    },
-    {
-        id: "4",
-        name: "Laura Martínez",
-        role: "Madre de alumno de Secundaria",
-        rating: 5,
-        content:
-            "El nivel académico es muy alto y la preparación para la universidad es excelente. Los profesores motivan constantemente a los alumnos a superarse.",
-        initials: "LM",
-        colorClass: "bg-pink-100 text-pink-600",
-    },
-    {
-        id: "5",
-        name: "Roberto Díaz",
-        role: "Padre de dos alumnos",
-        rating: 5,
-        content:
-            "Tengo dos hijos en el colegio, uno en primaria y otro en secundaria. La formación integral y los valores que inculcan son extraordinarios.",
-        initials: "RD",
-        colorClass: "bg-amber-100 text-amber-600",
-    },
-    {
-        id: "6",
-        name: "Patricia López",
-        role: "Madre de alumna de Jardín",
-        rating: 5,
-        content:
-            "El programa bilingüe es fantástico. Mi hija ya puede mantener conversaciones básicas en inglés y apenas está en jardín. El equipo docente es muy profesional.",
-        initials: "PL",
-        colorClass: "bg-teal-100 text-teal-600",
-    },
+  {
+    id: '1',
+    name: 'María González',
+    role: 'Madre de alumno de Primaria',
+    rating: 5,
+    content:
+      'La dedicación de los maestros es excepcional. Mi hijo ha mejorado notablemente en sus estudios y disfruta cada día en el colegio. El ambiente es muy familiar y seguro.',
+    initials: 'MG',
+    colorClass: 'bg-blue-100 text-blue-600',
+  },
+  {
+    id: '2',
+    name: 'Carlos Rodríguez',
+    role: 'Padre de alumna de Maternal',
+    rating: 5,
+    content:
+      'Mi pequeña asiste al maternal y estamos encantados. Las educadoras son muy cariñosas y profesionales. La adaptación fue muy suave gracias a su apoyo.',
+    initials: 'CR',
+    colorClass: 'bg-green-100 text-green-600',
+  },
+  {
+    id: '3',
+    name: 'Ana Pérez',
+    role: 'Madre de alumno de Jardín',
+    rating: 5,
+    content:
+      'El jardín es excelente. Las actividades son muy didácticas y mi hijo desarrolla tanto sus habilidades sociales como creativas. La infraestructura es moderna y segura.',
+    initials: 'AP',
+    colorClass: 'bg-purple-100 text-purple-600',
+  },
+  {
+    id: '4',
+    name: 'Laura Martínez',
+    role: 'Madre de alumno de Secundaria',
+    rating: 5,
+    content:
+      'El nivel académico es muy alto y la preparación para la universidad es excelente. Los profesores motivan constantemente a los alumnos a superarse.',
+    initials: 'LM',
+    colorClass: 'bg-pink-100 text-pink-600',
+  },
+  {
+    id: '5',
+    name: 'Roberto Díaz',
+    role: 'Padre de dos alumnos',
+    rating: 5,
+    content:
+      'Tengo dos hijos en el colegio, uno en primaria y otro en secundaria. La formación integral y los valores que inculcan son extraordinarios.',
+    initials: 'RD',
+    colorClass: 'bg-amber-100 text-amber-600',
+  },
+  {
+    id: '6',
+    name: 'Patricia López',
+    role: 'Madre de alumna de Jardín',
+    rating: 5,
+    content:
+      'El programa bilingüe es fantástico. Mi hija ya puede mantener conversaciones básicas en inglés y apenas está en jardín. El equipo docente es muy profesional.',
+    initials: 'PL',
+    colorClass: 'bg-teal-100 text-teal-600',
+  },
 ];
 
 // Duplicamos los testimonios para crear un efecto de carrusel infinito
@@ -79,131 +79,117 @@ const duplicatedTestimonials = [...testimonials, ...testimonials];
 ---
 
 <style>
-    #testimonials {
-        background-image: url("/images/jardin.webp");
-        background-size: cover;
-        background-position: center;
-        background-color: rgba(0, 0, 0, 0.5);
-        background-blend-mode: overlay;
-    }
+  #testimonials {
+    background-image: url('/images2/IMG_2720.JPG');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+  }
 </style>
 
 <div id="testimonials" class="w-full py-12 bg-gray-50 overflow-hidden mb-16">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-10">
-            <!-- Título de la sección -->
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-light tracking-wide">
-                    <span class="text-lime-500">TESTIMONIOS</span>
-                    <span class="text-lime-600 font-bold">DE PADRES</span>
-                </h2>
-                <div class="w-64 h-1 bg-lime-500 mx-auto mt-4"></div>
-            </div>
-        </div>
-
-        <div class="relative">
-            <!-- Carrusel con movimiento continuo -->
-            <div class="testimonial-carousel overflow-hidden">
-                <div class="testimonial-track flex animate-scroll">
-                    <!-- Testimonios generados dinámicamente -->
-                    {
-                        duplicatedTestimonials.map((testimonial) => (
-                            <div class="testimonial-card flex-shrink-0 w-80 p-6 mx-4 bg-white rounded-lg shadow-md">
-                                <div class="flex items-center mb-4">
-                                    <div
-                                        class={`w-12 h-12 rounded-full ${testimonial.colorClass} flex items-center justify-center`}
-                                    >
-                                        <span class="font-bold">
-                                            {testimonial.initials}
-                                        </span>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h4 class="font-semibold text-gray-900">
-                                            {testimonial.name}
-                                        </h4>
-                                        <p class="text-sm text-gray-600">
-                                            {testimonial.role}
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="mb-2">
-                                    <div class="flex text-yellow-400">
-                                        {Array.from({ length: 5 }).map(
-                                            (_, i) => (
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    class="h-5 w-5"
-                                                    viewBox="0 0 20 20"
-                                                    fill={
-                                                        i < testimonial.rating
-                                                            ? "currentColor"
-                                                            : "none"
-                                                    }
-                                                    stroke="currentColor"
-                                                >
-                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                                </svg>
-                                            ),
-                                        )}
-                                    </div>
-                                </div>
-                                <p class="text-gray-700 text-[14px] md:text-[16px] leading-relaxed">
-                                    "{testimonial.content}"
-                                </p>
-                            </div>
-                        ))
-                    }
-                </div>
-            </div>
-        </div>
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <!-- Título de la sección -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-light tracking-wide">
+          <span class="text-lime-500">TESTIMONIOS</span>
+          <span class="text-lime-600 font-bold">DE PADRES</span>
+        </h2>
+        <div class="w-64 h-1 bg-lime-500 mx-auto mt-4"></div>
+      </div>
     </div>
+
+    <div class="relative">
+      <!-- Carrusel con movimiento continuo -->
+      <div class="testimonial-carousel overflow-hidden">
+        <div class="testimonial-track flex animate-scroll">
+          <!-- Testimonios generados dinámicamente -->
+          {
+            duplicatedTestimonials.map((testimonial) => (
+              <div class="testimonial-card flex-shrink-0 w-80 p-6 mx-4 bg-white rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                  <div
+                    class={`w-12 h-12 rounded-full ${testimonial.colorClass} flex items-center justify-center`}
+                  >
+                    <span class="font-bold">{testimonial.initials}</span>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="font-semibold text-gray-900">
+                      {testimonial.name}
+                    </h4>
+                    <p class="text-sm text-gray-600">{testimonial.role}</p>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  <div class="flex text-yellow-400">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill={i < testimonial.rating ? 'currentColor' : 'none'}
+                        stroke="currentColor"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                </div>
+                <p class="text-gray-700 text-[14px] md:text-[16px] leading-relaxed">
+                  "{testimonial.content}"
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <style>
-    .testimonial-track {
-        width: fit-content;
-        animation: scroll 60s linear infinite;
+  .testimonial-track {
+    width: fit-content;
+    animation: scroll 60s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Pausa la animación al pasar el ratón */
+  .testimonial-carousel:hover .testimonial-track {
+    animation-play-state: paused;
+  }
+
+  /* Agregar efecto de desvanecimiento en los bordes */
+  .testimonial-carousel::before,
+  .testimonial-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  @media (min-width: 768px) {
+    .testimonial-carousel::before {
+      left: 0;
+      background: linear-gradient(to right, rgb(249 250 251), transparent);
     }
 
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
-    }
-
-    /* Pausa la animación al pasar el ratón */
-    .testimonial-carousel:hover .testimonial-track {
-        animation-play-state: paused;
-    }
-
-    /* Agregar efecto de desvanecimiento en los bordes */
-    .testimonial-carousel::before,
     .testimonial-carousel::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        width: 100px;
-        height: 100%;
-        z-index: 2;
-        pointer-events: none;
+      right: 0;
+      background: linear-gradient(to left, rgb(249 250 251), transparent);
     }
-
-    @media (min-width: 768px) {
-        .testimonial-carousel::before {
-            left: 0;
-            background: linear-gradient(
-                to right,
-                rgb(249 250 251),
-                transparent
-            );
-        }
-
-        .testimonial-carousel::after {
-            right: 0;
-            background: linear-gradient(to left, rgb(249 250 251), transparent);
-        }
-    }
+  }
 </style>
