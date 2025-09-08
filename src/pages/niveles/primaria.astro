@@ -5,8 +5,9 @@ import PostHero from '@/sections/PostHero.astro';
 import Inscripcion from '@/sections/Inscripcion.astro';
 import Logo from '@/assets/logo.astro';
 
-import Image1 from '/public/images/primaria.webp';
-import Image2 from '/public/images/chicos_mundo.webp';
+import Image1 from '/public/images2/PHOTO-2025-08-12-14-13-01.jpg';
+import Image2 from '/public/images2/PHOTO-2025-08-27-13-36-33.jpg';
+import Image3 from '/public/images2/PHOTO-2025-08-27-13-39-59.jpg';
 ---
 
 <Layout>
@@ -19,14 +20,26 @@ import Image2 from '/public/images/chicos_mundo.webp';
         const sectionTop = section.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
 
-        if (sectionTop < windowHeight * 0.75) {
+        if (sectionTop < windowHeight * 0.9) {
           section.classList.add('visible');
+          section.classList.remove('animate');
         }
       });
     }
 
+    // Función para inicializar las animaciones
+    function initAnimations() {
+      const sections = document.querySelectorAll('.section-fade');
+      sections.forEach((section) => {
+        section.classList.add('animate');
+      });
+    }
+
     // Ejecutar al cargar la página
-    document.addEventListener('DOMContentLoaded', handleScrollAnimation);
+    document.addEventListener('DOMContentLoaded', () => {
+      initAnimations();
+      handleScrollAnimation();
+    });
 
     // Ejecutar al hacer scroll
     window.addEventListener('scroll', handleScrollAnimation);
@@ -58,11 +71,16 @@ import Image2 from '/public/images/chicos_mundo.webp';
     }
 
     .section-fade {
-      opacity: 0;
-      transform: translateY(20px);
+      opacity: 1;
+      transform: translateY(0);
       transition:
         opacity 0.6s ease,
         transform 0.6s ease;
+    }
+
+    .section-fade.animate {
+      opacity: 0;
+      transform: translateY(20px);
     }
 
     .section-fade.visible {
@@ -75,13 +93,19 @@ import Image2 from '/public/images/chicos_mundo.webp';
       {
         src: Image1.src,
         alt: 'Aula del Colegio Las Lomas',
-        title: '',
+        title: 'PRIMARIA',
         description: '',
       },
       {
         src: Image2.src,
         alt: 'Aula del Colegio Las Lomas',
-        title: '',
+        title: 'PRIMARIA',
+        description: '',
+      },
+      {
+        src: Image3.src,
+        alt: 'Aula del Colegio Las Lomas',
+        title: 'PRIMARIA',
         description: '',
       },
     ]}

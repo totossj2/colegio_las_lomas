@@ -5,8 +5,8 @@ import PostHero from '@/sections/PostHero.astro';
 import Inscripcion from '@/sections/Inscripcion.astro';
 import Logo from '@/assets/logo.astro';
 
-import Image1 from '/public/images/inicial.webp';
-import Image2 from '/public/images/jardin.webp';
+import Image1 from '/public/images2/WhatsApp Image 2025-08-27 at 14.27.57.jpeg';
+import Image2 from '/public/images2/WhatsApp Image 2025-08-27 at 14.20.09.jpeg';
 ---
 
 <Layout>
@@ -19,14 +19,26 @@ import Image2 from '/public/images/jardin.webp';
         const sectionTop = section.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
 
-        if (sectionTop < windowHeight * 0.75) {
+        if (sectionTop < windowHeight * 0.9) {
           section.classList.add('visible');
+          section.classList.remove('animate');
         }
       });
     }
 
+    // Función para inicializar las animaciones
+    function initAnimations() {
+      const sections = document.querySelectorAll('.section-fade');
+      sections.forEach((section) => {
+        section.classList.add('animate');
+      });
+    }
+
     // Ejecutar al cargar la página
-    document.addEventListener('DOMContentLoaded', handleScrollAnimation);
+    document.addEventListener('DOMContentLoaded', () => {
+      initAnimations();
+      handleScrollAnimation();
+    });
 
     // Ejecutar al hacer scroll
     window.addEventListener('scroll', handleScrollAnimation);
@@ -58,11 +70,16 @@ import Image2 from '/public/images/jardin.webp';
     }
 
     .section-fade {
-      opacity: 0;
-      transform: translateY(20px);
+      opacity: 1;
+      transform: translateY(0);
       transition:
         opacity 0.6s ease,
         transform 0.6s ease;
+    }
+
+    .section-fade.animate {
+      opacity: 0;
+      transform: translateY(20px);
     }
 
     .section-fade.visible {
@@ -73,9 +90,15 @@ import Image2 from '/public/images/jardin.webp';
   <Hero
     images={[
       {
+        src: Image1.src,
+        alt: 'Frente del Colegio Las Lomas',
+        title: 'MATERNAL',
+        description: '',
+      },
+      {
         src: Image2.src,
         alt: 'Frente del Colegio Las Lomas',
-        title: '',
+        title: 'MATERNAL',
         description: '',
       },
     ]}

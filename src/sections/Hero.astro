@@ -1,5 +1,7 @@
 ---
 // HeroSlider.astro
+import { getRandomImages } from '@/utils/randomImages';
+
 // Define la interfaz para las imágenes del slider
 interface SliderImage {
     src: string;
@@ -9,8 +11,11 @@ interface SliderImage {
 }
 
 // Recibe un array de imágenes como prop
-//const { images = [] } = Astro.props as { images: SliderImage[] };
+// Si no se proporcionan imágenes, usa imágenes aleatorias
 const { images = [] } = Astro.props as { images: SliderImage[] };
+
+// Si no hay imágenes específicas, usar imágenes aleatorias
+const finalImages = images.length > 0 ? images : getRandomImages(1);
 ---
 
 <section class="relative w-full overflow-hidden bg-gray-900">
@@ -18,7 +23,7 @@ const { images = [] } = Astro.props as { images: SliderImage[] };
         <!-- Las imágenes del slider -->
         <div id="slider-container" class="w-full h-full relative touch-pan-x">
             {
-                images.map((image, index) => (
+                finalImages.map((image, index) => (
                     <div
                         class={`slider-item absolute top-0 left-0 w-full h-full transition-opacity duration-700 ${index === 0 ? "opacity-100" : "opacity-0"}`}
                         data-index={index}
@@ -49,14 +54,14 @@ const { images = [] } = Astro.props as { images: SliderImage[] };
             }
         </div>
 
-        {images.length > 1 && (
+        {finalImages.length > 1 && (
             <>
             <!-- Controles de navegación -->
             <div
                 class="absolute bottom-5 left-1/2 transform -translate-x-1/2 hidden md:flex space-x-2"
             >
                 {
-                images.map((_, index) => (
+                finalImages.map((_, index) => (
                     <button
                     class="slider-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-colors duration-300"
                     data-index={index}
