@@ -33,6 +33,12 @@ const finalImages = images.length > 0 ? images : getRandomImages(1);
                             alt={image.alt}
                             class="w-full h-full object-cover object-center"
                             draggable="false"
+                            loading={index === 0 ? "eager" : "lazy"}
+                            fetchpriority={index === 0 ? "high" : "auto"}
+                            decoding="async"
+                            width="1920"
+                            height="1080"
+                            sizes="100vw"
                         />
 
                         {(image.title || image.description) && (

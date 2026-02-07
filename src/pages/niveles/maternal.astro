@@ -5,8 +5,8 @@ import PostHero from '@/sections/PostHero.astro';
 import Inscripcion from '@/sections/Inscripcion.astro';
 import Logo from '@/assets/logo.astro';
 
-import Image1 from '/public/images2/WhatsApp Image 2025-08-27 at 14.27.57.jpeg';
-import Image2 from '/public/images2/WhatsApp Image 2025-08-27 at 14.20.09.jpeg';
+const Image1 = '/images2/WhatsApp Image 2025-08-27 at 14.27.57.webp';
+const Image2 = '/images2/WhatsApp Image 2025-08-27 at 14.20.09.webp';
 ---
 
 <Layout>
@@ -90,13 +90,13 @@ import Image2 from '/public/images2/WhatsApp Image 2025-08-27 at 14.20.09.jpeg';
   <Hero
     images={[
       {
-        src: Image1.src,
+        src: Image1,
         alt: 'Frente del Colegio Las Lomas',
         title: 'MATERNAL',
         description: '',
       },
       {
-        src: Image2.src,
+        src: Image2,
         alt: 'Frente del Colegio Las Lomas',
         title: 'MATERNAL',
         description: '',
@@ -229,7 +229,7 @@ import Image2 from '/public/images2/WhatsApp Image 2025-08-27 at 14.20.09.jpeg';
       </h2>
 
       <a
-        href="/public/propuestas/PP_MATERNA-NIVEL_INICIAL_CLL.docx"
+        href="/propuestas/PP_MATERNA-NIVEL_INICIAL_CLL.docx"
         class="text-blue-600 hover:text-blue-800 font-medium flex justify-center mb-6"
       >
         Descargar Propuesta Pedagógica

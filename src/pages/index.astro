@@ -6,9 +6,9 @@ import AboutUs from '@/sections/AboutUs.astro';
 import Niveles from '@/sections/Niveles.astro';
 import Inscripcion from '@/sections/Inscripcion.astro';
 
-import Image1 from '/public/images2/PHOTO-2025-08-27-13-53-07.jpg';
-import Image2 from '/public/images2/PHOTO-2025-08-27-13-47-39.jpg';
-import Image3 from '/public/images2/9ae987b2-b734-4c63-9d28-8214414886ed.jpg';
+const Image1 = '/images2/PHOTO-2025-08-27-13-53-07.webp';
+const Image2 = '/images2/PHOTO-2025-08-27-13-47-39.webp';
+const Image3 = '/images2/9ae987b2-b734-4c63-9d28-8214414886ed.webp';
 import Testimonials from '@/sections/Testimonials.astro';
 ---
 
@@ -16,20 +16,20 @@ import Testimonials from '@/sections/Testimonials.astro';
   <Hero
     images={[
       {
-        src: Image1.src,
+        src: Image1,
         alt: '',
         title: 'Colegio Las Lomas de Carlos Spegazzini',
         description:
           'Me lo contaron y lo olvidé, lo vi y lo entendí, lo hice y lo aprendí',
       },
       {
-        src: Image2.src,
+        src: Image2,
         alt: 'Frente del Colegio Las Lomas',
         title: 'Colegio Las Lomas de Carlos Spegazzini',
         description: 'Cañada de Gómez 70, Barrio Las Lomas',
       },
       {
-        src: Image3.src,
+        src: Image3,
         alt: 'Frente del Colegio Las Lomas',
         title: 'Colegio Las Lomas de Carlos Spegazzini',
         description: 'Abierta la inscripción todo el año',

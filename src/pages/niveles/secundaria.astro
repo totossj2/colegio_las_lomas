@@ -5,9 +5,9 @@ import PostHero from '@/sections/PostHero.astro';
 import Inscripcion from '@/sections/Inscripcion.astro';
 import Logo from '@/assets/logo.astro';
 
-import Image1 from '/public/images2/PHOTO-2025-08-12-14-12-15.jpg';
-import Image2 from '/public/images2/PHOTO-2025-08-27-13-50-18.jpg';
-import Image3 from '/public/images2/PHOTO-2025-08-12-14-23-09.jpg';
+const Image1 = '/images2/PHOTO-2025-08-12-14-12-15-1.webp';
+const Image2 = '/images2/PHOTO-2025-08-27-13-50-18.webp';
+const Image3 = '/images2/PHOTO-2025-08-12-14-23-09.webp';
 ---
 
 <Layout>
@@ -92,19 +92,19 @@ import Image3 from '/public/images2/PHOTO-2025-08-12-14-23-09.jpg';
   <Hero
     images={[
       {
-        src: Image1.src,
+        src: Image1,
         alt: 'Aula del Colegio Las Lomas',
         title: 'SECUNDARIA',
         description: '',
       },
       {
-        src: Image2.src,
+        src: Image2,
         alt: 'Aula del Colegio Las Lomas',
         title: 'SECUNDARIA',
         description: '',
       },
       {
-        src: Image3.src,
+        src: Image3,
         alt: 'Aula del Colegio Las Lomas',
         title: '',
         description: 'SECUNDARIA',
@@ -202,7 +202,7 @@ import Image3 from '/public/images2/PHOTO-2025-08-12-14-23-09.jpg';
       </h2>
 
       <a
-        href="/public/propuestas/PP_NIVEL_SECUNDARIO_CLL.docx"
+        href="/propuestas/PP_NIVEL_SECUNDARIO_CLL.docx"
         class="text-blue-600 hover:text-blue-800 font-medium flex justify-center mb-6"
       >
         Descargar Propuesta Pedagógica

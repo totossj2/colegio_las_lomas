@@ -2,13 +2,13 @@
 const niveles = [
   {
     titulo: 'MATERNAL',
-    imagen: '/images2/WhatsApp Image 2025-08-27 at 14.20.09.jpeg',
+    imagen: '/images2/WhatsApp Image 2025-08-27 at 14.20.09.webp',
     alt: 'Nivel Maternal',
     enlace: '/niveles/maternal',
   },
   {
     titulo: 'INICIAL',
-    imagen: '/images2/PHOTO-2025-08-27-13-42-19.jpg',
+    imagen: '/images2/PHOTO-2025-08-27-13-42-19.webp',
     alt: 'Nivel Inicial',
     enlace: '/niveles/inicial',
   },
@@ -84,6 +84,8 @@ const areasAcademicas = [
               src={nivel.imagen}
               alt={nivel.alt}
               class="w-full h-24 md:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
             />
             <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
               <h3
@@ -108,9 +110,11 @@ const areasAcademicas = [
 
   <div class="w-full h-fit md:h-50 flex flex-col md:flex-row gap">
     <img
-      src="/images/estudiando.jpeg"
+      src="/images/estudiando.webp"
       alt="Chicos estudiando"
       class="w-full md:w-[35%] h-36 md:h-full object-cover rounded-2xl"
+      loading="lazy"
+      decoding="async"
     />
     <div class="w-[5%] h-4 md:h-full"></div>
     <div class="w-full md:w-[60%] h-full flex items-center flex-col">
